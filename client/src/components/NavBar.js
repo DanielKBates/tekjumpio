@@ -14,8 +14,8 @@ const NavBar = ({ currentPage }) => {
           to="/about"
           className={`${
             currentPage === "/about"
-              ? " text-xl md:rounded bg-gradient-to-r hover:from-green-500 hover:to-blue-400 from-purple-500 to-red-600 text-black md:p-2" //  from-green-500 to-blue-400
-              : "text-xl md:rounded bg-gradient-to-r from-green-500 to-blue-400 hover:bg-gradient-to-r hover:from-purple-500 hover:to-red-600 text-black md:p-2"
+              ? " text-xl md:rounded bg-gradient-to-r hover:from-green-500 hover:to-blue-400 from-purple-500 to-red-600 text-black md:p-3" //  from-green-500 to-blue-400
+              : "text-xl md:rounded bg-gradient-to-r from-green-500 to-blue-400 hover:bg-gradient-to-r hover:from-purple-500 hover:to-red-600 text-black md:p-3"
           }`}
         >
           About Us
@@ -24,8 +24,8 @@ const NavBar = ({ currentPage }) => {
           to="/program"
           className={`${
             currentPage === "/program"
-              ? " text-xl md:rounded bg-gradient-to-r hover:from-green-500 hover:to-blue-400 from-purple-500 to-red-600 text-black md:p-2" //  from-green-500 to-blue-400
-              : "text-xl md:rounded bg-gradient-to-r from-green-500 to-blue-400 hover:bg-gradient-to-r hover:from-purple-500 hover:to-red-600 text-black md:p-2"
+              ? " text-xl md:rounded bg-gradient-to-r hover:from-green-500 hover:to-blue-400 from-red-600 to-purple-500 text-black md:p-3" //  from-green-500 to-blue-400
+              : "text-xl md:rounded bg-gradient-to-r from-blue-400 to-green-500 hover:bg-gradient-to-r hover:from-red-600 hover:to-purple-500 text-black md:p-3"
           }`}
         >
           Program
@@ -35,8 +35,8 @@ const NavBar = ({ currentPage }) => {
         to="/register"
         className={`${
           currentPage === "/register"
-            ? " text-xl md:rounded bg-gradient-to-r hover:from-green-500 hover:to-blue-400 from-purple-500 to-red-600 text-black md:p-2" //  from-green-500 to-blue-400
-            : "text-xl md:rounded bg-gradient-to-r from-green-500 to-blue-400 hover:bg-gradient-to-r hover:from-purple-500 hover:to-red-600 text-black md:p-2"
+            ? " text-xl md:rounded bg-gradient-to-r hover:from-green-500 hover:to-blue-400 from-purple-500 to-red-600 text-black md:p-3" //  from-green-500 to-blue-400
+            : "text-xl md:rounded bg-gradient-to-r from-green-500 to-blue-400 hover:bg-gradient-to-r hover:from-purple-500 hover:to-red-600 text-black md:p-3"
         }`}
       >
         Register
