@@ -22,9 +22,9 @@ module.exports = {
         }
       },
       animation: {
-        animateWave: "animateWave 3s ease-in",
+        animateWave: "animateWave 2s ease-in",
         wiggle: "wiggle 5s ease-in",
-        displayWaveText: "displayWaveText 3s ease-in"
+        displayWaveText: "displayWaveText 2s ease-in"
       }
     },
   },
