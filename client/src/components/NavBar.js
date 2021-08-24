@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const NavBar = ({ currentPage }) => {
   return (
     <nav className="flex flex-wrap items-center  justify-between p-5 bg-black shadow-xl">
-      <div className="mb-2 sm:mb-0">
+      <div>
         <Link to="/" className="text-3xl text-white">
           TEKJUMP.IO
         </Link>
@@ -36,7 +36,7 @@ const NavBar = ({ currentPage }) => {
         className={`${
           currentPage === "/register"
             ? " text-xl md:rounded bg-gradient-to-r hover:from-green-500 hover:to-blue-400 from-purple-500 to-red-600 text-black md:p-3" //  from-green-500 to-blue-400
-            : "text-xl md:rounded bg-gradient-to-r from-green-500 to-blue-400 hover:bg-gradient-to-r hover:from-purple-500 hover:to-red-600 text-black md:p-3"
+            : "text-xl md:rounded bg-red-400 hover:bg-gradient-to-r hover:from-purple-500 hover:to-red-600 text-black md:p-3"
         }`}
       >
         Register
