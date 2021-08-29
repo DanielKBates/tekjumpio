@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Route, Switch, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
@@ -11,22 +11,24 @@ function App() {
   const location = useLocation();
   return (
     // <div className="min-h-screen bg-gradient-to-b from-gray-100 to-blue-100">
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-gray-800">
       <NavBar currentPage={location.pathname} />
-      <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/program">
-          <Program />
-        </Route>
-        <Route path="/register">
-          <Register />
-        </Route>
-        <Route path="/" >
-          <Home />
-        </Route>
-      </Switch>
+      <div>
+        <Switch>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/program">
+            <Program />
+          </Route>
+          <Route exact path="/register">
+            <Register />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
       <Footer />
     </div>
   );
