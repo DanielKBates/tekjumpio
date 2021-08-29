@@ -1,25 +1,31 @@
 import React, { useState } from "react";
 
 const initialState = {
-  email: { value: "", error: "" },
-  firstName: { value: "", error: "" },
-  lastName: { value: "", error: "" },
+  email: { value: "", error: "Please enter all fields" },
+  firstName: { value: "", error: "Please enter all fields" },
+  lastName: { value: "", error: "Please enter all fields" },
 };
 const Register = () => {
   const [formData, setFormData] = useState(initialState);
-  const [isValid, setIsValid] =useState(true)
+  const [isValid, setIsValid] = useState(true);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const stateField = e.target.name;
+    const value = e.target.value;
+
+    if(!value) {
+        setFormData({...formData, [stateField]: {error: "Please enter all fields", ...value}})
+    }
+
+    setFormData({ ...formData, [stateField]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(isValid){
-        console.log(formData);
-    }
-    else{
-        console.log("not valid: ");
+    if (isValid) {
+      console.log(formData);
+    } else {
+      console.log("not valid: ");
     }
   };
   return (
@@ -30,21 +36,26 @@ const Register = () => {
         onChange={handleChange}
         value={formData.email.value}
         placeholder="Email Address"
-      ></input>
+      />
+      {formData.email.error && <span>{formData.email.error}</span>}
       <input
         className="block bg-black rounded border-2"
         name="firstName"
         onChange={handleChange}
-        value={formData.firstName}
+        value={formData.firstName.value}
         placeholder="First Name"
-      ></input>
+      />
+      {formData.firstName.error && <span>{formData.firstName.error}</span>}
+
       <input
         className="block bg-black rounded border-2"
         name="lastName"
         onChange={handleChange}
-        value={formData.lastName}
+        value={formData.lastName.value}
         placeholder="Last Name"
-      ></input>
+      />
+      {formData.lastName.error && <span>{formData.lastName.error}</span>}
+
       <button
         onClick={handleSubmit}
         className="border-2 rounded border-white p-2"
