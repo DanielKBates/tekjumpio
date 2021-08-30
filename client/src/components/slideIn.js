@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 
-const SlideIn = ({ children, dir, uniqueID, amount }) => {
+const SlideIn = ({ children, dir, uniqueID, amount, distanceFromBottom }) => {
   if (!dir) {
     dir = [0, 1];
   }
   if (!amount) {
-    amount = "2.5rem";
+    amount = "3rem";
+  }
+  if (!distanceFromBottom) {
+    distanceFromBottom = 50;
   }
   const [active, setActive] = useState(false);
 
@@ -17,14 +20,14 @@ const SlideIn = ({ children, dir, uniqueID, amount }) => {
   });
 
   function calc() {
-      //select this component
+    //select this component
     var thiss = document.getElementById(uniqueID);
     //check distance to top
     var distanceToTop = thiss.getBoundingClientRect().top;
 
     const diff = window.innerHeight - thiss.offsetHeight;
     //make sure entire compent is visible before floating it in
-    if (distanceToTop < diff - 100) {
+    if (distanceToTop < diff - distanceFromBottom) {
       setActive(true);
     } else {
       setActive(false);
@@ -52,7 +55,7 @@ const SlideIn = ({ children, dir, uniqueID, amount }) => {
                   : dir[1] === -1
                   ? `-${amount}`
                   : `0`
-              })`,
+              }${")"}`,
               opacity: 0,
             }
           : {}
@@ -64,4 +67,5 @@ const SlideIn = ({ children, dir, uniqueID, amount }) => {
   );
 };
 
-export default SlideIn;
+
+export { SlideIn };

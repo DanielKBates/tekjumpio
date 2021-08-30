@@ -10,8 +10,8 @@ import Footer from "./components/Footer";
 function App() {
   const location = useLocation();
   return (
-    // <div className="min-h-screen bg-gradient-to-b from-gray-100 to-blue-100">
-    <div className="min-h-screen bg-gray-800">
+    <div className="min-h-screen">
+      <div className="fixed min-h-screen min-w-full bg-gray-800 -z-1"></div>
       <NavBar currentPage={location.pathname} />
       <div>
         <Switch>

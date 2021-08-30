@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-
+const pages = require("./pages.json");
 const NavBar = ({ currentPage }) => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [dir, setDir] = useState(1);
@@ -16,10 +16,10 @@ const NavBar = ({ currentPage }) => {
         var st = window.pageYOffset || document.documentElement.scrollTop;
         if (st > lastScrollTop) {
           // down
-          setDir(-1)
+          setDir(-1);
         } else {
           // up
-          setDir(1)
+          setDir(1);
         }
         lastScrollTop = st <= 0 ? 0 : st;
       },
@@ -30,7 +30,13 @@ const NavBar = ({ currentPage }) => {
   return (
     <nav
       className="bg-gray-900 w-full fixed z-40 px-4 transition-all ease-in-out duration-500"
-      style={!mobileMenu ? dir === 1 ? { minHeight: "68px" } : {minHeight: "68px", transform: "translateY(-75px)"} : {}}
+      style={
+        !mobileMenu
+          ? dir === 1
+            ? { minHeight: "68px" }
+            : { minHeight: "68px", transform: "translateY(-75px)" }
+          : {}
+      }
     >
       <div className="max-w-6xl mx-auto">
         <div className="flex justify-between items-center">
@@ -45,36 +51,28 @@ const NavBar = ({ currentPage }) => {
             </div>
 
             <div className="hidden md:flex items-center space-x-1">
-              <NavLink
-                to="/about"
-                className="py-5 px-3 text-gray-300 hover:text-white hover:underline transition ease-linear duration-300 after-arrow"
-                activeClassName="underline"
-              >
-                About
-              </NavLink>
-
-              <NavLink
-                to="/program"
-                className="py-5 px-3 text-gray-300 hover:text-white hover:underline transition ease-linear duration-300 after-arrow"
-                activeClassName="underline"
-              >
-                Program
-              </NavLink>
-
-              <NavLink
-                to="/pricing"
-                className="py-5 px-3 text-gray-300 hover:text-white hover:underline transition ease-linear duration-300 after-arrow"
-                activeClassName="underline"
-              >
-                Pricing
-              </NavLink>
+              {pages.map((page) => {
+                if (page.forNav) {
+                  return (
+                    <NavLink
+                      to={page.to}
+                      className="py-5 px-3 text-gray-300 hover:text-white hover:underline transition ease-linear duration-300 after-arrow"
+                      activeClassName="underline"
+                    >
+                      {page.name}
+                    </NavLink>
+                  );
+                } else {
+                  return(null)
+                }
+              })}
             </div>
           </div>
 
           <div className="hidden md:flex items-center space-x-1">
             <NavLink
               to="/register"
-              className="py-2 px-10 bg-blue-600 hover:bg-blue-500 text-gray-300 hover:text-gray-100 rounded transition duration-300 text-center font-bold"
+              className="py-2 px-10 anim text-gray-100 rounded transition duration-300 text-center font-bold"
             >
               Register
             </NavLink>
@@ -123,7 +121,7 @@ const NavBar = ({ currentPage }) => {
         </NavLink>
         <NavLink
           to="/register"
-          className="py-2 px-3 bg-blue-600 hover:bg-blue-500 text-gray-300 hover:text-gray-100 rounded transition duration-300 text-center font-bold"
+          className="py-2 px-3 anim text-gray-100 rounded transition duration-300 text-center font-bold"
         >
           Register
         </NavLink>

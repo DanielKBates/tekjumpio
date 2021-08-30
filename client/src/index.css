@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
+  --border-width: 2px;
   font-family: "Poppins", sans-serif;
   overflow: overlay;
   overflow-x: hidden;
@@ -23,9 +24,12 @@ body {
   top: 1rem;
 }
 .arrow-hover .arrow {
+  display: inline-block;
   position: relative;
   transition: 0.5s;
   left: 0;
+  padding: 0;
+  margin: 0;
 }
 .arrow-hover:hover .arrow {
   left: 10px;
@@ -34,6 +38,7 @@ body {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black;
+  line-height: 1.1rem;
 }
 
 .tooltip .tooltiptext {
@@ -69,8 +74,68 @@ body {
   visibility: visible;
   opacity: 1;
 }
+
+.svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+.clipped {
+  z-index: -1;
+  width: 1980px;
+  height: 977px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  -webkit-clip-path: url(#my-clip-path);
+  clip-path: url(#my-clip-path);
+}
+
+.anim {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0);
+  transition: box-shadow 0.2s;
+}
+.anim:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+.gradient-box {
+  position: relative;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  border-top: solid var(--border-width) transparent;
+}
+.gradient-box:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  bottom: var(--border-width);
+  left: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 /* Track */
@@ -79,22 +144,15 @@ body {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  border: 1px solid rgba(147, 197, 253, 0.5);
-  @apply bg-blue-600 rounded transition-colors shadow-2xl;
+  @apply bg-gray-500 rounded transition-colors shadow-2xl hover:bg-gray-600 active:bg-gray-700;
 }
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-blue-700;
-}
-::-webkit-scrollbar-thumb:active {
-  @apply bg-blue-500;
-}
-
 .line {
   transition: all 0.35s;
   @apply block absolute w-full h-0.5 left-0 border-none outline-none rounded bg-gray-300;
 }
 .testDiv {
   @apply mx-auto drop-shadow-2xl h-96 my-20 flex items-center justify-center flex-col text-white text-3xl;
+}
+.-z-1 {
+  z-index: -1;
 }

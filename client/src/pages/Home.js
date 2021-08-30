@@ -2,13 +2,13 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import Container from "../components/Container";
-import SlideIn from "../components/slideIn";
+import { SlideIn } from "../components/slideIn";
 
 const Home = () => {
   return (
     <div>
       <div className="relative">
-        <div className="absolute md:top-44 top-16 flex flex-col justify-between md:flex-row">
+        <div className="absolute md:top-44 top-16 flex flex-col justify-between md:flex-row z-10">
           <div className="flex justify-center">
             <div className=" flex-col justify-items-start  px-2 w-3/4 space-y-2">
               <h1 className="text-white text-3xl xl:text-5xl flex-col justify-center py-4 animate-displayWaveText leading-none">
@@ -22,16 +22,28 @@ const Home = () => {
                 consequuntur laudantium quia quo sapiente fugiat quod modi
                 beatae!
               </span>
-              <div className="flex justify-start animate-displayWaveText">
-                <div className="flex items-center space-x-1">
-                  <NavLink
-                    exact
-                    to="/register"
-                    className="py-3 my-10 px-20 bg-blue-600 hover:bg-blue-500 text-gray-100 border-2 rounded-xl text-2xl transition duration-300 text-center font-bold"
-                  >
-                    Register
-                  </NavLink>
-                </div>
+              <div className="flex items-center space-x-1 w-full">
+                <NavLink
+                  exact
+                  to="/register"
+                  className="py-3 my-10 px-20 anim text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full arrow-hover"
+                >
+                  Register Now{" "}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-arrow-right-short arrow w-10 h-10"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                      className=""
+                        fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                      />
+                    </svg>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -40,7 +52,7 @@ const Home = () => {
               <img
                 src={`${process.env.PUBLIC_URL}/images/test.png`}
                 alt="placeholder"
-                className="rounded-lg w-11/12 shadow-2xl transform -translate-y-6 mx-auto"
+                className="rounded-lg w-3/4 md:w-11/12 shadow-2xl transform -translate-y-6 mx-auto"
               />
               <p className="text-gray-200 text-center transform -translate-y-14 xl:text-base text-xs">
                 Make this some gif of code. Try to use Apple VSCode as it looks
@@ -49,27 +61,19 @@ const Home = () => {
             </SlideIn>
           </div>
         </div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          id="visual"
-          viewBox="0 0 1980 977"
-          width="1900"
-          height="977"
-          version="1.1"
-          className="min-w-full"
-        >
-          <path
-            d="M0 870L82.5 866C165 862 330 854 495 766C660 678 825 510 990 482C1155 454 1320 566 1485 612C1650 658 1815 638 1897.5 628L1980 618L1980 0L1897.5 0C1815 0 1650 0 1485 0C1320 0 1155 0 990 0C825 0 660 0 495 0C330 0 165 0 82.5 0L0 0Z"
-            fill="rgb(37,99,235)"
-            strokeLinecap="round"
-            strokeLinejoin="miter"
-          />
+        <svg class="svg">
+          <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
+            <path d="M0,1 L0.042,0.995 C0.083,0.991,0.167,0.982,0.25,0.88 C0.333,0.779,0.417,0.586,0.5,0.554 C0.583,0.522,0.667,0.651,0.75,0.703 C0.833,0.756,0.917,0.733,0.958,0.722 L1,0.71 L1,0 L0.958,0 C0.917,0,0.833,0,0.75,0 C0.667,0,0.583,0,0.5,0 C0.417,0,0.333,0,0.25,0 C0.167,0,0.083,0,0.042,0 L0,0"></path>
+          </clipPath>
         </svg>
+
+        <div class="clipped"></div>
       </div>
       <Container>
         <div className="flex py-6 flex-col justify-center sm:py-12">
           <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-            <div className="animate-wiggle absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400  shadow-lg transform -skew-y-6 sm:skew-y-0 sm:rotate-12 sm:rounded-3xl"></div>
+            <div className="animate-wiggle absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400  shadow-lg transform rotate-12 sm:rounded-3xl transition-transform"></div>
+
             <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
               <div className="max-w-md mx-auto">
                 <div>
@@ -168,7 +172,20 @@ const Home = () => {
                     className="block pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7 arrow-hover text-cyan-600 hover:text-cyan-700"
                   >
                     <p>Want to learn more about our program?</p>
-                    Learn More <span className="arrow">&rarr; </span>
+                    Learn More{" "}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-arrow-right-short arrow w-6 h-6"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                      />
+                    </svg>
                   </Link>
                 </div>
               </div>
