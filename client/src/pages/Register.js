@@ -2,6 +2,11 @@ import React from "react";
 import "./register.css";
 import { useForm } from "react-hook-form";
 
+const initialState = {
+  email: { value: "", error: "Please enter all fields" },
+  firstName: { value: "", error: "Please enter all fields" },
+  lastName: { value: "", error: "Please enter all fields" },
+};
 const Register = () => {
   const {
     register,

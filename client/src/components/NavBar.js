@@ -4,7 +4,7 @@ const NavBar = ({ currentPage }) => {
   return (
     <nav className="flex flex-wrap items-center  justify-between p-5 bg-black shadow-xl">
       <div>
-        <Link to="/" className="text-3xl text-white">
+        <Link to="/" className="text-3xl text-transparent bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text">
           TEKJUMP.IO
         </Link>
       </div>

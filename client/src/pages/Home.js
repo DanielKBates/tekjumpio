@@ -46,7 +46,11 @@ const Home = () => {
         </svg>
       </div>
       <Container>
-        <div className="flex justify-end py-6 flex flex-col justify-center sm:py-12">
+      {/* <div className="relative py-12"> */}
+        <div className="grid grid-cols-2 py-6 sm:py-12"> 
+        <div className="p-20 ">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/1200px-IntelliJ_IDEA_Icon.svg.png" alt="intellij" ></img>
+        </div>
           <div className="relative py-3 sm:max-w-xl sm:mx-auto">
             <div className="animate-wiggle absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400  shadow-lg transform -skew-y-6 sm:skew-y-0 sm:rotate-12 sm:rounded-3xl"></div>
             <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
