@@ -5,13 +5,14 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Program from "./pages/Program";
 import Register from "./pages/Register";
+import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
 function App() {
   const location = useLocation();
   return (
-    <div className="min-h-screen">
-      <div className="fixed min-h-screen min-w-full bg-gray-800 -z-1"></div>
+    <div>
+    {/* <div className="fixed min-h-screen min-w-full bg-gray-800 -z-1"></div> */}
       <NavBar currentPage={location.pathname} />
       <div>
         <Switch>
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route exact path="/register">
             <Register />
+          </Route>
+          <Route exact path="/contact">
+            <Contact />
           </Route>
           <Route exact path="/">
             <Home />

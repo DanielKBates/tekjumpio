@@ -2,7 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import Container from "../components/Container";
-import { SlideIn } from "../components/slideIn";
+import { SlideIn } from "../components/Slidein.js";
 
 const Home = () => {
   return (
@@ -26,7 +26,7 @@ const Home = () => {
                 <NavLink
                   exact
                   to="/register"
-                  className="py-3 my-10 px-20 anim text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full arrow-hover"
+                  className="p-3 my-10 anim text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full arrow-hover"
                 >
                   Register Now{" "}
                     <svg
@@ -34,12 +34,12 @@ const Home = () => {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-arrow-right-short arrow w-10 h-10"
+                      className="bi bi-arrow-right-short arrow w-10 h-10"
                       viewBox="0 0 16 16"
                     >
                       <path
                       className=""
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
                       />
                     </svg>
@@ -61,13 +61,13 @@ const Home = () => {
             </SlideIn>
           </div>
         </div>
-        <svg class="svg">
+        <svg className="svg">
           <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
             <path d="M0,1 L0.042,0.995 C0.083,0.991,0.167,0.982,0.25,0.88 C0.333,0.779,0.417,0.586,0.5,0.554 C0.583,0.522,0.667,0.651,0.75,0.703 C0.833,0.756,0.917,0.733,0.958,0.722 L1,0.71 L1,0 L0.958,0 C0.917,0,0.833,0,0.75,0 C0.667,0,0.583,0,0.5,0 C0.417,0,0.333,0,0.25,0 C0.167,0,0.083,0,0.042,0 L0,0"></path>
           </clipPath>
         </svg>
 
-        <div class="clipped"></div>
+        <div className="clipped"></div>
       </div>
       <Container>
         <div className="flex py-6 flex-col justify-center sm:py-12">
@@ -178,11 +178,11 @@ const Home = () => {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-arrow-right-short arrow w-6 h-6"
+                      className="bi bi-arrow-right-short arrow w-6 h-6"
                       viewBox="0 0 16 16"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
                       />
                     </svg>
