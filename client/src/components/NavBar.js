@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 const pages = require("./pages.json");
-const NavBar = ({ currentPage }) => {
+
+const NavBar = () => {
+
   const [mobileMenu, setMobileMenu] = useState(false);
   const [dir, setDir] = useState(1);
   const handleMobileMenu = () => {
@@ -42,7 +44,7 @@ const NavBar = ({ currentPage }) => {
           : {}
       }
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-full px-10 mx-auto">
         <div className="flex justify-between items-center">
           <div className="flex space-x-4">
             <div>

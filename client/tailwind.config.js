@@ -2,23 +2,11 @@ module.exports = {
   purge: ["./src/*/.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    stroke: {
-      stroke: (theme) => ({
-        grey: theme("colors.grey.800"),
-      })
-    },
+ 
     extend: {
       keyframes: {
-        animateWave: {
-          "0%": {
-            transform: "scale(1, 0)",
-          },
-          "100%": {
-            transform: "scale(1, 1)",
-          },
-        },
         wiggle: {
-          "0%, 50%": { transform: "rotate(0deg)", opacity: "0" },
+          "0%": { transform: "rotate(0deg)", opacity: "0" },
           "100%": { transform: "rotate(12deg)", opacity: "1" },
         },
         displayWaveText: {
@@ -39,9 +27,9 @@ module.exports = {
       },
       animation: {
         animateWave: "animateWave 2s ease-in",
-        wiggle: "wiggle 3s ease-in",
-        displayWaveText: "displayWaveText 2s ease-in",
-        animateGradient: "animateGradient 15s ease-in ",
+        wiggle: "wiggle 2s ease-in",
+        displayWaveText: "displayWaveText 1s ease-in",
+        animateGradient: "animateGradient 15s ease-in infinite",
       },
       colors: {
         "gradient-salmon": "#ee7752",

@@ -1,14 +1,37 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import Container from "../components/Container";
-import { SlideIn } from "../components/slideIn";
+import SlideIn from "../components/slideIn";
+import AnimatedCard from "../components/AnimatedCard";
 
 const Home = () => {
+  const scrollRef = useRef(null);
+  const scrollRef2 = useRef(null);
+
+  const [isVisible, setIsVisible] = useState(false);
+  const scrollCallBack = (entries) => {
+    const [entry] = entries;
+    setIsVisible(entry.isIntersecting);
+  };
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.25,
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(scrollCallBack, options);
+    if (scrollRef.current) observer.observe(scrollRef.current);
+
+    return () => {
+      if (scrollRef.current) observer.unobserve(scrollRef.current);
+    };
+  }, [scrollRef, options]);
   return (
     <div>
-      <div className="relative bg-gradient-to-r from-gradient-salmon via-gradient-pink via-gradient-blue to-gradient-green animate-animateGradient">
-        {/* <div className="absolute md:top-44 top-16 flex flex-col justify-between md:flex-row z-10">
+      <div className="relative">
+        <div className="absolute md:top-44 top-16 flex flex-col justify-between md:flex-row z-10">
           <div className="flex justify-center">
             <div className=" flex-col justify-items-start  px-2 w-3/4 space-y-2 ">
               <h1 className="text-white text-3xl xl:text-5xl flex-col justify-center py-4 animate-displayWaveText leading-none">
@@ -60,35 +83,31 @@ const Home = () => {
               </p>
             </SlideIn>
           </div>
-        </div> */}
+        </div>
 
-        {/* <svg className="svg">
+        <svg className="svg absolute">
           <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
             <path d="M0,1 L0.042,0.995 C0.083,0.991,0.167,0.982,0.25,0.88 C0.333,0.779,0.417,0.586,0.5,0.554 C0.583,0.522,0.667,0.651,0.75,0.703 C0.833,0.756,0.917,0.733,0.958,0.722 L1,0.71 L1,0 L0.958,0 C0.917,0,0.833,0,0.75,0 C0.667,0,0.583,0,0.5,0 C0.417,0,0.333,0,0.25,0 C0.167,0,0.083,0,0.042,0 L0,0"></path>
           </clipPath>
-        </svg> */}
-        {/* <div className="relative"> */}
-          <svg
-            className="animate-animateWave origin-bottom "
-            id="svg"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="-300 0 950 270"
-          >
-            <path
-              d="M-314,267 C105,364 400,100 812,279"
-              fill="none"
-              stroke="gray-800"
-              strokeWidth="120"
-              strokeLinecap="round"
-            />
-          </svg>
-          {/* <div className="clipped animate-animateGradient"></div> */}
-        {/* </div> */}
+        </svg>
+
+        <div className="clipped animate-animateGradient max-h-100% max-w-100%"></div>
       </div>
       <Container>
-        <div className="flex py-6 flex-col justify-center sm:py-12">
+        <div
+          ref={scrollRef}
+          className="flex py-6 flex-col justify-center sm:py-12"
+        >
           <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-            <div className="animate-wiggle absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400  shadow-lg transform rotate-12 sm:rounded-3xl transition-transform"></div>
+            <AnimatedCard
+              animation={
+                "transform rotate-12 opacity-100 transition-all duration-1000 ease-in"
+              }
+              isVisible={isVisible}
+              propClassName={
+                "absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl "
+              }
+            />
 
             <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
               <div className="max-w-md mx-auto">

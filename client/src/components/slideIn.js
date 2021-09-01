@@ -67,5 +67,4 @@ const SlideIn = ({ children, dir, uniqueID, amount, distanceFromBottom }) => {
   );
 };
 
-
-export { SlideIn };
+export default SlideIn;
