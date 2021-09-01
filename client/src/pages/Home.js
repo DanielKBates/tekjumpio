@@ -2,7 +2,6 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import Container from "../components/Container";
-import { SlideIn } from "../components/Slidein.js";
 
 const Home = () => {
   return (
@@ -29,36 +28,38 @@ const Home = () => {
                   className="p-3 my-10 anim text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full arrow-hover"
                 >
                   Register Now{" "}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className="bi bi-arrow-right-short arrow w-10 h-10"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    className="bi bi-arrow-right-short arrow w-10 h-10"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
                       className=""
-                        fillRule="evenodd"
-                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
-                      />
-                    </svg>
+                      fillRule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
                 </NavLink>
               </div>
             </div>
           </div>
           <div>
-            <SlideIn dir={[1, 1]} uniqueID="gif-slidin">
-              <img
-                src={`${process.env.PUBLIC_URL}/images/test.png`}
-                alt="placeholder"
-                className="rounded-lg w-3/4 md:w-11/12 shadow-2xl transform -translate-y-6 mx-auto"
-              />
-              <p className="text-gray-200 text-center transform -translate-y-14 xl:text-base text-xs">
-                Make this some gif of code. Try to use Apple VSCode as it looks
-                cleaner in gif.
-              </p>
-            </SlideIn>
+            <div>
+              <div>
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/test.png`}
+                  alt="placeholder"
+                  className="rounded-lg w-3/4 md:w-11/12 shadow-2xl transform -translate-y-6 mx-auto"
+                />
+                <p className="text-gray-200 text-center transform -translate-y-14 xl:text-base text-xs">
+                  Make this some gif of code. Try to use Apple VSCode as it
+                  looks cleaner in gif.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <svg className="svg">
@@ -193,51 +194,12 @@ const Home = () => {
           </div>
         </div>
       </Container>
-      <SlideIn dir={[0, 1]} uniqueID="test-slidin1">
-        <div className="bg-red-400 testDiv w-1/2">
-          <span>&uarr;</span>Floats to point: (0,1)
-        </div>
-      </SlideIn>
-      <SlideIn dir={[0, 0]} uniqueID="test-slidin2">
-        <div className="bg-blue-700 testDiv w-1/2">
-          <span>&bull;</span>Floats to point: (0,0)
-        </div>
-      </SlideIn>
-      <SlideIn dir={[0, -1]} uniqueID="test-slidin3">
-        <div className="bg-yellow-800 testDiv w-1/2">
-          <span>&darr;</span>Floats to point: (0,-1)
-        </div>
-      </SlideIn>
-      <SlideIn dir={[1, 1]} uniqueID="test-slidin4">
-        <div className="bg-green-500 testDiv w-1/2">
-          <span>&#8598;</span>Floats to point: (1,1)
-        </div>
-      </SlideIn>
-      <SlideIn dir={[1, 0]} uniqueID="test-slidin5">
-        <div className="bg-indigo-700 testDiv w-1/2">
-          <span>&larr;</span>Floats to point: (1,0)
-        </div>
-      </SlideIn>
-      <SlideIn dir={[1, -1]} uniqueID="test-slidin6">
-        <div className="bg-pink-600 testDiv w-1/2">
-          <span>&#8601;</span>Floats to point: (1,-1)
-        </div>
-      </SlideIn>
-      <SlideIn dir={[-1, 1]} uniqueID="test-slidin7">
-        <div className="bg-gray-500 testDiv w-1/2">
-          <span>&#8599;</span>Floats to point: (-1,1)
-        </div>
-      </SlideIn>
-      <SlideIn dir={[-1, 0]} uniqueID="test-slidin8">
-        <div className="bg-green-900 testDiv w-1/2">
-          <span>&rarr;</span>Floats to point: (-1,0)
-        </div>
-      </SlideIn>
-      <SlideIn dir={[-1, -1]} uniqueID="test-slidin9">
-        <div className="bg-indigo-900 testDiv w-1/2">
-          <span>&#8600;</span>Floats to point: (-1,-1)
-        </div>
-      </SlideIn>
+      <div bottom>
+        <div className="bg-red-400 testDiv w-1/2">e</div>
+      </div>
+      <div bottom>
+        <div className="bg-blue-700 testDiv w-1/2">e</div>
+      </div>
     </div>
   );
 };
