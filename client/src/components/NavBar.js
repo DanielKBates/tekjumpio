@@ -8,7 +8,7 @@ const NavBar = ({ currentPage }) => {
     setMobileMenu(!mobileMenu);
   };
 
-  useEffect(() => {
+  const handleNavScroll = () => {
     var lastScrollTop = 0;
     window.addEventListener(
       "scroll",
@@ -25,6 +25,10 @@ const NavBar = ({ currentPage }) => {
       },
       false
     );
+  }
+
+  useEffect(() => {
+    handleNavScroll()
   }, []);
 
   return (
@@ -38,7 +42,7 @@ const NavBar = ({ currentPage }) => {
           : {}
       }
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center">
           <div className="flex space-x-4">
             <div>

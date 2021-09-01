@@ -75,19 +75,14 @@ body {
   opacity: 1;
 }
 
-.svg {
-  position: absolute;
-  width: 0;
-  height: 0;
-  z-index: -1;
-}
+
 .clipped {
-  z-index: -1;
+  /* z-index: -1; */
   width: 1980px;
   height: 977px;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  /* animation: gradient 15s ease infinite; */
   -webkit-clip-path: url(#my-clip-path);
   clip-path: url(#my-clip-path);
 }

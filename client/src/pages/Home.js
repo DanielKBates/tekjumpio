@@ -7,10 +7,10 @@ import { SlideIn } from "../components/slideIn";
 const Home = () => {
   return (
     <div>
-      <div className="relative">
-        <div className="absolute md:top-44 top-16 flex flex-col justify-between md:flex-row z-10">
+      <div className="relative bg-gradient-to-r from-gradient-salmon via-gradient-pink via-gradient-blue to-gradient-green animate-animateGradient">
+        {/* <div className="absolute md:top-44 top-16 flex flex-col justify-between md:flex-row z-10">
           <div className="flex justify-center">
-            <div className=" flex-col justify-items-start  px-2 w-3/4 space-y-2">
+            <div className=" flex-col justify-items-start  px-2 w-3/4 space-y-2 ">
               <h1 className="text-white text-3xl xl:text-5xl flex-col justify-center py-4 animate-displayWaveText leading-none">
                 <div className="py-2">Learn Real Skills</div>
                 <div className="py-0">Build Real Projects</div>
@@ -29,20 +29,20 @@ const Home = () => {
                   className="py-3 my-10 px-20 anim text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full arrow-hover"
                 >
                   Register Now{" "}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-arrow-right-short arrow w-10 h-10"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-short arrow w-10 h-10"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
                       className=""
-                        fill-rule="evenodd"
-                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
-                      />
-                    </svg>
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
                 </NavLink>
               </div>
             </div>
@@ -60,14 +60,30 @@ const Home = () => {
               </p>
             </SlideIn>
           </div>
-        </div>
-        <svg class="svg">
+        </div> */}
+
+        {/* <svg className="svg">
           <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
             <path d="M0,1 L0.042,0.995 C0.083,0.991,0.167,0.982,0.25,0.88 C0.333,0.779,0.417,0.586,0.5,0.554 C0.583,0.522,0.667,0.651,0.75,0.703 C0.833,0.756,0.917,0.733,0.958,0.722 L1,0.71 L1,0 L0.958,0 C0.917,0,0.833,0,0.75,0 C0.667,0,0.583,0,0.5,0 C0.417,0,0.333,0,0.25,0 C0.167,0,0.083,0,0.042,0 L0,0"></path>
           </clipPath>
-        </svg>
-
-        <div class="clipped"></div>
+        </svg> */}
+        {/* <div className="relative"> */}
+          <svg
+            className="animate-animateWave origin-bottom "
+            id="svg"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="-300 0 950 270"
+          >
+            <path
+              d="M-314,267 C105,364 400,100 812,279"
+              fill="none"
+              stroke="gray-800"
+              strokeWidth="120"
+              strokeLinecap="round"
+            />
+          </svg>
+          {/* <div className="clipped animate-animateGradient"></div> */}
+        {/* </div> */}
       </div>
       <Container>
         <div className="flex py-6 flex-col justify-center sm:py-12">
