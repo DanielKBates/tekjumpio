@@ -1,33 +1,19 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
+import useOnScroll from "../hooks/useOnScroll";
 
 import Container from "../components/Container";
 import SlideIn from "../components/slideIn";
 import AnimatedCard from "../components/AnimatedCard";
 
 const Home = () => {
-  const scrollRef = useRef(null);
-  const scrollRef2 = useRef(null);
-
-  const [isVisible, setIsVisible] = useState(false);
-  const scrollCallBack = (entries) => {
-    const [entry] = entries;
-    setIsVisible(entry.isIntersecting);
-  };
-  const options = {
+  const [scrollRef, isVisible] = useOnScroll({
     root: null,
     rootMargin: "0px",
     threshold: 0.25,
-  };
+  });
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(scrollCallBack, options);
-    if (scrollRef.current) observer.observe(scrollRef.current);
 
-    return () => {
-      if (scrollRef.current) observer.unobserve(scrollRef.current);
-    };
-  }, [scrollRef, options]);
   return (
     <div>
       <div className="relative">
@@ -70,8 +56,11 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div>
-            <SlideIn dir={[1, 1]} uniqueID="gif-slidin">
+          <div ref={scrollRef}>
+            <AnimatedCard  isVisible={isVisible}
+             animation ="transform translate-x-4 opacity-0 transition-all duration-1000 ease-in"
+             inactiveClassName ="transform opacity-100 translate-x-0 transition-all duration-1000 ease-in"
+             >
               <img
                 src={`${process.env.PUBLIC_URL}/images/test.png`}
                 alt="placeholder"
@@ -81,7 +70,7 @@ const Home = () => {
                 Make this some gif of code. Try to use Apple VSCode as it looks
                 cleaner in gif.
               </p>
-            </SlideIn>
+            </AnimatedCard>
           </div>
         </div>
 
@@ -104,6 +93,7 @@ const Home = () => {
                 "transform rotate-12 opacity-100 transition-all duration-1000 ease-in"
               }
               isVisible={isVisible}
+              inactiveClassName="transition-all duration-1000 ease-in-out translate-y-0 opacity-0"
               propClassName={
                 "absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl "
               }
