@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Container from "../components/Container";
+import Callout from "../components/Callout";
 
 const Home = () => {
 
@@ -20,12 +21,7 @@ const Home = () => {
                 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
               </span>
               <div className="flex justify-start animate-displayWaveText">
-                <Link
-                  to="/register"
-                  className="transition duration-150 ease-in-out transform hover:scale-125 flex justify-start text-xl rounded bg-gradient-to-r from-purple-500 to-red-600 text-black p-2 mt-5"
-                >
-                  Register Now
-                </Link>
+                <Callout to="/register">Register Now</Callout>
               </div>
             </div>
           </div>
