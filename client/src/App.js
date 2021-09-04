@@ -12,9 +12,9 @@ function App() {
   const location = useLocation();
   return (
     <div>
-    {/* <div className="fixed min-h-screen min-w-full bg-gray-800 -z-1"></div> */}
+    {/* <div className="fixed min-h-screen min-w-full bg-gray-800 -z-10"></div> */}
       <NavBar currentPage={location.pathname} />
-      <div>
+      <div className='content-wrapper'>
         <Switch>
           <Route exact path="/about">
             <About />

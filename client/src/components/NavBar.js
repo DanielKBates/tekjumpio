@@ -82,8 +82,8 @@ const NavBar = ({ currentPage }) => {
             className="flex flex-col items-center justify-center relative w-8 h-8 md:hidden"
             onClick={handleMobileMenu}
           >
-            <span className={`line ${mobileMenu ? "active" : ""}`}></span>
-            <span className={`line ${mobileMenu ? "active" : ""}`}></span>
+            <span className={`top-5 block absolute w-full h-0.5 left-0 border-none outline-none rounded bg-gray-300 transition-all duration-300 transform ${mobileMenu ? "rotate-45 top-5" : ""}`}></span>
+            <span className={`top-3 block absolute w-full h-0.5 left-0 border-none outline-none rounded bg-gray-300 transition-all duration-300 transform ${mobileMenu ? "-rotate-45 top-5" : ""}`}></span>
           </button>
         </div>
       </div>

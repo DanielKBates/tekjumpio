@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-
+import { Fade } from "react-reveal";
 import Container from "../components/Container";
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
                 <div className="py-0">Build Real Projects</div>
               </h1>
               <span className="mx-auto text-xl xl:text-2xl text-gray-300 flex justify-center animate-displayWaveText max-w-3xl mb-8">
-                Join Tekjump today to Lorem ipsum dolor sit amet consectetur
+                Lorem ipsum dolor sit amet consectetur
                 adipisicing elit. Molestias provident veritatis voluptas
                 perspiciatis voluptates excepturi non, a, eius esse incidunt ad
                 consequuntur laudantium quia quo sapiente fugiat quod modi
@@ -47,7 +47,7 @@ const Home = () => {
             </div>
           </div>
           <div>
-            <div>
+            <Fade bottom right distance='3rem'>
               <div>
                 <img
                   src={`${process.env.PUBLIC_URL}/images/test.png`}
@@ -59,7 +59,7 @@ const Home = () => {
                   looks cleaner in gif.
                 </p>
               </div>
-            </div>
+            </Fade>
           </div>
         </div>
         <svg className="svg">
@@ -194,12 +194,12 @@ const Home = () => {
           </div>
         </div>
       </Container>
-      <div bottom>
-        <div className="bg-red-400 testDiv w-1/2">e</div>
-      </div>
-      <div bottom>
-        <div className="bg-blue-700 testDiv w-1/2">e</div>
-      </div>
+      <Fade bottom distance="5rem" cascade>
+        <div>
+          <div className="bg-red-400 testDiv w-1/2">e</div>
+          <div className="bg-blue-700 testDiv w-1/2">e</div>
+        </div>
+      </Fade>
     </div>
   );
 };
