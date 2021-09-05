@@ -57,10 +57,10 @@ const Home = () => {
             </div>
           </div>
           <div ref={scrollRef}>
-            <AnimatedCard  isVisible={isVisible}
-             animation ="transform translate-x-4 opacity-0 transition-all duration-1000 ease-in"
-             inactiveClassName ="transform opacity-100 translate-x-0 transition-all duration-1000 ease-in"
-             >
+            <AnimatedCard isVisible={isVisible}
+              activeClassName="transform translate-x-4 opacity-0 transition-all duration-1000 ease-in"
+              inactiveClassName="transform opacity-100 translate-x-0 transition-all duration-1000 ease-in"
+            >
               <img
                 src={`${process.env.PUBLIC_URL}/images/test.png`}
                 alt="placeholder"
@@ -263,6 +263,19 @@ const Home = () => {
           <span>&#8600;</span>Floats to point: (-1,-1)
         </div>
       </SlideIn>
+      <div ref={scrollRef}>
+        <AnimatedCard
+          activeClassName={
+            "transform translate-x-0 opacity-100 transition-all duration-1000 ease-in-out"
+          }
+          isVisible={isVisible}
+          inactiveClassName="transition-all duration-1000 ease-in-out transform translate-x-4 opacity-0"
+        >
+          <div className="bg-indigo-900 testDiv w-1/2">
+            <span>&#8600;</span>Floats to point: (-1,-1)
+          </div>
+        </AnimatedCard>
+      </div>
     </div>
   );
 };
