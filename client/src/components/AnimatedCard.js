@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 const AnimatedCard = (props) => {
-  const { isVisible, animation, propClassName, children, inactiveClassName } = props;
+  const { isVisible, activeClassName, children, inactiveClassName } = props;
 
   return (
-    <div className={isVisible? `${animation} ${propClassName}` : `${inactiveClassName} ${propClassName}`}>
+    <div className={isVisible? `${activeClassName} ` : `${inactiveClassName}`}>
       {children}
     </div>
   );
