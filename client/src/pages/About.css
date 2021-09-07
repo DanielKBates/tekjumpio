@@ -16,35 +16,17 @@ body {
 
 .StreamsHero-image {
  
-  top: 0;
-  left: 0;
+
   width: 100%;
-  text-align: center;
-  margin: 0 auto;
 }
 
-.StreamsHero-header {
-  color: #fff;
-  font-weight: 200;
-  line-height: 48px;
-  margin-bottom: -5px;
-  font-size: 32px;
-}
 
-.StreamsHero-blurb {
-  color: #fff;
-  font-size: 21px;
-  font-weight: 200;
-  line-height: 28px;
-  opacity: .7;
-  transition: opacity 300ms linear;
-  padding-bottom: 2em;
-}
+
+
 
 .StreamsHero-image{
-    margin-top: 0%;
-    margin-bottom: 5%;
-    border-radius: 8px;
+   
+    border-radius: 10px;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -84,9 +66,209 @@ body {
 
 
 .wrapper{
-    background-image:url("https://wallpaperaccess.com/full/4689415.png");
+    background-image:url("tekjump.gif");
     background-size: cover;
 }
+
+#video{
+    border-radius: 8px;
+}
+
+#hello{
+  /*background: repeating-linear-gradient(0.25turn,#74ABDD, #74ABDD 49.9%, #498DCB 50.1%, #498DCB 100%);*/
+  background:url("background.jpg")
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
+body{
+  background:#CDDC39;
+  font-family: 'Arimo', sans-serif;
+}
+h2{
+  color:#000;
+  text-align:center;
+  font-size:2em;
+}
+.warpper{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tab{
+  cursor: pointer;
+  padding:10px 20px;
+  margin:0px 2px;
+  background:#000;
+  display:inline-block;
+  color:#fff;
+  border-radius:3px 3px 0px 0px;
+  box-shadow: 0 0.5rem 0.8rem #00000080;
+}
+.panels{
+  background:#fffffff6;
+  box-shadow: 0 2rem 2rem #00000080;
+  min-height:200px;
+  width:100%;
+  max-width:500px;
+  border-radius:3px;
+  overflow:hidden;
+  padding:20px;  
+}
+.panel{
+  display:none;
+  animation: fadein .8s;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+.panel-title{
+  font-size:1.5em;
+  font-weight:bold
+}
+.radio{
+  display:none;
+}
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#three:checked ~ .panels #three-panel{
+  display:block
+}
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab,
+#three:checked ~ .tabs #three-tab{
+  background:#fffffff6;
+  color:#000;
+  border-top: 3px solid #000;
+}
+
+
+#secondHeader{
+  background: black;
+}
+
+#header1 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#20bf55,#01baef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#header2 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#20bf55,#01baef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.back{
+  background: #333;
+}
+
+.container2 {
+  position: relative;
+  height: 300px;
+  width: 600px;
+  top: 60px;
+  left: calc(50% - 300px);
+  display: flex;
+  margin-bottom: 10%;
+}
+
+.card {
+  display: flex;
+  height: 300px;
+  width: 600px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  top: 150px;
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+
+
   
  
 /* End Animation Wave Color */
