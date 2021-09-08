@@ -1,8 +1,7 @@
 import { useRef, useState, useEffect } from "react"
 
 const useOnScroll = (options) => {
-    const scrollRef = useRef(null);
-
+  const scrollRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const scrollCallBack = (entries) => {
     console.log(entries)
@@ -11,10 +10,11 @@ const useOnScroll = (options) => {
   };
   useEffect(() => {
     const observer = new IntersectionObserver(scrollCallBack, options);
-    if (scrollRef.current) observer.observe(scrollRef.current);
+    let currentRef= scrollRef.current
+    if (currentRef) observer.observe(currentRef);
 
     return () => {
-      if (scrollRef.current) observer.unobserve(scrollRef.current);
+      if (currentRef) observer.unobserve(currentRef);
     };
   }, [scrollRef, options]);
   return [scrollRef, isVisible]
