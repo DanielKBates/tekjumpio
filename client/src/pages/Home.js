@@ -1,17 +1,16 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import useOnScroll from "../hooks/useOnScroll";
 
 import Container from "../components/Container";
-import SlideIn from "../components/slideIn";
+// import SlideIn from "../components/slideIn";
 import AnimatedCard from "../components/AnimatedCard";
 
 const Home = () => {
-  const [scrollRef, isVisible] = useOnScroll({
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.25,
-  });
+
+
+  //Ok so the animated cards use IntersectionObserver API. Google it if you mess with the way they are called here. Works until we render
+  // more than one onto the screen with an animation at the same time. /shrug. Low prio task for the future, immediate solution is to simply
+  //not render two of them into the screen on load at the same time. **THIS BUG IS ANIMATION ONLY**
 
 
   return (
@@ -56,10 +55,10 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div ref={scrollRef}>
-            <AnimatedCard isVisible={isVisible}
-              activeClassName="transform translate-x-4 opacity-0 transition-all duration-1000 ease-in"
-              inactiveClassName="transform opacity-100 translate-x-0 transition-all duration-1000 ease-in"
+          <div >
+            <AnimatedCard
+              activeClassName="transform translate-x-4 opacity-100 transition-all duration-1000 ease-in"
+              inactiveClassName="transform opacity-0 translate-x-0 transition-all duration-1000 ease-in"
             >
               <img
                 src={`${process.env.PUBLIC_URL}/images/test.png`}
@@ -84,19 +83,17 @@ const Home = () => {
       </div>
       <Container>
         <div
-          ref={scrollRef}
           className="flex py-6 flex-col justify-center sm:py-12"
         >
           <div className="relative py-3 sm:max-w-xl sm:mx-auto">
             <AnimatedCard
-              animation={
-                "transform rotate-12 opacity-100 transition-all duration-1000 ease-in"
+              activeClassName={
+                "transform rotate-12 opacity-100 transition-all duration-1000 ease-in absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
               }
-              isVisible={isVisible}
-              inactiveClassName="transition-all duration-1000 ease-in-out translate-y-0 opacity-0"
-              propClassName={
-                "absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl "
-              }
+              inactiveClassName="transition-all duration-1000 ease-in translate-y-0 opacity-0 absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
+            // propClassName={
+            //   "absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl "
+            // }
             />
 
             <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
@@ -135,11 +132,11 @@ const Home = () => {
                               {" "}
                               <span className="text-white font-bold">M</span>
                               ongoDB,{" "}
-                              <span className="text-white font-bold">E</span>
+                              <span className="text-white font-bold"> E</span>
                               xpress,{" "}
-                              <span className="text-white font-bold">R</span>
+                              <span className="text-white font-bold"> R</span>
                               eact,{" "}
-                              <span className="text-white font-bold">N</span>ode
+                              <span className="text-white font-bold"> N</span>ode.js
                             </span>
                           </span>{" "}
                           stack.
@@ -217,65 +214,21 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </Container>
-      <SlideIn dir={[0, 1]} uniqueID="test-slidin1">
-        <div className="bg-red-400 testDiv w-1/2">
-          <span>&uarr;</span>Floats to point: (0,1)
-        </div>
-      </SlideIn>
-      <SlideIn dir={[0, 0]} uniqueID="test-slidin2">
-        <div className="bg-blue-700 testDiv w-1/2">
-          <span>&bull;</span>Floats to point: (0,0)
-        </div>
-      </SlideIn>
-      <SlideIn dir={[0, -1]} uniqueID="test-slidin3">
-        <div className="bg-yellow-800 testDiv w-1/2">
-          <span>&darr;</span>Floats to point: (0,-1)
-        </div>
-      </SlideIn>
-      <SlideIn dir={[1, 1]} uniqueID="test-slidin4">
-        <div className="bg-green-500 testDiv w-1/2">
-          <span>&#8598;</span>Floats to point: (1,1)
-        </div>
-      </SlideIn>
-      <SlideIn dir={[1, 0]} uniqueID="test-slidin5">
-        <div className="bg-indigo-700 testDiv w-1/2">
-          <span>&larr;</span>Floats to point: (1,0)
-        </div>
-      </SlideIn>
-      <SlideIn dir={[1, -1]} uniqueID="test-slidin6">
-        <div className="bg-pink-600 testDiv w-1/2">
-          <span>&#8601;</span>Floats to point: (1,-1)
-        </div>
-      </SlideIn>
-      <SlideIn dir={[-1, 1]} uniqueID="test-slidin7">
-        <div className="bg-gray-500 testDiv w-1/2">
-          <span>&#8599;</span>Floats to point: (-1,1)
-        </div>
-      </SlideIn>
-      <SlideIn dir={[-1, 0]} uniqueID="test-slidin8">
-        <div className="bg-green-900 testDiv w-1/2">
-          <span>&rarr;</span>Floats to point: (-1,0)
-        </div>
-      </SlideIn>
-      <SlideIn dir={[-1, -1]} uniqueID="test-slidin9">
-        <div className="bg-indigo-900 testDiv w-1/2">
-          <span>&#8600;</span>Floats to point: (-1,-1)
-        </div>
-      </SlideIn>
-      <div ref={scrollRef}>
         <AnimatedCard
           activeClassName={
             "transform translate-x-0 opacity-100 transition-all duration-1000 ease-in-out"
           }
-          isVisible={isVisible}
           inactiveClassName="transition-all duration-1000 ease-in-out transform translate-x-4 opacity-0"
         >
           <div className="bg-indigo-900 testDiv w-1/2">
-            <span>&#8600;</span>Floats to point: (-1,-1)
+            <span>&#8600;</span>BLAH
           </div>
         </AnimatedCard>
-      </div>
+      </Container>
+
+
+
+
     </div>
   );
 };
