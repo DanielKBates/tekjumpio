@@ -8,7 +8,7 @@ import AnimatedCard from "../components/AnimatedCard";
 const Home = () => {
 
 
-  //Ok so the animated cards use IntersectionObserver API. Google it if you mess with the way they are called here. Works until we render
+  //Ok so the <AnimatedCard>s use IntersectionObserver API. Google it if you mess with the way they are called here. Works until we render
   // more than one onto the screen with an animation at the same time. /shrug. Low prio task for the future, immediate solution is to simply
   //not render two of them into the screen on load at the same time. **THIS BUG IS ANIMATION ONLY**
 
