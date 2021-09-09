@@ -8,8 +8,15 @@ body {
   overflow-x: hidden;
   @apply bg-gray-800 overlay md:overflow-x-hidden;
 }
-*, a, button, link, input, textarea {
-  @apply focus:ring-4 ring-white ring-opacity-50 outline-none
+a:focus-visible,
+button:focus-visible,
+link:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  @apply ring-4 ring-white ring-opacity-50 outline-none;
+}
+code:focus-visible {
+  outline: none;
 }
 .overlay {
   overflow: overlay;
