@@ -1,39 +1,99 @@
 import React, { useState } from "react";
 import "./register.css";
 import { useForm } from "react-hook-form";
-import Confirm from "./Confirm";
 
-const initialState = {
-  email: { value: "", error: "Please enter all fields" },
-  firstName: { value: "", error: "Please enter all fields" },
-  lastName: { value: "", error: "Please enter all fields" },
-};
-const Register = () => {
+const Confirm = (props) => {
+  const [editing, setEditing] = useState(false);
+  const onEditClick = () => {
+    setEditing(true);
+    setTimeout(()=>{
+      document.getElementById(props.data.experience).setAttribute("selected", "selected")
+    }, 200)
+
+  };
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
-  const [registered, setRegistered] = useState(false);
-  const [data, setData] = useState(initialState);
   const onSubmit = (data) => {
-    //post data to server
-    console.log(data);
-    setData(data);
-    setRegistered(true);
-
-  };
-  // pattern: /^[0-9]+$/g
-  if (!registered) {
+    props.setData(data)
+    setEditing(false);
+  }
+  if (!editing) {
     return (
-      <div className="w-1/2 m-auto text-center bg-gray-400 rounded p-10 mb-20 shadow-xl">
-        <form onSubmit={handleSubmit(onSubmit)} className="mt-20">
+      <div className="card rounded bg-gray-800 shadow w-1/2 m-auto text-center relative">
+        <h1 className="text-2xl bg-gradient-to-r from-green-400 to-blue-300 bg-clip-text text-transparent font-bold">
+          Confirm your details...
+        </h1>
+        <p className="text-lg text-white">
+          <span className="bg-gradient-to-r from-green-400 to-blue-300 bg-clip-text text-transparent font-bold">
+            First name:
+          </span>{" "}
+          {props.data.firstName}
+        </p>
+        <p className="text-lg text-white">
+          <span className="bg-gradient-to-r from-green-400 to-blue-300 bg-clip-text text-transparent font-bold">
+            Last name:
+          </span>{" "}
+          {props.data.lastName}
+        </p>
+        <p className="text-lg text-white">
+          <span className="bg-gradient-to-r from-green-400 to-blue-300 bg-clip-text text-transparent font-bold">
+            Email:
+          </span>{" "}
+          {props.data.email}
+        </p>
+        <p className="text-lg text-white">
+          <span className="bg-gradient-to-r from-green-400 to-blue-300 bg-clip-text text-transparent font-bold">
+            Age:
+          </span>{" "}
+          {props.data.age}
+        </p>
+        <p className="text-lg text-white">
+          <span className="bg-gradient-to-r from-green-400 to-blue-300 bg-clip-text text-transparent font-bold">
+            Phone number:
+          </span>{" "}
+          {props.data.phonenumber}
+        </p>
+        <p className="text-lg text-white">
+          <span className="bg-gradient-to-r from-green-400 to-blue-300 bg-clip-text text-transparent font-bold">
+            Address:
+          </span>{" "}
+          {props.data.address}
+        </p>
+        <p className="text-lg text-white">
+          <span className="bg-gradient-to-r from-green-400 to-blue-300 bg-clip-text text-transparent font-bold">
+            Experience:
+          </span>{" "}
+          {props.data.experience}
+        </p>
+        <p className="text-lg text-white">
+          <span className="bg-gradient-to-r from-green-400 to-blue-300 bg-clip-text text-transparent font-bold">
+            Elaborate:
+          </span>{" "}
+          {props.data.elaborate}
+        </p>
+        <button
+          onClick={onEditClick}
+          className="bg-gradient-to-r from-green-400 to-blue-300 rounded p-3 font-bold"
+        >
+          Edit!
+        </button>
+      </div>
+    );
+  } else {
+    return (
+      <div className="w-1/2 m-auto text-center bg-gray-800 rounded p-10 mb-20 shadow-xl">
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="txt-field">
             <input
               className="form-input w-3/4 bg-transparent mb-10 m-auto"
               {...register("firstName", { required: true })}
-              placeholder=" "
+              placeholder= " "
+              id="firstName"
+              defaultValue={props.data.firstName}
             />
             <span className="form-label bg-gradient-to-r from-green-400 to-blue-300 text-transparent bg-clip-text font-bold">
               First Name
@@ -48,7 +108,9 @@ const Register = () => {
             <input
               className="form-input w-3/4 bg-transparent mb-10 m-auto"
               {...register("lastName", { required: true })}
-              placeholder=" "
+              placeholder= " "
+              id="lastName"
+              defaultValue={props.data.lastName}
             />
             <span className="form-label bg-gradient-to-r from-green-400 to-blue-300 text-transparent bg-clip-text font-bold">
               Last Name
@@ -67,7 +129,9 @@ const Register = () => {
                 pattern:
                   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g,
               })}
-              placeholder=" "
+              placeholder= " "
+              id="email"
+              defaultValue={props.data.email}
             />
             <span className="form-label bg-gradient-to-r from-green-400 to-blue-300 text-transparent bg-clip-text font-bold">
               Email
@@ -83,7 +147,9 @@ const Register = () => {
                 required: true,
                 pattern: /^[0-9]+$/g,
               })}
-              placeholder=" "
+              placeholder= " "
+              id="age"
+              defaultValue={props.data.age}
             />
             <span className="form-label for-age bg-gradient-to-r from-green-400 to-blue-300 text-transparent bg-clip-text font-bold">
               Age
@@ -97,9 +163,11 @@ const Register = () => {
               className="form-input w-3/4 bg-transparent mb-10 m-auto"
               {...register("phonenumber", {
                 required: true,
-                pattern: /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/g
+                pattern: /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/g,
               })}
-              placeholder=" "
+              placeholder= " "
+              id="phonenumber"
+              defaultValue={props.data.phonenumber}
             />
             <span className="form-label for-age bg-gradient-to-r from-green-400 to-blue-300 text-transparent bg-clip-text font-bold">
               Phone Number
@@ -114,12 +182,16 @@ const Register = () => {
               {...register("address", {
                 required: true,
               })}
-              placeholder=" "
+              placeholder= " "
+              id="address"
+              defaultValue={props.data.address}
             />
             <span className="form-label for-age bg-gradient-to-r from-green-400 to-blue-300 text-transparent bg-clip-text font-bold">
               Address
               {errors.address && (
-                <p className="inline text-red-600 ml-6">Please enter your address</p>
+                <p className="inline text-red-600 ml-6">
+                  Please enter your address
+                </p>
               )}
             </span>
           </div>
@@ -128,9 +200,9 @@ const Register = () => {
               {...register("experience")}
               className="bg-gradient-to-r from-green-400 to-blue-300 text-black font-bold"
             >
-              <option value="none">None</option>
-              <option value="some">Some</option>
-              <option value="year">More than one year</option>
+              <option value="none" id="none">None</option>
+              <option value="some" id="some">Some</option>
+              <option value="year" id="year">More than one year</option>
             </select>
             <span className="form-label for-age bg-gradient-to-r from-green-400 to-blue-300 text-transparent bg-clip-text font-bold">
               Programming Experience
@@ -147,7 +219,7 @@ const Register = () => {
             <textarea
               className="block w-9/12  mt-5"
               {...register("elaborate")}
-            ></textarea>
+            >{props.data.elaborate}</textarea>
             <span className="form-label for-age bg-gradient-to-r from-green-400 to-blue-300 text-transparent bg-clip-text font-bold">
               Elaborate(optional)
             </span>
@@ -156,14 +228,12 @@ const Register = () => {
             type="submit"
             className="border-0 bg-gradient-to-r from-green-400 to-blue-300 text-black font-bold rounded p-3 mt-28"
           >
-            Register now
+            Save changes
           </button>
         </form>
       </div>
     );
-  } else {
-    return <Confirm data={data} setData={setData} />;
   }
 };
 
-export default Register;
+export default Confirm;
