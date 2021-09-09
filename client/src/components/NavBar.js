@@ -1,48 +1,139 @@
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, NavLink,  } from "react-router-dom";
+const pages = require("./pages.json");
 
-const NavBar = ({ currentPage }) => {
+const NavBar = () => {
+
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const [dir, setDir] = useState(1);
+  const handleMobileMenu = () => {
+    setMobileMenu(!mobileMenu);
+  };
+
+  const handleNavScroll = () => {
+    var lastScrollTop = 0;
+    window.addEventListener(
+      "scroll",
+      function () {
+        var st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > lastScrollTop) {
+          // down
+          setDir(-1);
+        } else {
+          // up
+          setDir(1);
+        }
+        lastScrollTop = st <= 0 ? 0 : st;
+      },
+      false
+    );
+  }
+
+  useEffect(() => {
+    handleNavScroll()
+  }, []);
+
   return (
-    <nav className="flex flex-wrap items-center  justify-between p-5 bg-black shadow-xl">
-      <div>
-        <Link to="/" className="text-3xl text-transparent bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text">
-          TEKJUMP.IO
-        </Link>
+    <nav
+      className="bg-gray-900 w-full fixed z-40 px-4 transition-all ease-in-out duration-500"
+      style={
+        !mobileMenu
+          ? dir === 1
+            ? { minHeight: "68px" }
+            : { minHeight: "68px", transform: "translateY(-75px)" }
+          : {}
+      }
+    >
+      <div className="max-w-full px-10 mx-auto">
+        <div className="flex justify-between items-center">
+          <div className="flex space-x-4">
+            <div>
+              <Link
+                to="/"
+                className="flex items-center py-5 text-gray-100 transition ease-linear duration-300"
+              >
+                <span className="font-bold text-2xl">TJ</span>
+              </Link>
+            </div>
+
+            <div className="hidden md:flex items-center space-x-1">
+              {pages.map((page) => {
+                if (page.forNav) {
+                  return (
+                    <NavLink
+                      to={page.to}
+                      className="py-5 px-3 text-gray-300 hover:text-white hover:underline transition ease-linear duration-300"
+                      activeClassName="underline"
+                    >
+                      {page.name}
+                    </NavLink>
+                  );
+                } else {
+                  return(null)
+                }
+              })}
+            </div>
+          </div>
+
+          <div className="hidden md:flex items-center space-x-1">
+            <NavLink
+              to="/register"
+              className="py-2 px-10 multiGradient animate-animateGradient text-gray-100 rounded transition duration-300 text-center font-bold"
+            >
+              Register
+            </NavLink>
+          </div>
+          <button
+            className="flex flex-col items-center justify-center relative w-8 h-8 md:hidden"
+            onClick={handleMobileMenu}
+          >
+            <span className={`line ${mobileMenu ? "active" : ""}`}></span>
+            <span className={`line ${mobileMenu ? "active" : ""}`}></span>
+          </button>
+        </div>
+
+
       </div>
 
-      <div className=" flex-col block md:inline space-x-5 md:flex-row w-full md:w-auto text-bold mt-5 md:mt-0 border-t-2 md:border-none">
-        <Link
+      {/* MOBILE */}
+      <div
+        className="flex flex-col p-8 pt-0 md:hidden transition-all duration-300 overflow-hidden"
+        style={
+          mobileMenu
+            ? { opacity: 1, height: "216px" }
+            : { height: "0px", opacity: 0, padding: "0rem" }
+        }
+      >
+        <NavLink
           to="/about"
-          className={`${
-            currentPage === "/about"
-              ? " text-xl md:rounded bg-gradient-to-r hover:from-green-500 hover:to-blue-400 from-purple-500 to-red-600 text-transparent md:p-3 bg-clip-text font-bold" //  from-green-500 to-blue-400
-              : "text-xl md:rounded bg-gradient-to-r to-green-400 from-blue-300 hover:bg-gradient-to-r hover:from-purple-500 hover:to-red-600 text-transparent md:p-3 bg-clip-text font-bold"
-          }`}
+          className="p-2 my-1 text-gray-300 rounded hover:bg-gray-600 hover:underline transition ease-linear duration-100 after-arrow"
+          activeClassName="underline"
         >
-          About Us
-        </Link>
-        <Link
+          About
+        </NavLink>
+
+        <NavLink
           to="/program"
-          className={`${
-            currentPage === "/program"
-              ? " text-xl md:rounded bg-gradient-to-r hover:from-green-500 hover:to-blue-400 from-red-600 to-purple-500 text-transparent md:p-3 bg-clip-text font-bold" //  from-green-500 to-blue-400
-              : "text-xl md:rounded bg-gradient-to-r to-red-300 from-green-400 hover:bg-gradient-to-r hover:from-red-600 hover:to-purple-500 text-transparent md:p-3 bg-clip-text font-bold"
-          }`}
+          className="p-2 my-1 text-gray-300 rounded hover:bg-gray-600 hover:underline transition ease-linear duration-100 after-arrow"
+          activeClassName="underline"
         >
           Program
-        </Link>
+        </NavLink>
+
+        <NavLink
+          to="/pricing"
+          className="p-2 my-1 text-gray-300 rounded hover:bg-gray-600 hover:underline transition ease-linear duration-100 after-arrow"
+          activeClassName="underline"
+        >
+          Pricing
+        </NavLink>
+        <NavLink
+          to="/register"
+          className="py-2 px-3 anim text-gray-100 rounded transition duration-300 text-center font-bold"
+        >
+          Register
+        </NavLink>
       </div>
-      <Link
-        to="/register"
-        className={`${
-          currentPage === "/register"
-            ? " text-xl md:rounded bg-gradient-to-r hover:from-green-500 hover:to-blue-400 from-red-600 to-purple-500 text-transparent md:p-3 bg-clip-text font-bold" //  from-green-500 to-blue-400
-            : "text-xl md:rounded bg-gradient-to-r to-red-300 from-green-400 hover:bg-gradient-to-r hover:from-red-600 hover:to-purple-500 text-transparent md:p-3 bg-clip-text font-bold"
-          // ? " text-xl md:rounded bg-gradient-to-r hover:from-green-500 hover:to-blue-400 from-purple-500 to-red-600 text-transparent md:p-3 bg-clip-text" //  from-green-500 to-blue-400
-          // : "text-xl md:rounded bg-red-400 hover:bg-gradient-to-r hover:from-purple-500 hover:to-red-600 text-black md:p-3 bg-clip-text"
-        }`}
-      >
-        Register
-      </Link>
     </nav>
   );
 };
