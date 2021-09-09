@@ -74,6 +74,7 @@ const Home = () => {
         <div className="clipped animate-animateGradient max-h-100% max-w-100%"></div>
       </div>
 
+
       {/* <Container> */}
       <div className="flex py-6 flex-col justify-center sm:py-12">
         <div className="relative py-3 sm:max-w-xl sm:mx-auto">
@@ -174,6 +175,7 @@ const Home = () => {
                     training, but the real world experience to launch yourself
                     into a new career.
                   </p>
+
                 </div>
                 <Link
                   to="/program"

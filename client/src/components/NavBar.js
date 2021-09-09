@@ -91,6 +91,8 @@ const NavBar = () => {
             <span className={`line ${mobileMenu ? "active" : ""}`}></span>
           </button>
         </div>
+
+
       </div>
 
       {/* MOBILE */}
