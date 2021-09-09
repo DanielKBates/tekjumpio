@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink,  } from "react-router-dom";
 const pages = require("./pages.json");
 
 const NavBar = () => {
@@ -62,7 +62,7 @@ const NavBar = () => {
                   return (
                     <NavLink
                       to={page.to}
-                      className="py-5 px-3 text-gray-300 hover:text-white hover:underline transition ease-linear duration-300 after-arrow"
+                      className="py-5 px-3 text-gray-300 hover:text-white hover:underline transition ease-linear duration-300"
                       activeClassName="underline"
                     >
                       {page.name}
