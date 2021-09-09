@@ -2,26 +2,21 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import Container from "../components/Container";
-// import SlideIn from "../components/slideIn";
 import AnimatedCard from "../components/AnimatedCard";
 
 const Home = () => {
-
-
-  //Ok so the <AnimatedCard>s use IntersectionObserver API. Google it if you mess with the way they are called here. Works until we render
-  // more than one onto the screen with an animation at the same time. /shrug. Low prio task for the future, immediate solution is to simply
-  //not render two of them into the screen on load at the same time. **THIS BUG IS ANIMATION ONLY**
-
+  //Ok so the <AnimatedCard>s use IntersectionObserver API. Google it if you mess with the way they are called here. Use them for any scroll event based animations (although it doesnt really look at)
 
   return (
     <div>
       <div className="relative">
-        <div className="absolute md:top-44 top-16 flex flex-col justify-between md:flex-row z-10">
+        <div className="absolute md:top-32 top-16 flex flex-col justify-between md:flex-row z-10">
           <div className="flex justify-center">
             <div className=" flex-col justify-items-start  px-2 w-3/4 space-y-2 ">
               <h1 className="text-white text-3xl xl:text-5xl flex-col justify-center py-4 animate-displayWaveText leading-none">
-                <div className="py-2">Learn Real Skills</div>
-                <div className="py-0">Build Real Projects</div>
+                <div className="py-2">Learn Real Skills.</div>
+                <div className="py-2">Work with Real Clients</div>
+                <div className="py-2">Build Real Projects.</div>
               </h1>
               <span className="mx-auto text-xl xl:text-2xl text-gray-300 flex justify-center animate-displayWaveText max-w-3xl mb-8">
                 Join Tekjump today to Lorem ipsum dolor sit amet consectetur
@@ -30,11 +25,11 @@ const Home = () => {
                 consequuntur laudantium quia quo sapiente fugiat quod modi
                 beatae!
               </span>
-              <div className="flex items-center space-x-1 w-full">
+              <div className="flex items-center space-x-1 w-3/4">
                 <NavLink
                   exact
                   to="/register"
-                  className="py-3 my-10 px-20 anim text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full arrow-hover"
+                  className="py-3 my-10 px-20 multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full arrow-hover"
                 >
                   Register Now{" "}
                   <svg
@@ -55,8 +50,9 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div >
+          <div className="flex items-center">
             <AnimatedCard
+              threshold={0.5}
               activeClassName="transform translate-x-4 opacity-100 transition-all duration-1000 ease-in"
               inactiveClassName="transform opacity-0 translate-x-0 transition-all duration-1000 ease-in"
             >
@@ -82,18 +78,17 @@ const Home = () => {
         <div className="clipped animate-animateGradient max-h-100% max-w-100%"></div>
       </div>
       <Container>
-        <div
-          className="flex py-6 flex-col justify-center sm:py-12"
-        >
+        <div className="flex py-6 flex-col justify-center sm:py-12">
           <div className="relative py-3 sm:max-w-xl sm:mx-auto">
             <AnimatedCard
+              threshold={0.25}
               activeClassName={
-                "transform rotate-12 opacity-100 transition-all duration-1000 ease-in absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
+                "transform rotate-12 opacity-100 transition-all duration-1400 ease-in absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
               }
-              inactiveClassName="transition-all duration-1000 ease-in translate-y-0 opacity-0 absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
-            // propClassName={
-            //   "absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl "
-            // }
+              inactiveClassName="transition-all duration-1400 ease-in translate-y-0 opacity-0 absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
+              // propClassName={
+              //   "absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl "
+              // }
             />
 
             <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
@@ -136,7 +131,8 @@ const Home = () => {
                               xpress,{" "}
                               <span className="text-white font-bold"> R</span>
                               eact,{" "}
-                              <span className="text-white font-bold"> N</span>ode.js
+                              <span className="text-white font-bold"> N</span>
+                              ode.js
                             </span>
                           </span>{" "}
                           stack.
@@ -215,20 +211,17 @@ const Home = () => {
           </div>
         </div>
         <AnimatedCard
+          threshold={0.75}
           activeClassName={
             "transform translate-x-0 opacity-100 transition-all duration-1000 ease-in-out"
           }
-          inactiveClassName="transition-all duration-1000 ease-in-out transform translate-x-4 opacity-0"
+          inactiveClassName="transition-all duration-1000 ease-in-out transform -translate-x-7 -translate-y-7 opacity-0"
         >
           <div className="bg-indigo-900 testDiv w-1/2">
-            <span>&#8600;</span>BLAH
+            <span>&#8600;</span>DEMO DEMO
           </div>
         </AnimatedCard>
       </Container>
-
-
-
-
     </div>
   );
 };

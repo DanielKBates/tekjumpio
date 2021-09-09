@@ -78,7 +78,7 @@ const NavBar = () => {
           <div className="hidden md:flex items-center space-x-1">
             <NavLink
               to="/register"
-              className="py-2 px-10 anim text-gray-100 rounded transition duration-300 text-center font-bold"
+              className="py-2 px-10 multiGradient animate-animateGradient text-gray-100 rounded transition duration-300 text-center font-bold"
             >
               Register
             </NavLink>

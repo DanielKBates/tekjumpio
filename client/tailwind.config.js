@@ -37,6 +37,14 @@ module.exports = {
         "gradient-blue": "#23a6d5",
         "gradient-green": "#23d5ab",
       },
+      transitionDuration: {
+        "0": "0ms",
+        "1200": "1200ms",
+        "1400": "1400ms",
+        "1600":"1600ms",
+        "1800": "1800ms",
+        "2000": "2000ms",
+      }
     },
   },
   variants: {
