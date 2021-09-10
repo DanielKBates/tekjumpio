@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About/About";
-import Program from "./pages/Program";
+import Program from "./pages/Program/Program";
 import Register from "./pages/Register/Register";
 import Contact from "./pages/Contact/Contact";
 import Footer from "./components/Footer";

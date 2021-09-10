@@ -73,8 +73,8 @@ const Footer = () => {
               </svg>
             </Link>
           </div>
-          <p className="mt-8 text-base leading-6 text-center text-gray-400">
-            © 2021 Thinking Feet
+          <p className="mt-8 text-base  leading-6 text-center text-gray-400">
+            © 2021 Thinking Feet LLC
           </p>
         </div>
       </section>
