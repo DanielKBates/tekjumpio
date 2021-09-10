@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Home",
+    "to": "/"
+  },
+  {
+    "name": "Register",
+    "to": "/register"
+  },
+  {
+    "name": "About",
+    "to": "/about",
+    "forNav": true
+
+  },
+  {
+    "name": "Programs",
+    "to": "/program",
+    "forNav": true
+
+  },
+  {
+    "name": "Contact",
+    "to": "/contact"
+  }
+]
