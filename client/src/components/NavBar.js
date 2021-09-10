@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink,  } from "react-router-dom";
 const pages = require("./pages.json");
-const NavBar = ({ currentPage }) => {
+
+const NavBar = () => {
+
   const [mobileMenu, setMobileMenu] = useState(false);
   const [dir, setDir] = useState(1);
   const handleMobileMenu = () => {
     setMobileMenu(!mobileMenu);
   };
 
-  useEffect(() => {
+  const handleNavScroll = () => {
     var lastScrollTop = 0;
     window.addEventListener(
       "scroll",
@@ -25,6 +27,10 @@ const NavBar = ({ currentPage }) => {
       },
       false
     );
+  }
+
+  useEffect(() => {
+    handleNavScroll()
   }, []);
 
   return (
@@ -38,7 +44,8 @@ const NavBar = ({ currentPage }) => {
           : {}
       }
     >
-      <div className="max-w-screen-2xl mx-auto">
+
+      <div className="max-w-full px-10 mx-auto">
         <div className="flex justify-between items-center">
           <div className="flex space-x-4">
             <div>
@@ -56,7 +63,7 @@ const NavBar = ({ currentPage }) => {
                   return (
                     <NavLink
                       to={page.to}
-                      className="py-5 px-3 text-gray-300 hover:text-white hover:underline transition ease-linear duration-300 after-arrow"
+                      className="py-5 px-3 text-gray-300 hover:text-white hover:underline transition ease-linear duration-300"
                       activeClassName="underline"
                       key={page.to}
                     >
@@ -73,7 +80,7 @@ const NavBar = ({ currentPage }) => {
           <div className="hidden md:flex items-center space-x-1">
             <NavLink
               to="/register"
-              className="py-2 px-10 anim text-gray-100 rounded transition duration-300 text-center font-bold"
+              className="py-2 px-10 multiGradient animate-animateGradient text-gray-100 rounded transition duration-300 text-center font-bold"
             >
               Register
             </NavLink>
@@ -86,6 +93,8 @@ const NavBar = ({ currentPage }) => {
             <span className={`top-3 block absolute w-full h-0.5 left-0 border-none outline-none rounded bg-gray-300 transition-all duration-300 transform ${mobileMenu ? "-rotate-45 top-5" : ""}`}></span>
           </button>
         </div>
+
+
       </div>
 
       {/* MOBILE */}
