@@ -1,4 +1,5 @@
 module.exports = {
+
   purge: ["./src/*/.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -20,6 +21,10 @@ module.exports = {
    
  
     extend: {
+       zIndex: {
+        "-10": "-10",
+      },
+
       keyframes: {
         displayWaveText: {
           "0%": { opacity: "0" },
@@ -47,6 +52,7 @@ module.exports = {
         "gradient-pink": "#e73c7e",
         "gradient-blue": "#23a6d5",
         "gradient-green": "#23d5ab",
+         "light-blue-500": "rgba(14,165,233,var(--tw-bg-opacity))"
       },
       transitionDuration: {
         "0": "0ms",

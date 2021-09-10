@@ -44,6 +44,7 @@ const NavBar = () => {
           : {}
       }
     >
+
       <div className="max-w-full px-10 mx-auto">
         <div className="flex justify-between items-center">
           <div className="flex space-x-4">
@@ -64,12 +65,13 @@ const NavBar = () => {
                       to={page.to}
                       className="py-5 px-3 text-gray-300 hover:text-white hover:underline transition ease-linear duration-300"
                       activeClassName="underline"
+                      key={page.to}
                     >
                       {page.name}
                     </NavLink>
                   );
                 } else {
-                  return(null)
+                  return null;
                 }
               })}
             </div>
@@ -87,8 +89,8 @@ const NavBar = () => {
             className="flex flex-col items-center justify-center relative w-8 h-8 md:hidden"
             onClick={handleMobileMenu}
           >
-            <span className={`line ${mobileMenu ? "active" : ""}`}></span>
-            <span className={`line ${mobileMenu ? "active" : ""}`}></span>
+            <span className={`top-5 block absolute w-full h-0.5 left-0 border-none outline-none rounded bg-gray-300 transition-all duration-300 transform ${mobileMenu ? "rotate-45 top-5" : ""}`}></span>
+            <span className={`top-3 block absolute w-full h-0.5 left-0 border-none outline-none rounded bg-gray-300 transition-all duration-300 transform ${mobileMenu ? "-rotate-45 top-5" : ""}`}></span>
           </button>
         </div>
 
@@ -104,29 +106,23 @@ const NavBar = () => {
             : { height: "0px", opacity: 0, padding: "0rem" }
         }
       >
-        <NavLink
-          to="/about"
-          className="p-2 my-1 text-gray-300 rounded hover:bg-gray-600 hover:underline transition ease-linear duration-100 after-arrow"
-          activeClassName="underline"
-        >
-          About
-        </NavLink>
 
-        <NavLink
-          to="/program"
-          className="p-2 my-1 text-gray-300 rounded hover:bg-gray-600 hover:underline transition ease-linear duration-100 after-arrow"
-          activeClassName="underline"
-        >
-          Program
-        </NavLink>
-
-        <NavLink
-          to="/pricing"
-          className="p-2 my-1 text-gray-300 rounded hover:bg-gray-600 hover:underline transition ease-linear duration-100 after-arrow"
-          activeClassName="underline"
-        >
-          Pricing
-        </NavLink>
+        {pages.map((page) => {
+          if (page.forNav) {
+            return (
+              <NavLink
+              to={page.to}
+              className="p-2 my-1 text-gray-300 rounded hover:bg-gray-600 hover:underline transition ease-linear duration-100 after-arrow"
+              activeClassName="underline"
+              key={page.to}
+            >
+              {page.name}
+            </NavLink>
+            );
+          } else {
+            return null;
+          }
+        })}
         <NavLink
           to="/register"
           className="py-2 px-3 anim text-gray-100 rounded transition duration-300 text-center font-bold"

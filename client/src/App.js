@@ -10,10 +10,12 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Program from "./pages/Program";
 import Register from "./pages/Register";
+import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
 function App() {
   return (
+
     <Router>
       <div className="min-h-screen">
         <div className="fixed min-h-screen min-w-full bg-gray-800 -z-1"></div>

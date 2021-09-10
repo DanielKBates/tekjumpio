@@ -7,22 +7,22 @@
 body {
   --border-width: 2px;
   font-family: "Poppins", sans-serif;
-  overflow: overlay;
   overflow-x: hidden;
+  @apply bg-gray-800 overlay md:overflow-x-hidden;
 }
-.line:nth-of-type(1) {
-  top: 1.2rem;
+a:focus-visible,
+button:focus-visible,
+link:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  @apply ring-4 ring-white ring-opacity-50 outline-none;
 }
-.line:nth-of-type(2) {
-  top: 0.7rem;
+ 
+code:focus-visible {
+  outline: none;
 }
-.line.active:nth-of-type(1) {
-  transform: rotate(-45deg);
-  top: 1rem;
-}
-.line.active:nth-of-type(2) {
-  transform: rotate(45deg);
-  top: 1rem;
+.overlay {
+  overflow: overlay;
 }
 .clipped {
   /* z-index: -1; */
@@ -88,13 +88,6 @@ body {
 ::-webkit-scrollbar-thumb {
   @apply bg-gray-500 rounded transition-colors shadow-2xl hover:bg-gray-600 active:bg-gray-700;
 }
-.line {
-  transition: all 0.35s;
-  @apply block absolute w-full h-0.5 left-0 border-none outline-none rounded bg-gray-300;
-}
-.testDiv {
-  @apply mx-auto drop-shadow-2xl h-96 my-20 flex items-center justify-center flex-col text-white text-3xl;
-}
 
 
 /* CONVERT TO TAILWIND */
@@ -127,7 +120,6 @@ body {
   /* margin-left: -60px; */
 }
 
-
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
@@ -144,3 +136,4 @@ body {
 .arrow-hover:hover .arrow {
   left: 10px;
 }
+
