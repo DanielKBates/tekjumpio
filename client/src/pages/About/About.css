@@ -65,20 +65,12 @@ body {
 }
 
 
-.wrapper{
-    background-image:url("tekjump.gif");
-    background-size: cover;
-}
 
 #video{
     border-radius: 8px;
 }
 
-#hello{
-  /*background: repeating-linear-gradient(0.25turn,#74ABDD, #74ABDD 49.9%, #498DCB 50.1%, #498DCB 100%);*/
-  background:url("background.jpg")
 
-}
 
 @import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');
 body{

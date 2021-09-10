@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import CodeBlock from "../components/CodeBlock";
+import CodeBlock from "../../components/CodeBlock";
 const Contact = () => {
   const [frame, setFrame] = useState(0);
   useEffect(() => {

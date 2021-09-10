@@ -1,13 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./About.css";
-import logo from "./video2.mp4";
-import { Player } from "video-react";
 
-import ContainerAbout from "../components/ContainerAbout";
-import ContainerHeader from "../components/ContainerHeader";
-import SlideIn2 from "../components/slideIn2";
-import SlideIn from "../components/slideIn";
+
+import ContainerAbout from "../../components/ContainerAbout";
+import ContainerHeader from "../../components/ContainerHeader";
+import SlideIn from "../../components/slideIn";
 
 // import css
 
@@ -131,8 +129,8 @@ const About = () => {
             </p>
           </div>
         </div>
-        <SlideIn dir={[0, 0]} uniqueID="test-slidin9">
-          <div class="flex mr-20 mb-16 mt-32 ">
+        {/* <SlideIn dir={[0, 0]} uniqueID="test-slidin9"> */}
+          {/* <div class="flex mr-20 mb-16 mt-32 ">
             <div class=" shadow-3xl xl:mb-6 2xl:mb-16  relative group max-w-md mx-auto rounded-xl  overflow-hidden md:max-w-2xl bg-white p-2 StreamsHero-image relative bg-gradient-to-r from-purple-400 via-green-400 to-red-400 h-1/2">
               <div class="StreamsHero-content ">
                 <h1 class="text-white">Lorem Text</h1>
@@ -183,10 +181,10 @@ const About = () => {
               </div>
             </div>
           </div>
-        </SlideIn>
+        </SlideIn> */}
       </div>
 
-      <SlideIn dir={[-1, 0]} uniqueID="test-slidin9">
+      {/* <SlideIn dir={[-1, 0]} uniqueID="test-slidin9">
           <div class="flex mr-20 mb-36">
             <div class=" shadow-3xl xl:mb-6 2xl:mb-16  relative group max-w-md mx-auto rounded-xl  overflow-hidden md:max-w-2xl bg-white p-2 StreamsHero-image relative bg-gradient-to-r from-purple-400 via-green-400 to-red-400 h-1/2">
               <div class="StreamsHero-content">
@@ -211,12 +209,12 @@ const About = () => {
               ></img>
             </div>
           </div>
-        </SlideIn>
+        </SlideIn> */}
 
         <hr class="bg-white m-8 mb-16"></hr>
 
 
-      <div class="flex p-8">
+      <div class="hidden sm:flex p-8">
         <div class="card">
           <h3 class="title">Reviews</h3>
           <div class="bar">

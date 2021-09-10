@@ -7,10 +7,10 @@ import {
   
 } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About";
+import About from "./pages/About/About";
 import Program from "./pages/Program";
-import Register from "./pages/Register";
-import Contact from "./pages/Contact";
+import Register from "./pages/Register/Register";
+import Contact from "./pages/Contact/Contact";
 import Footer from "./components/Footer";
 
 function App() {
@@ -30,6 +30,9 @@ function App() {
             </Route>
             <Route  path="/register">
               <Register />
+            </Route>
+            <Route  path="/contact">
+              <Contact />
             </Route>
             <Route  path="/">
               <Home />
