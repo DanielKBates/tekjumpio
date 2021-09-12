@@ -5,7 +5,7 @@ import Container from "../components/Container";
 import AnimatedCard from "../components/AnimatedCard";
 
 const Home = () => {
-  //Ok so the <AnimatedCard>s use IntersectionObserver API. Google it if you mess with the way they are called here. Use them for any scroll event based animations (although it doesnt really look at)
+  //Ok so the <AnimatedCard>s use IntersectionObserver API. Google it if you mess with the way they are called here. Use them for any scroll event based animations (although it doesnt really look at scrolling)
 
   return (
     <div>
@@ -20,7 +20,7 @@ const Home = () => {
                 <div className="py-2">Build Real Projects.</div>
               </h1>
 
-              <span className="mx-auto text-xl xl:text-2xl text-gray-300 flex justify-center animate-displayWaveText max-w-3xl ">
+              <span className="mx-auto text-xl xl:text-4xl text-gray-300 flex justify-center animate-displayWaveText max-w-3xl ">
                 Join Tekjump today to Lorem ipsum dolor sit amet consectetur
                 adipisicing elit. Molestias provident veritatis voluptas
                 perspiciatis voluptates excepturi non, a, eius esse incidunt ad
@@ -63,7 +63,7 @@ const Home = () => {
               <img
                 src={`${process.env.PUBLIC_URL}/images/rec5.gif`}
                 alt="placeholder"
-                className="rounded-lg w-11/12 shadow-2xl  "
+                className="rounded-lg w-11/12 shadow-2xl border-2 border-white  "
               />
             </AnimatedCard>
           </div>
@@ -211,8 +211,11 @@ const Home = () => {
         }
         inactiveClassName="transition-all duration-1000 ease-in-out transform -translate-x-7 -translate-y-7 opacity-0"
       >
-        <div className="bg-indigo-900 testDiv w-1/2">
-          <span>&#8600;</span>DEMO DEMO
+        <div className="bg-indigo-700 w-1/2 mx-auto my-20 flex-row h-52 p-4 rounded">
+          <p className="text-2xl">REVIEWER NAME</p>
+          <p> Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
+          Lorem LoremLorem LoremLorem LoremLorem LoremLorem LoremLorem LoremLorem LoremLorem LoremLorem Loremvvv Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
+          Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem</p>
         </div>
       </AnimatedCard>
       {/* </Container> */}
