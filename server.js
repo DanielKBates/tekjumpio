@@ -2,18 +2,20 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
+// imports 
+const keys = require("./config/keys")
+
 // globals
 const app = express();
 const PORT = process.env.PORT || 3001;
-const CONNECTION_URL =
-  "mongodb+srv://user:user@cluster0.0cow3.mongodb.net/devDB?retryWrites=true&w=majority";
+const MONGO_URL = "mongodb+srv://user:user@cluster0.0cow3.mongodb.net/devDB?retryWrites=true&w=majority";
 
 // middles
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 mongoose
-  .connect(CONNECTION_URL)
+  .connect(keys.mongoURI)
   .then(() => {
     console.log("Mongoose Connected"),
       app.listen(PORT, () =>

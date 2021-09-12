@@ -1,8 +1,9 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
-import Container from "../components/Container";
-import AnimatedCard from "../components/AnimatedCard";
+// Components
+// import Container from "../../components/Container";
+import AnimatedCard from "../../components/AnimatedCard";
 
 const Home = () => {
   //Ok so the <AnimatedCard>s use IntersectionObserver API. Google it if you mess with the way they are called here. Use them for any scroll event based animations (although it doesnt really look at scrolling)
@@ -31,9 +32,8 @@ const Home = () => {
                 <NavLink
                   exact
                   to="/register"
-
                   className="py-3 my-8 px-20 multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full arrow-hover"
-                 >
+                >
                   Register Now{" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,6 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex">
             <AnimatedCard
               threshold={0.5}
               activeClassName="transform -translate-x-4 opacity-100 transition-all duration-1000 ease-in"
@@ -66,7 +65,6 @@ const Home = () => {
                 className="rounded-lg w-11/12 shadow-2xl border-2 border-white  "
               />
             </AnimatedCard>
-          </div>
         </div>
         <svg className="svg absolute">
           <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
@@ -74,11 +72,26 @@ const Home = () => {
           </clipPath>
         </svg>
         <div className="clipped animate-animateGradient max-h-100% max-w-100%"></div>
+        <div className="flex justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-10 w-10 animate-bounce"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="white"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </div>
       </div>
 
-
       {/* <Container> */}
-      <div className="flex py-6 flex-col justify-center sm:py-12">
+      <div className="flex py-6 mt-5 flex-col justify-center sm:py-12">
         <div className="relative py-3 sm:max-w-xl sm:mx-auto">
           <AnimatedCard
             threshold={0.25}
@@ -177,7 +190,6 @@ const Home = () => {
                     training, but the real world experience to launch yourself
                     into a new career.
                   </p>
-
                 </div>
                 <Link
                   to="/program"
@@ -213,9 +225,16 @@ const Home = () => {
       >
         <div className="bg-indigo-700 w-1/2 mx-auto my-20 flex-row h-52 p-4 rounded">
           <p className="text-2xl">REVIEWER NAME</p>
-          <p> Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
-          Lorem LoremLorem LoremLorem LoremLorem LoremLorem LoremLorem LoremLorem LoremLorem LoremLorem Loremvvv Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
-          Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem</p>
+          <p>
+            {" "}
+            Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
+            Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
+            Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
+            LoremLorem LoremLorem LoremLorem LoremLorem LoremLorem LoremLorem
+            LoremLorem LoremLorem Loremvvv Lorem Lorem Lorem Lorem Lorem Lorem
+            Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
+            Lorem Lorem Lorem Lorem Lorem Lorem Lorem
+          </p>
         </div>
       </AnimatedCard>
       {/* </Container> */}

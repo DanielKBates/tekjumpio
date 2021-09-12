@@ -14,7 +14,6 @@ const Confirm = (props) => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {

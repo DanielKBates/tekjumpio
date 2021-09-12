@@ -1,12 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./About.css";
 
 
 import ContainerAbout from "../../components/ContainerAbout";
-import ContainerHeader from "../../components/ContainerHeader";
-import SlideIn from "../../components/slideIn";
-
 // import css
 
 const About = () => {
@@ -83,7 +79,7 @@ const About = () => {
             <div>
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/1200px-IntelliJ_IDEA_Icon.svg.png"
-                alt="This image is our logo"
+                alt="logo"
                 class="w-full m-16"
               ></img>
             </div>

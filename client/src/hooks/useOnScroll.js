@@ -4,7 +4,6 @@ const useOnScroll = (options) => {
   const scrollRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const scrollCallBack = (entries) => {
-    console.log(entries)
     const [entry] = entries;
     setIsVisible(entry.isIntersecting);
   };
