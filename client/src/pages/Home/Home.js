@@ -10,7 +10,6 @@ const Home = () => {
 
   return (
     <div>
-      {/* Home View - SVG, gif and headers */}
       <div className="relative">
         <div className="absolute md:top-32 top-16 grid grid-cols-2  z-10">
           <div className="flex justify-center">
@@ -54,6 +53,7 @@ const Home = () => {
             </div>
           </div>
 
+          <div className="flex">
             <AnimatedCard
               threshold={0.5}
               activeClassName="transform -translate-x-4 opacity-100 transition-all duration-1000 ease-in"
@@ -65,6 +65,7 @@ const Home = () => {
                 className="rounded-lg w-11/12 shadow-2xl border-2 border-white  "
               />
             </AnimatedCard>
+          </div>
         </div>
         <svg className="svg absolute">
           <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
@@ -72,26 +73,10 @@ const Home = () => {
           </clipPath>
         </svg>
         <div className="clipped animate-animateGradient max-h-100% max-w-100%"></div>
-        <div className="flex justify-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-10 w-10 animate-bounce"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="white"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </div>
       </div>
 
       {/* <Container> */}
-      <div className="flex py-6 mt-5 flex-col justify-center sm:py-12">
+      <div className="flex py-6 flex-col justify-center sm:py-12">
         <div className="relative py-3 sm:max-w-xl sm:mx-auto">
           <AnimatedCard
             threshold={0.25}

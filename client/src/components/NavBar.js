@@ -39,8 +39,8 @@ const NavBar = () => {
       style={
         !mobileMenu
           ? dir === 1
-            ? { minHeight: "68px" }
-            : { minHeight: "68px", transform: "translateY(-75px)" }
+            ? { minHeight: "7%" }
+            : { minHeight: "7%", transform: "translateY(-70vh)" }
           : {}
       }
     >
@@ -102,7 +102,7 @@ const NavBar = () => {
         className="flex flex-col p-8 pt-0 md:hidden transition-all duration-300 overflow-hidden"
         style={
           mobileMenu
-            ? { opacity: 1, height: "216px" }
+            ? { opacity: 1, height: "5%" }
             : { height: "0px", opacity: 0, padding: "0rem" }
         }
       >
