@@ -10,14 +10,14 @@ const About = () => {
   return (
     <div className="pt-24">
       <Container>
-        <AboutTabs />
-        <div className=" bg-white shadow-3xl rounded m-8 p-8   text-center">
+
+        <div className="bg-opacity-60 shadow-3xl rounded-xl p-8 mb-10 text-center">
           <div>
-            <h1 className="text-9xl text-black text-center pb-4" id="header2">
+            <h1 className="text-7xl text-white text-center pb-4 animate-fadeInText">
               Our Mission
             </h1>
 
-            <p className="text-white font-thin text-sm leading-normal text-center text-xl">
+            <p className="text-white font-thin text-base leading-normal p-2 animate-fadeInText text-center">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Voluptatibus quia, nulla! Maiores et perferendis eaque,
               exercitationem praesentium nihil. Lorem ipsum dolor sit amet,
@@ -31,8 +31,10 @@ const About = () => {
               consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
               perferendis eaque, exercitationem praesentium nihil.Lorem ipsum
               dolor sit amet, consectetur adipisicing elit. Voluptatibus quia,
-              nulla! Maiores et perferendis eaque, exercitationem praesentium
-              nihil.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+
+            <p className="text-white font-thin text-base leading-normal p-2 animate-fadeInText text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Voluptatibus quia, nulla! Maiores et perferendis eaque,
               exercitationem praesentium nihil. Lorem ipsum dolor sit amet,
               consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
@@ -42,10 +44,15 @@ const About = () => {
               nihil.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Voluptatibus quia, nulla! Maiores et perferendis eaque,
               exercitationem praesentium nihil.Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores
+              consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
+              perferendis eaque, exercitationem praesentium nihil.Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit. Voluptatibus quia,
             </p>
+
           </div>
         </div>
+
+        <AboutTabs />
 
         {/* <div className="hidden sm:flex p-8">
           <div className="card">

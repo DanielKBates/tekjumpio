@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Components
 // import Container from "../../components/Container";
@@ -11,16 +11,16 @@ const Home = () => {
   return (
     <div>
       <div className="relative">
-        <div className="absolute md:top-32 top-16 grid grid-cols-2  z-10">
+        <div className="absolute md:top-32 top-16 grid grid-cols-2 z-10">
           <div className="flex justify-center">
             <div className=" flex-col  w-3/4 space-y-2 ">
-              <h1 className="text-white text-3xl xl:text-5xl flex-col  animate-displayWaveText leading-none">
+              <h1 className="text-white text-3xl xl:text-5xl flex-col  animate-fadeInText leading-none">
                 <div className="py-2">Learn Real Skills.</div>
                 <div className="py-2">Work with Real Clients</div>
                 <div className="py-2">Build Real Projects.</div>
               </h1>
 
-              <span className="mx-auto text-xl xl:text-4xl text-gray-300 flex justify-center animate-displayWaveText max-w-3xl ">
+              <span className="mx-auto text-3xl text-gray-300 flex justify-center animate-fadeInText max-w-3xl ">
                 Join Tekjump today to Lorem ipsum dolor sit amet consectetur
                 adipisicing elit. Molestias provident veritatis voluptas
                 perspiciatis voluptates excepturi non, a, eius esse incidunt ad
@@ -28,7 +28,7 @@ const Home = () => {
                 beatae!
               </span>
               <div className="flex items-center space-x-1 w-3/4">
-                <NavLink
+                <Link
                   exact
                   to="/register"
                   className="py-3 my-8 px-20 multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full arrow-hover"
@@ -48,7 +48,7 @@ const Home = () => {
                       d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
                     />
                   </svg>
-                </NavLink>
+                </Link>
               </div>
             </div>
           </div>
@@ -62,7 +62,7 @@ const Home = () => {
               <img
                 src={`${process.env.PUBLIC_URL}/images/rec5.gif`}
                 alt="placeholder"
-                className="rounded-lg w-11/12 shadow-2xl border-2 border-white  "
+                className="rounded-lg w-11/12 h-11/12 shadow-2xl border-2 border-white  "
               />
             </AnimatedCard>
           </div>

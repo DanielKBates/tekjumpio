@@ -5,7 +5,7 @@ const pages = require("./pages.json");
 const Footer = () => {
   return (
     <div className="relative">
-      <section className="bg-black gradient-box">
+      <section className="bg-black gradient-box animate-animateGradient">
         <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
           <nav className="flex flex-wrap justify-center -mx-5 -my-2">
             {pages.map((e) => {
