@@ -8,7 +8,6 @@ const keys = require("./config/keys")
 // globals
 const app = express();
 const PORT = process.env.PORT || 3001;
-const MONGO_URL = "mongodb+srv://user:user@cluster0.0cow3.mongodb.net/devDB?retryWrites=true&w=majority";
 
 // middles
 app.use(express.urlencoded({ extended: true }));

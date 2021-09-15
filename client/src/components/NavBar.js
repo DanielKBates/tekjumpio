@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink,  } from "react-router-dom";
-const pages = require("./pages.json");
+const pages = require("../utils/pages.json");
 
 const NavBar = () => {
 

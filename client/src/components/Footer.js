@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const pages = require("./pages.json");
+const pages = require("../utils/pages.json");
 
 const Footer = () => {
   return (

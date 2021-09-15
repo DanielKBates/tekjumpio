@@ -28,7 +28,11 @@ module.exports = {
       },
 
       keyframes: {
-        fadeInText: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        fadeInDelayed: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
@@ -45,7 +49,7 @@ module.exports = {
         },
       },
       animation: {
-        fadeInText: "fadeInText 1s ease-in",
+        fadeIn: "fadeIn 1500ms ease-in",
         animateGradient: "animateGradient 15s ease-in infinite",
       },
       colors: {

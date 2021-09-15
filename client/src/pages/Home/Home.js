@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 // Components
 // import Container from "../../components/Container";
 import AnimatedCard from "../../components/AnimatedCard";
+import Reviews from "./Reviews";
 
 const Home = () => {
   //Ok so the <AnimatedCard>s use IntersectionObserver API. Google it if you mess with the way they are called here. Use them for any scroll event based animations (although it doesnt really look at scrolling)
@@ -14,20 +15,20 @@ const Home = () => {
         <div className="absolute md:top-32 top-16 grid grid-cols-2 z-10">
           <div className="flex justify-center">
             <div className=" flex-col  w-3/4 space-y-2 ">
-              <h1 className="text-white text-3xl xl:text-5xl flex-col  animate-fadeInText leading-none">
+              <h1 className="text-white text-3xl xl:text-5xl flex-col  animate-fadeIn leading-none">
                 <div className="py-2">Learn Real Skills.</div>
                 <div className="py-2">Work with Real Clients</div>
                 <div className="py-2">Build Real Projects.</div>
               </h1>
 
-              <span className="mx-auto text-3xl text-gray-300 flex justify-center animate-fadeInText max-w-3xl ">
+              <span className="mx-auto text-3xl text-gray-300 flex justify-center animate-fadeIn max-w-3xl ">
                 Join Tekjump today to Lorem ipsum dolor sit amet consectetur
                 adipisicing elit. Molestias provident veritatis voluptas
                 perspiciatis voluptates excepturi non, a, eius esse incidunt ad
                 consequuntur laudantium quia quo sapiente fugiat quod modi
                 beatae!
               </span>
-              <div className="flex items-center space-x-1 w-3/4">
+              <div className="flex items-center space-x-1 w-3/4 animate-fadeIn">
                 <Link
                   exact
                   to="/register"
@@ -75,8 +76,7 @@ const Home = () => {
         <div className="clipped animate-animateGradient max-h-100% max-w-100%"></div>
       </div>
 
-      {/* <Container> */}
-      <div className="flex py-6 flex-col justify-center sm:py-12">
+      <div className="flex py-6 mb-10 flex-col justify-center sm:py-12">
         <div className="relative py-3 sm:max-w-xl sm:mx-auto">
           <AnimatedCard
             threshold={0.25}
@@ -201,28 +201,18 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <AnimatedCard
-        threshold={0.75}
+        threshold={0.25}
         activeClassName={
           "transform translate-x-0 opacity-100 transition-all duration-1000 ease-in-out"
         }
         inactiveClassName="transition-all duration-1000 ease-in-out transform -translate-x-7 -translate-y-7 opacity-0"
       >
-        <div className="bg-indigo-700 w-1/2 mx-auto my-20 flex-row h-52 p-4 rounded">
-          <p className="text-2xl">REVIEWER NAME</p>
-          <p>
-            {" "}
-            Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
-            Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
-            Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
-            LoremLorem LoremLorem LoremLorem LoremLorem LoremLorem LoremLorem
-            LoremLorem LoremLorem Loremvvv Lorem Lorem Lorem Lorem Lorem Lorem
-            Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
-            Lorem Lorem Lorem Lorem Lorem Lorem Lorem
-          </p>
+        <div className="w-screen flex justify-center">
+          <Reviews />
         </div>
       </AnimatedCard>
-      {/* </Container> */}
     </div>
   );
 };
