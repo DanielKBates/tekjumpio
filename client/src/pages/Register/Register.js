@@ -26,7 +26,7 @@ const Register = () => {
   // pattern: /^[0-9]+$/g
   if (!registered) {
     return (
-      <div className="w-1/2 m-auto text-center bg-gray-400 rounded p-10 mb-20 shadow-xl">
+      <div className="w-2/3 mx-auto text-center shadow-3xl rounded pt-24 mb-20 shadow-xl">
         <form onSubmit={handleSubmit(onSubmit)} className="mt-20">
           <div className="txt-field">
             <input

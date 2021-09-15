@@ -22,7 +22,7 @@ const Confirm = (props) => {
   }
   if (!editing) {
     return (
-      <div className="card rounded bg-gray-800 shadow w-1/2 m-auto text-center relative">
+      <div className="rounded bg-gray-800 shadow-3xl w-2/3 mx-auto pt-24 text-center relative">
         <h1 className="text-2xl bg-gradient-to-r from-green-400 to-blue-300 bg-clip-text text-transparent font-bold">
           Confirm your details...
         </h1>

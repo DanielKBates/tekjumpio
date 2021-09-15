@@ -1,20 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CodeBlock from "../../components/CodeBlock";
 const Contact = () => {
-  const [frame, setFrame] = useState(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFrame((frame) => (frame < 10 ? frame + 1 : 0));
-    }, 100);
-    return () => clearInterval(interval);
-  }, []);
+
   return (
     <div>
       <div className="pt-24">
-        <h1 className="text-white text-8xl font-semibold text-center">
-          Tailwind Test <br />
-          {frame}
-        </h1>
+
         <div className="my-10">
           <CodeBlock lang="language-html">
             {`<div className="flex justify-center mt-8 space-x-6">

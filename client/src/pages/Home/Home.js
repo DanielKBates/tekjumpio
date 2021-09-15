@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Components
 // import Container from "../../components/Container";
 import AnimatedCard from "../../components/AnimatedCard";
-import Reviews from "./Reviews";
+import Reviews from "./Reviews/Reviews";
 
 const Home = () => {
   //Ok so the <AnimatedCard>s use IntersectionObserver API. Google it if you mess with the way they are called here. Use them for any scroll event based animations (although it doesnt really look at scrolling)
@@ -80,7 +80,7 @@ const Home = () => {
         <div className="relative py-3 sm:max-w-xl sm:mx-auto">
           <AnimatedCard
             threshold={0.25}
-            activeClassName="transform rotate-12 opacity-100 transition-all duration-1400 ease-in absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
+            activeClassName="transform rotate-12 opacity-100 transition-all duration-1400 ease-in absolute inset-0 multiGradient shadow-lg sm:rounded-3xl"
             inactiveClassName="transition-all duration-1400 ease-in translate-y-0 opacity-0 absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
           />
 
@@ -203,7 +203,7 @@ const Home = () => {
       </div>
 
       <AnimatedCard
-        threshold={0.25}
+        threshold={0.50}
         activeClassName={
           "transform translate-x-0 opacity-100 transition-all duration-1000 ease-in-out"
         }

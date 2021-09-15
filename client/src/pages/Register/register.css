@@ -26,10 +26,7 @@
   transform: translateY(-5px);
   
 }
-.form-input:focus-visible,
-.txt-field textarea{
-  outline: none;
-}
+
 .txt-field input:focus ~ span,
 .txt-field input:not(:placeholder-shown) ~ span {
   transform: translateY(-15px);
@@ -46,7 +43,6 @@
   left:60%;
 }
 
-
-.card{
-  height:600px;
+textarea:focus, input:focus {
+  outline:none
 }
