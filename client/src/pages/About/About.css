@@ -1,3 +1,12 @@
+.aboutClipped {
+  width: 100vw;
+  height: 38rem;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-clip-path: url(#my-clip-path);
+  clip-path: url(#my-clip-path);
+}
+
 .warpper{
   display:flex;
   flex-direction: column;

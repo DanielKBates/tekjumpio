@@ -9,7 +9,7 @@ const About = () => {
   return (
     <>
       <div className="relative">
-        <div className="absolute  md:top-52 p-20 top-16 z-10 ">
+        <div className="absolute px-20 top-24 z-10">
           <div>
             <h1 className="text-7xl text-white text-center pb-4 animate-fadeDown">
               Our Mission
@@ -37,7 +37,7 @@ const About = () => {
             <path d="M0,1 L0.042,0.995 C0.083,0.991,0.167,0.982,0.25,0.88 C0.333,0.779,0.417,0.586,0.5,0.554 C0.583,0.522,0.667,0.651,0.75,0.703 C0.833,0.756,0.917,0.733,0.958,0.722 L1,0.71 L1,0 L0.958,0 C0.917,0,0.833,0,0.75,0 C0.667,0,0.583,0,0.5,0 C0.417,0,0.333,0,0.25,0 C0.167,0,0.083,0,0.042,0 L0,0"></path>
           </clipPath>
         </svg>
-        <div className="clipped animate-animateGradient max-h-100% max-w-100%"></div>
+        <div className="aboutClipped animate-animateGradient"></div>
       </div>
 
       <Container>
