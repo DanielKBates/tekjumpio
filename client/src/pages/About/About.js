@@ -44,7 +44,7 @@ const About = () => {
         <div className="grid grid-cols-2 gap-y-20">
           <div className="flex justify-center items-center  h-100 py-20">
             <h1 className="text-white font-semibold text-3xl animate-fadeFromLeft">
-              Learn the skills you need
+              Learn the skills you need Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
             </h1>
           </div>
           <div className="bg-gray-400 h-100 flex items-center justify-center  animate-fadeFromRight">
@@ -55,12 +55,12 @@ const About = () => {
           </div>
           <div className="flex justify-center items-center  h-100 py-20">
             <h1 className="text-white font-semibold text-3xl animate-fadeFromRight">
-              Build Real World Experience
+              Build Real World Experience Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
             </h1>
           </div>
           <div className="flex justify-center items-center  h-100 py-20">
             <h1 className="text-white font-semibold text-3xl animate-fadeFromLeft">
-              JUMP into a new career
+              JUMP into a new career Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
             </h1>
           </div>
           <div className="bg-gray-400 h-100 flex items-center justify-center animate-fadeFromRight ">
