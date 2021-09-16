@@ -52,8 +52,20 @@ module.exports = {
           "0%, 50%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        fadeFromLeft: {
+          "0%": { opacity: "0", transform: "translateX(-10vh)"},
+          "100%": {opacity:"1"}
+        },
+        fadeFromRight: {
+          "0%": { opacity: "0", transform: "translateX(10vh)"},
+          "100%": {opacity:"1"}
+        },
         fadeUp: {
-          "0%": { opacity: "0", transform: "translateY(15vh)" },
+          "0%": { opacity: "0", transform: "translateY(10vh)" },
+          "100%": { opacity: "1" }
+        },
+        fadeDown: {
+          "0%": { opacity: "0", transform: "translateY(-10vh)" },
           "100%": { opacity: "1" }
         },
         animateGradient: {
@@ -70,8 +82,11 @@ module.exports = {
       },
       animation: {
         fadeIn: "fadeIn 1s ease-in",
+        fadeDown: "fadeDown 1s ease-in",
         fadeInDelay: "fadeInDelay 2s ease-in",
         fadeUp: "fadeUp 1s ease-in",
+        fadeFromLeft: "fadeFromLeft 1s ease-in",
+        fadeFromRight: "fadeFromRight 1s ease-in",
         animateGradient: "animateGradient 15s ease-in infinite",
       },
       colors: {

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Components
 // import Container from "../../components/Container";
 import AnimatedCard from "../../components/AnimatedCard";
-import Reviews from "./Reviews/Reviews";
+import Reviews from "../Program/Reviews/Reviews";
 
 const Home = () => {
   //Ok so the <AnimatedCard>s use IntersectionObserver API. Google it if you mess with the way they are called here. Use them for any scroll event based animations (although it doesnt really look at scrolling)
@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div>
       <div className="relative">
-        <div className="absolute md:top-32 top-16 grid grid-cols-2 z-10">
+        <div className="absolute md:top-32 top-16 grid grid-cols-2 z-10 ">
           <div className="flex justify-center">
             <div className=" flex-col  w-3/4 space-y-2 ">
               <h1 className="text-white text-3xl xl:text-5xl flex-col  animate-fadeIn leading-none">
@@ -30,7 +30,7 @@ const Home = () => {
               </span>
               <div className="flex items-center space-x-1 w-3/4 animate-fadeIn">
                 <Link
-                  exact
+                
                   to="/register"
                   className="py-3 my-8 px-20 multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full arrow-hover"
                 >
@@ -44,7 +44,7 @@ const Home = () => {
                     viewBox="0 0 16 16"
                   >
                     <path
-                      className=""
+                      className="text-white"
                       fillRule="evenodd"
                       d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
                     />
@@ -77,10 +77,10 @@ const Home = () => {
       </div>
 
       <div className="flex py-6 mb-10 flex-col justify-center sm:py-12">
-        <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+        <div className="relative py-3 sm:max-w-xl sm:mx-auto mb-10">
           <AnimatedCard
             threshold={0.25}
-            activeClassName="transform rotate-12 opacity-100 transition-all duration-1400 ease-in absolute inset-0 multiGradient shadow-lg sm:rounded-3xl"
+            activeClassName="transform rotate-12 opacity-100 transition-all duration-1400 ease-in absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
             inactiveClassName="transition-all duration-1400 ease-in translate-y-0 opacity-0 absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
           />
 
@@ -201,15 +201,14 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       <AnimatedCard
-        threshold={0.50}
+        threshold={0.5}
         activeClassName={
-          "transform translate-x-0 opacity-100 transition-all duration-1000 ease-in-out"
+          "transform translate-x-0 opacity-100 transition-all duration-1200 ease-in-out"
         }
-        inactiveClassName="transition-all duration-1000 ease-in-out transform -translate-x-7 -translate-y-7 opacity-0"
+        inactiveClassName="transition-all duration-1200 ease-in-out transform -translate-x-7 -translate-y-7 opacity-0"
       >
-        <div className="w-screen flex justify-center">
+        <div className="w-100 mx-auto flex justify-center">
           <Reviews />
         </div>
       </AnimatedCard>
