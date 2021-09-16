@@ -70,7 +70,7 @@
 }
 
 
-/* .card {
+.card {
   display: flex;
   height: 300px;
   width: 600px;
@@ -95,9 +95,9 @@
   position: relative;
   left: 50px;
   transition: 0.4s ease-out;
-} */
+} 
 
-/* .title {
+ .title {
   color: white;
   font-weight: 300;
   position: absolute;
@@ -133,7 +133,7 @@
 .card:hover .filledbar {
   width: 120px;
   transition: 0.4s ease-out;
-} */
+}
 
 .circle {
   position: absolute;

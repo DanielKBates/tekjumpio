@@ -44,7 +44,10 @@ const About = () => {
         <div className="grid grid-cols-2 gap-y-20">
           <div className="flex justify-center items-center  h-100 py-20">
             <h1 className="text-white font-semibold text-3xl animate-fadeFromLeft">
-              Learn the skills you need Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
+              We want to teach you the skills you need Lorem Lorem Lorem Lorem
+              Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
+              Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
+              Lorem Lorem Lorem
             </h1>
           </div>
           <div className="bg-gray-400 h-100 flex items-center justify-center  animate-fadeFromRight">
@@ -55,12 +58,16 @@ const About = () => {
           </div>
           <div className="flex justify-center items-center  h-100 py-20">
             <h1 className="text-white font-semibold text-3xl animate-fadeFromRight">
-              Build Real World Experience Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
+              We will help you Build Real World Experience Lorem Lorem Lorem
+              Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
+              Lorem Lorem Lorem Lorem
             </h1>
           </div>
           <div className="flex justify-center items-center  h-100 py-20">
             <h1 className="text-white font-semibold text-3xl animate-fadeFromLeft">
-              JUMP into a new career Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem 
+              JUMP into a new career Lorem Lorem Lorem Lorem Lorem Lorem Lorem
+              Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem
+              Lorem Lorem
             </h1>
           </div>
           <div className="bg-gray-400 h-100 flex items-center justify-center animate-fadeFromRight ">
@@ -68,81 +75,86 @@ const About = () => {
           </div>{" "}
         </div>
 
-        {/* <div className="hidden sm:flex p-8">
-          <div className="card">
-            <h3 className="title">Reviews</h3>
-            <div className="bar">
-              <div className="emptybar"></div>
-              <div className="filledbar"></div>
-            </div>
+        <div className="mt-28">
+          <h1 className="flex justify-center text-4xl text-white">
+            STUDENT PORTFOLIOS
+          </h1>
+          <div className="hidden sm:flex p-8">
+            <div className="card">
+              <h3 className="title">PROJECT X</h3>
+              <div className="bar">
+                <div className="emptybar"></div>
+                <div className="filledbar"></div>
+              </div>
 
-            <p className="mt-32 pl-4 pr-4 text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet consectetur adipiscing elit.
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="title">Reviews</h3>
-            <div className="bar">
-              <div className="emptybar"></div>
-              <div className="filledbar"></div>
+              <p className="mt-32 pl-4 pr-4 text-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              </p>
             </div>
-            <p className="mt-32 pl-4 pr-4 text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet consectetur adipiscing elit.
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="title">Reviews</h3>
-            <div className="bar">
-              <div className="emptybar"></div>
-              <div className="filledbar"></div>
+            <div className="card">
+              <h3 className="title">PROJECT X</h3>
+              <div className="bar">
+                <div className="emptybar"></div>
+                <div className="filledbar"></div>
+              </div>
+              <p className="mt-32 pl-4 pr-4 text-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              </p>
             </div>
-            <p className="mt-32 pl-4 pr-4 text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet consectetur adipiscing elit.
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="title">Reviews</h3>
-            <div className="bar">
-              <div className="emptybar"></div>
-              <div className="filledbar"></div>
+            <div className="card">
+              <h3 className="title">PROJECT X</h3>
+              <div className="bar">
+                <div className="emptybar"></div>
+                <div className="filledbar"></div>
+              </div>
+              <p className="mt-32 pl-4 pr-4 text-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              </p>
             </div>
-            <p className="mt-32 pl-4 pr-4 text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet consectetur adipiscing elit.
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="title">Reviews</h3>
-            <div className="bar">
-              <div className="emptybar"></div>
-              <div className="filledbar"></div>
+            <div className="card">
+              <h3 className="title">PROJECT X</h3>
+              <div className="bar">
+                <div className="emptybar"></div>
+                <div className="filledbar"></div>
+              </div>
+              <p className="mt-32 pl-4 pr-4 text-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              </p>
             </div>
-            <p className="mt-32 pl-4 pr-4 text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet consectetur adipiscing elit.
-            </p>
-          </div>
-          <div className="card">
-            <h3 className="title">Reviews</h3>
-            <div className="bar">
-              <div className="emptybar"></div>
-              <div className="filledbar"></div>
+            <div className="card">
+              <h3 className="title">PROJECT X</h3>
+              <div className="bar">
+                <div className="emptybar"></div>
+                <div className="filledbar"></div>
+              </div>
+              <p className="mt-32 pl-4 pr-4 text-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              </p>
             </div>
-            <p className="mt-32 pl-4 pr-4 text-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet consectetur adipiscing elit.
-            </p>
+            <div className="card">
+              <h3 className="title">PROJECT X</h3>
+              <div className="bar">
+                <div className="emptybar"></div>
+                <div className="filledbar"></div>
+              </div>
+              <p className="mt-32 pl-4 pr-4 text-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              </p>
+            </div>
           </div>
-        </div> */}
+        </div>
       </Container>
     </>
   );
