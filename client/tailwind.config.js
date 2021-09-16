@@ -44,6 +44,11 @@ module.exports = {
       },
 
       keyframes: {
+        shake : {
+          "0%, 100%" : {},
+          "33%": {transform: "translateX(-5px)"},
+          "66%": {transform: "translateX(5px)"}
+        },
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
@@ -81,6 +86,7 @@ module.exports = {
         },
       },
       animation: {
+        shake: "shake 300ms",
         fadeIn: "fadeIn 1s ease-in",
         fadeDown: "fadeDown 1s ease-in",
         fadeInDelay: "fadeInDelay 2s ease-in",
@@ -119,5 +125,7 @@ module.exports = {
       scale: ["responsive", "hover", "focus"],
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms")
+  ],
 };
