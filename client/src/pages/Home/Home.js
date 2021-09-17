@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 // Components
 // import Container from "../../components/Container";
 import AnimatedCard from "../../components/AnimatedCard";
-import Reviews from "../Program/Reviews/Reviews";
+import Reviews from "../../components/Reviews/Reviews";
+import Callout from "../../components/Callout"
 
 const Home = () => {
   //Ok so the <AnimatedCard>s use IntersectionObserver API. Google it if you mess with the way they are called here. Use them for any scroll event based animations (although it doesnt really look at scrolling)
@@ -29,8 +30,8 @@ const Home = () => {
                 beatae!
               </span>
               <div className="flex items-center space-x-1 w-3/4 animate-fadeIn">
-                <Link
-                
+                <Callout
+
                   to="/register"
                   className="py-3 my-8 px-20 multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full arrow-hover"
                 >
@@ -49,7 +50,7 @@ const Home = () => {
                       d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
                     />
                   </svg>
-                </Link>
+                </Callout>
               </div>
             </div>
           </div>

@@ -2,22 +2,21 @@ module.exports = {
   purge: ["./src/*/.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-
     scale: {
-      '0': '0',
-      '25': '.25',
-      '50': '.5',
-      '75': '.75',
-      '90': '.9',
-      '95': '.95',
-      "96":".96",
-      "99": ".99",
-      '100': '1',
-      '105': '1.05',
-      '110': '1.1',
-      '125': '1.25',
-      '150': '1.5',
-      '200': '2',
+      0: "0",
+      25: ".25",
+      50: ".5",
+      75: ".75",
+      90: ".9",
+      95: ".95",
+      96: ".96",
+      99: ".99",
+      100: "1",
+      105: "1.05",
+      110: "1.1",
+      125: "1.25",
+      150: "1.5",
+      200: "2",
     },
 
     extend: {
@@ -44,10 +43,22 @@ module.exports = {
       },
 
       keyframes: {
-        shake : {
-          "0%, 100%" : {},
-          "33%": {transform: "translateX(-5px)"},
-          "66%": {transform: "translateX(5px)"}
+        shake: {
+          "10%,90%": {
+            transform: "translateX(-1px)",
+          },
+
+          "20%,80%": {
+            transform: "translateX(2px)",
+          },
+
+          "30%,50%,70%": {
+            transform: "translateX(-4px)",
+          },
+
+          "40%,60%": {
+            transform: "translateX(4px)",
+          },
         },
         fadeIn: {
           "0%": { opacity: "0" },
@@ -58,20 +69,20 @@ module.exports = {
           "100%": { opacity: "1" },
         },
         fadeFromLeft: {
-          "0%": { opacity: "0", transform: "translateX(-10vh)"},
-          "100%": {opacity:"1"}
+          "0%": { opacity: "0", transform: "translateX(-10vh)" },
+          "100%": { opacity: "1" },
         },
         fadeFromRight: {
-          "0%": { opacity: "0", transform: "translateX(10vh)"},
-          "100%": {opacity:"1"}
+          "0%": { opacity: "0", transform: "translateX(10vh)" },
+          "100%": { opacity: "1" },
         },
         fadeUp: {
           "0%": { opacity: "0", transform: "translateY(10vh)" },
-          "100%": { opacity: "1" }
+          "100%": { opacity: "1" },
         },
         fadeDown: {
           "0%": { opacity: "0", transform: "translateY(-10vh)" },
-          "100%": { opacity: "1" }
+          "100%": { opacity: "1" },
         },
         animateGradient: {
           "0%": {
@@ -86,7 +97,7 @@ module.exports = {
         },
       },
       animation: {
-        shake: "shake 300ms",
+        shake: "shake 750ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both",
         fadeIn: "fadeIn 1s ease-in",
         fadeDown: "fadeDown 1s ease-in",
         fadeInDelay: "fadeInDelay 2s ease-in",
@@ -125,7 +136,5 @@ module.exports = {
       scale: ["responsive", "hover", "focus"],
     },
   },
-  plugins: [
-    require("@tailwindcss/forms")
-  ],
+  plugins: [require("@tailwindcss/forms")],
 };

@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../../components/Container";
 import ProgramTabs from "./ProgramTabs";
 import AnimatedCard from "../../components/AnimatedCard";
-import Reviews from "./Reviews/Reviews";
+import Reviews from "../../components/Reviews/Reviews";
 const Program = () => {
   return (
     <div className="pt-28">
