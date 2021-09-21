@@ -43,7 +43,6 @@ const Contact = () => {
             </div>
 
             <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
-
               <div className={"sm:col-span-3 "}>
                 <label
                   htmlFor="first-name"
@@ -66,7 +65,7 @@ const Contact = () => {
                     className={`shadow-sm  block w-full sm:text-sm rounded-md  ${
                       errors.firstName
                         ? "bg-red-300 border-red-600 focus:ring-red-600 focus:border-red-500 animate-shake"
-                        : "border-gray-600 focus:ring-indigo-500 focus:border-indigo-500"
+                        : "border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
                     }`}
                     {...register("firstName", { required: true })}
                   />
@@ -79,6 +78,11 @@ const Contact = () => {
                   className="block text-sm font-medium text-gray-700"
                 >
                   Last name
+                  {errors.lastName && (
+                    <p className="inline text-red-600 ml-6">
+                      Please enter last name
+                    </p>
+                  )}
                 </label>
                 <div className="mt-1">
                   <input
@@ -86,7 +90,12 @@ const Contact = () => {
                     name="last-name"
                     id="last-name"
                     autoComplete="family-name"
-                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                    className={`shadow-sm  block w-full sm:text-sm rounded-md  ${
+                      errors.lastName
+                        ? "bg-red-300 border-red-600 focus:ring-red-600 focus:border-red-500 animate-shake"
+                        : "border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                    }`}
+                    {...register("lastName", { required: true })}
                   />
                 </div>
               </div>
@@ -97,6 +106,9 @@ const Contact = () => {
                   className="block text-sm font-medium text-gray-700"
                 >
                   Email address
+                  {errors.email && (
+                    <p className="inline text-red-600 ml-6">Invalid email</p>
+                  )}
                 </label>
                 <div className="mt-1">
                   <input
@@ -104,7 +116,16 @@ const Contact = () => {
                     name="email"
                     type="email"
                     autoComplete="email"
-                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                    className={`shadow-sm  block w-full sm:text-sm rounded-md  ${
+                      errors.email
+                        ? "bg-red-300 border-red-600 focus:ring-red-600 focus:border-red-500 animate-shake"
+                        : "border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                    }`}
+                    {...register("email", {
+                      required: true,
+                      pattern:
+                        /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/g,
+                    })}
                   />
                 </div>
               </div>
@@ -114,6 +135,11 @@ const Contact = () => {
                   className="block text-sm font-medium text-gray-700"
                 >
                   Phone Number
+                  {errors.phoneNumber && (
+                    <p className="inline text-red-600 ml-6">
+                      Invalid phone number
+                    </p>
+                  )}
                 </label>
                 <div className="mt-1">
                   <input
@@ -121,7 +147,16 @@ const Contact = () => {
                     name="phoneNumber"
                     type="text"
                     autoComplete="phoneNumber"
-                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                    className={`shadow-sm  block w-full sm:text-sm rounded-md  ${
+                      errors.phoneNumber
+                        ? "bg-red-300 border-red-600 focus:ring-red-600 focus:border-red-500 animate-shake"
+                        : "border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                    }`}
+                    {...register("phoneNumber", {
+                      required: true,
+                      pattern:
+                        /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/g,
+                    })}
                   />
                 </div>
               </div>
@@ -132,6 +167,11 @@ const Contact = () => {
                   className="block text-sm font-medium text-gray-700"
                 >
                   Street address
+                  {errors.streetAddress && (
+                    <p className="inline text-red-600 ml-6">
+                      Please enter street address
+                    </p>
+                  )}
                 </label>
                 <div className="mt-1">
                   <input
@@ -139,7 +179,12 @@ const Contact = () => {
                     name="street-address"
                     id="street-address"
                     autoComplete="street-address"
-                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                    className={`shadow-sm  block w-full sm:text-sm rounded-md  ${
+                      errors.streetAddress
+                        ? "bg-red-300 border-red-600 focus:ring-red-600 focus:border-red-500 animate-shake"
+                        : "border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                    }`}
+                    {...register("streetAddress", { required: true })}
                   />
                 </div>
               </div>
@@ -150,13 +195,23 @@ const Contact = () => {
                   className="block text-sm font-medium text-gray-700"
                 >
                   City
+                  {errors.city && (
+                    <p className="inline text-red-600 ml-6">
+                      Please enter city
+                    </p>
+                  )}
                 </label>
                 <div className="mt-1">
                   <input
                     type="text"
                     name="city"
                     id="city"
-                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                    className={`shadow-sm  block w-full sm:text-sm rounded-md  ${
+                      errors.city
+                        ? "bg-red-300 border-red-600 focus:ring-red-600 focus:border-red-500 animate-shake"
+                        : "border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                    }`}
+                    {...register("city", { required: true })}
                   />
                 </div>
               </div>
@@ -167,13 +222,21 @@ const Contact = () => {
                   className="block text-sm font-medium text-gray-700"
                 >
                   State / Province
+                  {errors.state && (
+                    <p className="inline text-red-600 ml-6">Please enter state</p>
+                  )}
                 </label>
                 <div className="mt-1">
                   <input
                     type="text"
                     name="state"
                     id="state"
-                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                    className={`shadow-sm  block w-full sm:text-sm rounded-md  ${
+                      errors.state
+                        ? "bg-red-300 border-red-600 focus:ring-red-600 focus:border-red-500 animate-shake"
+                        : "border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                    }`}
+                    {...register("state", { required: true })}
                   />
                 </div>
               </div>
@@ -184,6 +247,9 @@ const Contact = () => {
                   className="block text-sm font-medium text-gray-700"
                 >
                   ZIP / Postal
+                  {errors.zip && (
+                    <p className="inline text-red-600 ml-6">Invalid zip code</p>
+                  )}
                 </label>
                 <div className="mt-1">
                   <input
@@ -191,7 +257,12 @@ const Contact = () => {
                     name="zip"
                     id="zip"
                     autoComplete="postal-code"
-                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                    className={`shadow-sm  block w-full sm:text-sm rounded-md  ${
+                      errors.zip
+                        ? "bg-red-300 border-red-600 focus:ring-red-600 focus:border-red-500 animate-shake"
+                        : "border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                    }`}
+                    {...register("zip", { required: true, pattern: /^\d{5}(?:[-\s]\d{4})?$/g })}
                   />
                 </div>
               </div>
@@ -201,6 +272,9 @@ const Contact = () => {
                   className="block text-sm font-medium text-gray-700"
                 >
                   Do you have any programming experience?
+                  {errors.experience && (
+                    <p className="inline text-red-600 ml-6">Please describe your programming experience</p>
+                  )}
                 </label>
                 <div className="mt-1">
                   <textarea
@@ -209,6 +283,12 @@ const Contact = () => {
                     rows={3}
                     className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md"
                     defaultValue={""}
+                    className={`shadow-sm  block w-full sm:text-sm rounded-md  ${
+                      errors.experience
+                        ? "bg-red-300 border-red-600 focus:ring-red-600 focus:border-red-500 animate-shake"
+                        : "border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+                    }`}
+                    {...register("experience", { required: true })}
                   />
                 </div>
                 <p className="mt-2 text-sm text-gray-500">
