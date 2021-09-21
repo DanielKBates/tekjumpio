@@ -23,11 +23,7 @@ const Home = () => {
               </h1>
 
               <span className="mx-auto text-3xl text-gray-300 flex justify-center animate-fadeIn max-w-3xl ">
-                Join Tekjump today to Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Molestias provident veritatis voluptas
-                perspiciatis voluptates excepturi non, a, eius esse incidunt ad
-                consequuntur laudantium quia quo sapiente fugiat quod modi
-                beatae!
+                Join Tekjump today to become a master of the MERN stack, a skill that all major technology companies are looking for. Get a jump start on your career in web development now!
               </span>
               <div className="flex items-center space-x-1 w-3/4 animate-fadeIn">
                 <Callout
