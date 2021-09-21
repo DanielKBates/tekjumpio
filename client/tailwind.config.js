@@ -20,6 +20,10 @@ module.exports = {
     },
 
     extend: {
+      height: {
+        96:"45rem",
+        128: "55rem"
+      },
       boxShadow: {
         sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
         DEFAULT:
@@ -99,11 +103,11 @@ module.exports = {
       animation: {
         shake: "shake 750ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both",
         fadeIn: "fadeIn 1s ease-in",
-        fadeDown: "fadeDown 1s ease-in",
+        fadeDown: "fadeDown 1s ease",
         fadeInDelay: "fadeInDelay 2s ease-in",
         fadeUp: "fadeUp 1s ease-in",
-        fadeFromLeft: "fadeFromLeft 1s ease-in",
-        fadeFromRight: "fadeFromRight 1s ease-in",
+        fadeFromLeft: "fadeFromLeft 1s ease",
+        fadeFromRight: "fadeFromRight 1s ease",
         animateGradient: "animateGradient 15s ease-in infinite",
       },
       colors: {
