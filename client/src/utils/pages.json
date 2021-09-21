@@ -11,17 +11,14 @@
     "name": "About",
     "to": "/about",
     "forNav": true
-
   },
   {
-    "name": "Program",
+    "name": "Programs",
     "to": "/program",
     "forNav": true
-
   },
   {
     "name": "Contact",
     "to": "/contact"
   }
 ]
-

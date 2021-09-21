@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // import Container from "../../components/Container";
 import AnimatedCard from "../../components/AnimatedCard";
 import Reviews from "../../components/Reviews/Reviews";
-import Callout from "../../components/Callout"
+import Callout from "../../components/Callout";
 
 const Home = () => {
   //Ok so the <AnimatedCard>s use IntersectionObserver API. Google it if you mess with the way they are called here. Use them for any scroll event based animations (although it doesnt really look at scrolling)
@@ -31,7 +31,6 @@ const Home = () => {
               </span>
               <div className="flex items-center space-x-1 w-3/4 animate-fadeIn">
                 <Callout
-
                   to="/register"
                   className="py-3 my-8 px-20 multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full arrow-hover"
                 >
@@ -45,7 +44,7 @@ const Home = () => {
                     viewBox="0 0 16 16"
                   >
                     <path
-                      className="text-white"
+                      fill="white"
                       fillRule="evenodd"
                       d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
                     />
@@ -58,8 +57,8 @@ const Home = () => {
           <div className="flex">
             <AnimatedCard
               threshold={0.5}
-              activeClassName="transform -translate-x-4 opacity-100 transition-all duration-1000 ease-in"
-              inactiveClassName="transform opacity-0 translate-x-0 transition-all duration-1000 ease-in"
+              activeClassName="transform -translate-x-4 -translate-y-4 opacity-100 transition-all duration-1000 ease"
+              inactiveClassName="transform opacity-0 translate-x-0 translate-y-0 transition-all duration-1000 ease"
             >
               <img
                 src={`${process.env.PUBLIC_URL}/images/rec5.gif`}
@@ -81,8 +80,8 @@ const Home = () => {
         <div className="relative py-3 sm:max-w-xl sm:mx-auto mb-10">
           <AnimatedCard
             threshold={0.25}
-            activeClassName="transform rotate-12 opacity-100 transition-all duration-1400 ease-in absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
-            inactiveClassName="transition-all duration-1400 ease-in translate-y-0 opacity-0 absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
+            activeClassName="transform rotate-12 opacity-100 transition-all duration-1000 ease absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
+            inactiveClassName="transition-all duration-1000 ease translate-y-0 opacity-0 absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
           />
 
           <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
@@ -209,7 +208,7 @@ const Home = () => {
         }
         inactiveClassName="transition-all duration-1200 ease-in-out transform -translate-x-7 -translate-y-7 opacity-0"
       >
-        <div className="w-100 mx-auto flex justify-center">
+        <div className="w-100 mx-auto flex justify-center my-10">
           <Reviews />
         </div>
       </AnimatedCard>

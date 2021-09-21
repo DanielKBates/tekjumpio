@@ -17,7 +17,7 @@ input:focus-visible,
 textarea:focus-visible {
   @apply ring-4 ring-white ring-opacity-50 outline-none;
 }
- 
+
 code:focus-visible {
   outline: none;
 }
@@ -37,32 +37,31 @@ code:focus-visible {
   background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0);
-  transition: box-shadow 0.2s;
 }
 .purpleGradient {
   background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0);
-  transition: box-shadow 0.2s;
 }
 
 .blueGradient {
-  background: linear-gradient(45deg, #7B85E3, #9585E4, #B085E5, #CA85E7);
+  background: linear-gradient(45deg, #7b85e3, #9585e4, #b085e5, #ca85e7);
   background-size: 600% 600%;
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0);
-  transition: box-shadow 0.2s;
 }
 .greenGradient {
-  background: linear-gradient(45deg, #68BB59, #ACDF87, #ACDF87, #76BA1B);
+  background: linear-gradient(45deg, #68bb59, #acdf87, #acdf87, #76ba1b);
   background-size: 600% 600%;
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0);
-  transition: box-shadow 0.2s;
 }
- /* .navlink {
+/* .navlink {
   background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
 } */
-.multiGradient:hover {
+.multiGradient:hover,
+.purpleGradient:hover,
+.blueGradient:hover,
+.greenGradient:hover {
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
 }
 .gradient-box {
@@ -101,13 +100,12 @@ code:focus-visible {
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: transparent;
+  @apply bg-gray-900 bg-opacity-0;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-500 rounded transition-colors shadow-2xl hover:bg-gray-600 active:bg-gray-700;
+  @apply bg-gray-500 rounded transition-colors shadow-2xl hover:bg-gray-600 active:bg-gray-700 bg-opacity-50;
 }
-
 
 /* CONVERT TO TAILWIND */
 .-z-1 {
@@ -118,24 +116,24 @@ code:focus-visible {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black;
-  line-height: 1.1rem;
+  line-height: 1.2rem;
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.15s ease-in-out, visiblity 0s linear 0.15s;
-  width: 300px;
+  width: 315px;
   backdrop-filter: blur(5px);
   background-color: #000a;
   color: #ddd;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 5px;
   position: absolute;
   z-index: 1;
   top: -5px;
-  right: 115%;
+  right: 110%;
   /* margin-left: -60px; */
 }
 
@@ -155,4 +153,3 @@ code:focus-visible {
 .arrow-hover:hover .arrow {
   left: 10px;
 }
-
