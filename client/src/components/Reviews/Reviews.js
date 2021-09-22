@@ -16,7 +16,7 @@ function Reviews() {
 
   return (
     <>
-      <section className="py-12 rounded-xl bg-gray-200 overflow-hidden md:py-20 lg:py-24">
+      <section className="py-12 rounded-3xl bg-gray-200 overflow-hidden md:py-20 lg:py-24">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
             <blockquote className="mt-10">
