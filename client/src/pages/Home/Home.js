@@ -19,7 +19,7 @@ const Home = () => {
         {/* CONTENT ON TOP OF ANIMATED GRADIENT */}
         <div className="absolute flex flex-col top-24 md:justify-around md:top-32 md:flex-row z-10 ">
           {/* Headers */}
-          <div className="flex-col w-full xl:w-2/5 2xl:w-1/3 space-y-6 xl:space-y-8 2xl:space-y-12 ">
+          <div className="flex-col w-full xl:w-2/5 2xl:w-1/3 space-y-6 xl:space-y-8 ">
             <h1 className="text-white text-4xl xl:text-5xl 2xl:text-6xl flex-col space-y-2 xl:space-y-4 2xl:space-y-6 animate-fadeIn">
               <span className="flex justify-center xl:justify-start">
                 Learn Real Skills.
@@ -40,7 +40,7 @@ const Home = () => {
               consequuntur laudantium quia quo sapiente fugiat quod modi beatae!
             </div>
             <div className="flex xl:w-2/3 2xl:w-3/4 animate-fadeIn">
-              <Callout
+              <Link
                 to="/register"
                 className="py-3 md:my-8 px-12 md:px-20 multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full arrow-hover"
               >
@@ -59,7 +59,7 @@ const Home = () => {
                     d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
                   />
                 </svg>
-              </Callout>
+              </Link>
             </div>
           </div>
 
