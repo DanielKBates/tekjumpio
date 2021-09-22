@@ -14,10 +14,10 @@ const Home = () => {
     <div>
       <div className="relative">
         {/* CONTENT ON TOP OF ANIMATED GRADIENT */}
-        <div className="absolute flex flex-col top-24 md:top-32 md:flex-row z-10 ">
+        <div className="absolute flex flex-col top-24 md:justify-around md:top-32 md:flex-row z-10 ">
           {/* Headers */}
-          <div className="flex-col w-full md:w-1/2 space-y-6 md:space-y-2 ">
-            <h1 className="text-white text-4xl xl:text-5xl flex-col space-y-2 animate-fadeIn">
+          <div className="flex-col w-full md:w-1/3 space-y-6 md:space-y-12 ">
+            <h1 className="text-white text-4xl xl:text-6xl flex-col space-y-2 md:space-y-6 animate-fadeIn">
               <span className="flex justify-center md:justify-start">
                 Learn Real Skills.
               </span>
@@ -30,7 +30,7 @@ const Home = () => {
             </h1>
 
             {/* Text Paragraph */}
-            <div className="flex mx-2 md:mx-0  text-2xl xl:text-3xl text-gray-300 animate-fadeIn">
+            <div className="flex mx-2 md:mx-0 md:leading-relaxed text-2xl xl:text-3xl text-gray-300 animate-fadeIn">
               Join Tekjump today to Lo6em ipsum dolor sit amet consectetur
               adipisicing elit. Molestias provident veritatis voluptas
               perspiciatis voluptates excepturi non, a, eius esse incidunt ad
@@ -74,7 +74,7 @@ const Home = () => {
             </AnimatedCard>
           </div>
         </div>
-        <svg className=" absolute">
+        <svg className="absolute">
           <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
             <path d="M0,1 L0.042,0.995 C0.083,0.991,0.167,0.982,0.25,0.88 C0.333,0.779,0.417,0.586,0.5,0.554 C0.583,0.522,0.667,0.651,0.75,0.703 C0.833,0.756,0.917,0.733,0.958,0.722 L1,0.71 L1,0 L0.958,0 C0.917,0,0.833,0,0.75,0 C0.667,0,0.583,0,0.5,0 C0.417,0,0.333,0,0.25,0 C0.167,0,0.083,0,0.042,0 L0,0"></path>
           </clipPath>
