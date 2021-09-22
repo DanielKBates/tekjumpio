@@ -73,7 +73,7 @@ module.exports = {
           "100%": { opacity: "1" },
         },
         fadeFromLeft: {
-          "0%": { opacity: "0", transform: "translateX(-10vh)" },
+          "0%": { opacity: "0", transform: "translateX(-5rem)" },
           "100%": { opacity: "1" },
         },
         fadeFromRight: {
@@ -103,11 +103,11 @@ module.exports = {
       animation: {
         shake: "shake 750ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both",
         fadeIn: "fadeIn 1s ease-in",
-        fadeDown: "fadeDown 1s ease",
+        fadeDown: "fadeDown 1s ease-in",
         fadeInDelay: "fadeInDelay 2s ease-in",
         fadeUp: "fadeUp 1s ease-in",
-        fadeFromLeft: "fadeFromLeft 1s ease",
-        fadeFromRight: "fadeFromRight 1s ease",
+        fadeFromLeft: "fadeFromLeft 1s ease-in",
+        fadeFromRight: "fadeFromRight 1s ease-in",
         animateGradient: "animateGradient 15s ease-in infinite",
       },
       colors: {

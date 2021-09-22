@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
+import About2 from "./pages/About/About2"
 import Program from "./pages/Program/Program";
 import Register from "./pages/Register/Register";
 import Contact from "./pages/Contact/Contact";
@@ -23,7 +24,7 @@ function App() {
         <div>
           <Switch>
             <Route  path="/about">
-              <About />
+              <About2 />
             </Route>
             <Route  path="/program">
               <Program />
