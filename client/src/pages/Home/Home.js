@@ -33,7 +33,7 @@ const Home = () => {
             </h1>
 
             {/* Text Paragraph */}
-            <div className="flex mx-2 md:mx-0 md:leading-relaxed text-2xl 2xl:text-3xl text-gray-300 animate-fadeIn">
+            <div className="flex xl:w-11/12 mx-2 md:mx-0 md:leading-relaxed text-2xl 2xl:text-3xl text-gray-300 animate-fadeIn">
               Join Tekjump today to Lo6em ipsum dolor sit amet consectetur
               adipisicing elit. Molestias provident veritatis voluptas
               perspiciatis voluptates excepturi non, a, eius esse incidunt ad
@@ -63,7 +63,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="hidden xl:flex ">
+          <div className="hidden xl:flex z-20 ">
             <AnimatedCard
               threshold={0.5}
               activeClassName="transform -translate-x-4 opacity-100 transition-all duration-1000 ease-in"
@@ -78,12 +78,33 @@ const Home = () => {
             </AnimatedCard>
           </div>
         </div>
-        <svg className="absolute">
+
+        {/* WAVY SVG HEADER */}
+        <svg className="svg absolute">
           <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
             <path d="M0,1 L0.042,0.995 C0.083,0.991,0.167,0.982,0.25,0.88 C0.333,0.779,0.417,0.586,0.5,0.554 C0.583,0.522,0.667,0.651,0.75,0.703 C0.833,0.756,0.917,0.733,0.958,0.722 L1,0.71 L1,0 L0.958,0 C0.917,0,0.833,0,0.75,0 C0.667,0,0.583,0,0.5,0 C0.417,0,0.333,0,0.25,0 C0.167,0,0.083,0,0.042,0 L0,0"></path>
           </clipPath>
         </svg>
-        <div className="md:h-128 h-96 animate-animateGradient animate-fadeIn  clipped"></div>
+        <div className="clipped animate-animateGradient"></div>
+{/* 
+        <svg
+        className="absolute bottom-0 w-full h-auto z-10 text-gray-800"
+          id="svg"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="-300 0 950 270"
+        >
+          <path
+            d="M-314,267 C105,364 400,100 812,279"
+            fill="white"
+            stroke="white"
+            stroke-width="120"
+            stroke-linecap="round"
+          />
+        </svg> */}
+
+
+        <div className="md:h-128 h-96 animate-animateGradient animate-fadeIn z-0 clipped"></div>
+        </div>
 
         <div className="flex md:mb-10 flex-col justify-center pt-12 pb-4">
           <div className=" relative py-3 max-w-xl mx-auto mb-10">
@@ -226,7 +247,7 @@ const Home = () => {
           </AnimatedCard>
         </div>
       </div>
-    </div>
+   
   );
 };
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { textBody } from '../../utils/codeBlockText'
 
-function Typewriter({ loop }) {
+function Typewriter({ loop, children }) {
     const [text, setText] = useState("");
     const [currentIndex, setCurrentIndex] = useState(0);
     useEffect(() => {
