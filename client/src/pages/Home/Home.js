@@ -5,49 +5,219 @@ import { Link } from "react-router-dom";
 // import Container from "../../components/Container";
 import AnimatedCard from "../../components/AnimatedCard";
 import Reviews from "../../components/Reviews/Reviews";
-import Callout from "../../components/Callout"
+import Callout from "../../components/Callout";
+import HoverAnim from "../../components/HoverAnim";
 
 const Home = () => {
   //Ok so the <AnimatedCard>s use IntersectionObserver API. Google it if you mess with the way they are called here. Use them for any scroll event based animations (although it doesnt really look at scrolling)
-
+  const options = [
+    {
+      position: {
+        top: "0.5rem",
+        left: "-3.1rem",
+        bottom: "",
+        right: "",
+      },
+      items: [
+        {
+          position: {
+            top: "0",
+            left: "0",
+            bottom: "",
+            right: "",
+          },
+          transitionDelay: "100ms",
+          size: "20px",
+        },
+        {
+          position: {
+            top: "-1rem",
+            left: "0",
+            bottom: "",
+            right: "",
+          },
+          transitionDelay: "200ms",
+          size: "15px",
+        },
+        {
+          position: {
+            top: "0",
+            left: "-1rem",
+            bottom: "",
+            right: "",
+          },
+          transitionDelay: "300ms",
+          size: "10px",
+        },
+      ],
+      color: "white",
+    },
+    {
+      position: {
+        top: "-1rem",
+        left: "",
+        bottom: "",
+        right: "0rem",
+      },
+      items: [
+        {
+          position: {
+            top: "0",
+            left: "0",
+            bottom: "",
+            right: "",
+          },
+          transitionDelay: "200ms",
+          size: "20px",
+        },
+        {
+          position: {
+            top: "-1rem",
+            left: "0",
+            bottom: "",
+            right: "",
+          },
+          transitionDelay: "250ms",
+          size: "15px",
+        },
+        {
+          position: {
+            top: "0",
+            left: "-1rem",
+            bottom: "",
+            right: "",
+          },
+          transitionDelay: "300ms",
+          size: "10px",
+        },
+      ],
+      color: "#fff",
+    },
+    {
+      position: {
+        top: "",
+        left: "",
+        bottom: "-0.5rem",
+        right: "",
+      },
+      items: [
+        {
+          position: {
+            top: "0rem",
+            left: "0",
+            bottom: "",
+            right: "",
+          },
+          transitionDelay: "400ms",
+          size: "20px",
+        },
+        {
+          position: {
+            top: "1rem",
+            left: "0",
+            bottom: "",
+            right: "-0.5rem",
+          },
+          transitionDelay: "450ms",
+          size: "15px",
+        },
+        {
+          position: {
+            top: "0",
+            left: "-1rem",
+            bottom: "",
+            right: "",
+          },
+          transitionDelay: "500ms",
+          size: "10px",
+        },
+      ],
+      color: "#fff",
+    },
+    {
+      position: {
+        top: "-3rem",
+        left: "50%",
+        bottom: "",
+        right: "",
+      },
+      items: [
+        {
+          position: {
+            top: "0",
+            left: "0",
+            bottom: "",
+            right: "",
+          },
+          transitionDelay: "150ms",
+          size: "20px",
+        },
+        {
+          position: {
+            top: "1rem",
+            left: "0",
+            bottom: "",
+            right: "",
+          },
+          transitionDelay: "250ms",
+          size: "15px",
+        },
+        {
+          position: {
+            top: "0",
+            left: "1rem",
+            bottom: "",
+            right: "",
+          },
+          transitionDelay: "350ms",
+          size: "10px",
+        },
+      ],
+      color: "#fff",
+    },
+  ];
   return (
     <div>
       <div className="relative">
         <div className="absolute md:top-32 top-16 grid grid-cols-2 z-10 ">
           <div className="flex justify-center">
-            <div className=" flex-col  w-3/4 space-y-2 ">
+            <div className=" flex-col  w-3/4">
               <h1 className="text-white text-3xl xl:text-5xl flex-col  animate-fadeIn leading-none">
                 <div className="py-2">Learn Real Skills.</div>
                 <div className="py-2">Work with Real Clients</div>
                 <div className="py-2">Build Real Projects.</div>
               </h1>
 
-              <span className="mx-auto text-3xl text-gray-300 flex justify-center animate-fadeIn max-w-3xl ">
-                Join Tekjump today to become a master of the MERN stack, a skill that all major technology companies are looking for. Get a jump start on your career in web development now!
+              <span className="my-2 mx-auto text-3xl text-gray-300 flex justify-center animate-fadeIn max-w-3xl ">
+                Join Tekjump today to become a master of the MERN stack, a skill
+                that all major technology companies are looking for. Get a jump
+                start on your career in web development now!
               </span>
-              <div className="flex items-center space-x-1 w-3/4 animate-fadeIn">
-                <Callout
 
+              <HoverAnim
+                className="animate-fadeIn my-16 w-full"
+                options={options}
+              >
+                <Link
                   to="/register"
-                  className="py-3 my-8 px-20 multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full arrow-hover"
+                  className="block py-3 px-20 multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold arrow-hover"
                 >
                   Register Now{" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
-                    fill="currentColor"
-                    className="bi bi-arrow-right-short arrow w-10 h-10"
+                    className="text-white arrow w-10 h-10"
                     viewBox="0 0 16 16"
                   >
                     <path
-                      className="text-white"
+                      fill="currentColor"
                       fillRule="evenodd"
                       d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
                     />
                   </svg>
-                </Callout>
-              </div>
+                </Link>
+              </HoverAnim>
             </div>
           </div>
 

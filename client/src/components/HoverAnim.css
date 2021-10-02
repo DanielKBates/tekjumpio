@@ -1,0 +1,78 @@
+.f {
+  position: absolute;
+  width: calc(var(--size) * 2);
+  height: calc(var(--size) * 2);
+  padding: 2px;
+}
+.tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.6px;
+  height: var(--size);
+  background: currentColor;
+  transform: rotate(45deg);
+  transform-origin: top;
+}
+.br {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2.6px;
+  height: var(--size);
+  background: currentColor;
+  transform: rotate(-45deg);
+  transform-origin: bottom;
+}
+.tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.6px;
+  height: var(--size);
+  background: currentColor;
+  transform: rotate(-45deg);
+  transform-origin: top;
+}
+.bl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2.6px;
+  height: var(--size);
+  background: currentColor;
+  transform: rotate(45deg);
+  transform-origin: bottom;
+}
+.f.sm {
+  --delay: 300ms;
+  --size: 10px;
+  top: 0;
+  left: -1rem;
+}
+.f.md {
+  --delay: 200ms;
+  --size: 15px;
+  top: -1rem;
+  left: 0;
+}
+.f.lg {
+  --delay: 100ms;
+  --size: 20px;
+  top: 0;
+  left: 0;
+}
+.fg-group {
+  position: absolute;
+}
+.f-group.active .f .l {
+  opacity: 1;
+  transition-delay: var(--delay);
+}
+.f-group .f .l {
+  opacity: 0;
+  transition: height 0.6s, opacity 0s;
+}
+.f-group.active .f .l {
+  --size: 0px;
+}
