@@ -193,7 +193,6 @@ const Home = () => {
                 that all major technology companies are looking for. Get a jump
                 start on your career in web development now!
               </span>
-
               <HoverAnim
                 className="animate-fadeIn my-16 w-full"
                 options={options}
@@ -224,8 +223,8 @@ const Home = () => {
           <div className="flex">
             <AnimatedCard
               threshold={0.5}
-              activeClassName="transform -translate-x-4 opacity-100 transition-all duration-1000 ease-in"
-              inactiveClassName="transform opacity-0 translate-x-0 transition-all duration-1000 ease-in"
+              activeClassName="transform -translate-x-4 -translate-y-4 opacity-100 transition-all duration-1000 ease"
+              inactiveClassName="transform opacity-0 translate-x-0 translate-y-0 transition-all duration-1000 ease"
             >
               <img
                 src={`${process.env.PUBLIC_URL}/images/rec5.gif`}
@@ -247,8 +246,8 @@ const Home = () => {
         <div className="relative py-3 sm:max-w-xl sm:mx-auto mb-10">
           <AnimatedCard
             threshold={0.25}
-            activeClassName="transform rotate-12 opacity-100 transition-all duration-1400 ease-in absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
-            inactiveClassName="transition-all duration-1400 ease-in translate-y-0 opacity-0 absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
+            activeClassName="transform rotate-12 opacity-100 transition-all duration-1000 ease absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
+            inactiveClassName="transition-all duration-1000 ease translate-y-0 opacity-0 absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg sm:rounded-3xl"
           />
 
           <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
@@ -375,7 +374,7 @@ const Home = () => {
         }
         inactiveClassName="transition-all duration-1200 ease-in-out transform -translate-x-7 -translate-y-7 opacity-0"
       >
-        <div className="w-100 mx-auto flex justify-center">
+        <div className="w-100 mx-auto flex justify-center my-10">
           <Reviews />
         </div>
       </AnimatedCard>

@@ -7,22 +7,21 @@ const Program = () => {
   return (
     <div className="pt-28">
       <Container>
-       
         <div className="animate-fadeIn">
           <ProgramTabs />
         </div>
 
-        <AnimatedCard
+        {/* <AnimatedCard
           threshold={0.5}
           activeClassName={
             "transform translate-x-0 opacity-100 transition-all duration-1200 ease-in-out"
           }
           inactiveClassName="transition-all duration-1200 ease-in-out transform -translate-x-7 -translate-y-7 opacity-0"
         >
-          <div className="w-100 mx-auto flex justify-center">
-            <Reviews />
-          </div>
-        </AnimatedCard>
+          <div className="w-100 mx-auto flex justify-center"> */}
+        <Reviews />
+        {/* </div>
+        </AnimatedCard> */}
       </Container>
     </div>
   );

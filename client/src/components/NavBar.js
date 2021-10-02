@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink,  } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const pages = require("../utils/pages.json");
 
 const NavBar = () => {
-
   const [mobileMenu, setMobileMenu] = useState(false);
   const [dir, setDir] = useState(1);
   const handleMobileMenu = () => {
@@ -27,10 +26,10 @@ const NavBar = () => {
       },
       false
     );
-  }
+  };
 
   useEffect(() => {
-    handleNavScroll()
+    handleNavScroll();
   }, []);
 
   return (
@@ -39,12 +38,11 @@ const NavBar = () => {
       style={
         !mobileMenu
           ? dir === 1
-            ? { minHeight: "7%" }
-            : { minHeight: "7%", transform: "translateY(-70vh)" }
+            ? { minHeight: "68px" }
+            : { minHeight: "68px", transform: "translateY(-70vh)" }
           : {}
       }
     >
-
       <div className="max-w-full px-10 mx-auto">
         <div className="flex justify-between items-center">
           <div className="flex space-x-4">
@@ -89,12 +87,18 @@ const NavBar = () => {
             className="flex flex-col items-center justify-center relative w-8 h-8 md:hidden"
             onClick={handleMobileMenu}
           >
-            <span className={`top-5 block absolute w-full h-0.5 left-0 border-none outline-none rounded bg-gray-300 transition-all duration-300 transform ${mobileMenu ? "rotate-45 top-5" : ""}`}></span>
-            <span className={`top-3 block absolute w-full h-0.5 left-0 border-none outline-none rounded bg-gray-300 transition-all duration-300 transform ${mobileMenu ? "-rotate-45 top-5" : ""}`}></span>
+            <span
+              className={`top-5 block absolute w-full h-0.5 left-0 border-none outline-none rounded bg-gray-300 transition-all duration-300 transform ${
+                mobileMenu ? "rotate-45 top-5" : ""
+              }`}
+            ></span>
+            <span
+              className={`top-3 block absolute w-full h-0.5 left-0 border-none outline-none rounded bg-gray-300 transition-all duration-300 transform ${
+                mobileMenu ? "-rotate-45 top-5" : ""
+              }`}
+            ></span>
           </button>
         </div>
-
-
       </div>
 
       {/* MOBILE */}
@@ -102,22 +106,21 @@ const NavBar = () => {
         className="flex flex-col p-8 pt-0 md:hidden transition-all duration-300 overflow-hidden"
         style={
           mobileMenu
-            ? { opacity: 1, height: "5%" }
+            ? { opacity: 1, height: "216px" }
             : { height: "0px", opacity: 0, padding: "0rem" }
         }
       >
-
         {pages.map((page) => {
           if (page.forNav) {
             return (
               <NavLink
-              to={page.to}
-              className="p-2 my-1 text-gray-300 rounded hover:bg-gray-600 hover:underline transition ease-linear duration-100 after-arrow"
-              activeClassName="underline"
-              key={page.to}
-            >
-              {page.name}
-            </NavLink>
+                to={page.to}
+                className="p-2 my-1 text-gray-300 rounded hover:bg-gray-600 hover:underline transition ease-linear duration-100 after-arrow"
+                activeClassName="underline"
+                key={page.to}
+              >
+                {page.name}
+              </NavLink>
             );
           } else {
             return null;
@@ -125,7 +128,7 @@ const NavBar = () => {
         })}
         <NavLink
           to="/register"
-          className="py-2 px-3 anim text-gray-100 rounded transition duration-300 text-center font-bold"
+          className="py-2 px-3 anim text-gray-100 rounded transition duration-300 text-center font-bold multiGradient animate-animateGradient"
         >
           Register
         </NavLink>

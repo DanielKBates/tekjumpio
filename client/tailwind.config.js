@@ -20,6 +20,16 @@ module.exports = {
     },
 
     extend: {
+      gridRow: {
+        1: "1 / 1",
+      },
+      gridColumn: {
+        1: "1 / 1",
+      },
+      height: {
+        200: "50rem",
+        "fit-content": "fit-content",
+      },
       boxShadow: {
         sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
         DEFAULT:
@@ -39,6 +49,7 @@ module.exports = {
       },
 
       zIndex: {
+        "-1": "-1",
         "-10": "-10",
       },
 
@@ -98,13 +109,13 @@ module.exports = {
       },
       animation: {
         shake: "shake 750ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both",
-        fadeIn: "fadeIn 1s ease-in",
-        fadeDown: "fadeDown 1s ease-in",
-        fadeInDelay: "fadeInDelay 2s ease-in",
-        fadeUp: "fadeUp 1s ease-in",
-        fadeFromLeft: "fadeFromLeft 1s ease-in",
-        fadeFromRight: "fadeFromRight 1s ease-in",
-        animateGradient: "animateGradient 15s ease-in infinite",
+        fadeIn: "fadeIn 1s ease",
+        fadeDown: "fadeDown 1s ease",
+        fadeInDelay: "fadeInDelay 2s ease",
+        fadeUp: "fadeUp 1s ease",
+        fadeFromLeft: "fadeFromLeft 1s ease",
+        fadeFromRight: "fadeFromRight 1s ease",
+        animateGradient: "animateGradient 15s ease infinite",
       },
       colors: {
         "gradient-salmon": "#ee7752",
