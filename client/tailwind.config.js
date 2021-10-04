@@ -115,7 +115,6 @@ module.exports = {
         "gradient-pink": "#e73c7e",
         "gradient-blue": "#23a6d5",
         "gradient-green": "#23d5ab",
-        "light-blue-500": "rgba(14,165,233,var(--tw-bg-opacity))",
       },
       transitionDuration: {
         0: "0ms",

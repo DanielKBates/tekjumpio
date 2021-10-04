@@ -17,11 +17,11 @@
     "name": "Program",
     "to": "/program",
     "forNav": true
-
   },
   {
     "name": "Contact",
-    "to": "/contact"
+    "to": "/contact",
+    "forNav":true
   }
 ]
 

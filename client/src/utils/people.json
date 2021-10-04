@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Tuhin Dutt",
+        "role":"Founder & CEO",
+        "bio":"lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+        "imageUrl":"https://via.placeholder.com/320x400.png",
+        "linkedInUrl": ""
+    },
+    {
+        "name": "Daniel Bates",
+        "role":"Director of Technology & Lead Developer",
+        "bio":"lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+        "imageUrl":"https://via.placeholder.com/320x400.png",
+        "linkedInUrl": ""
+    },
+    {
+        "name": "Jordan Burke",
+        "role":"Vice President of Operations",
+        "bio":"lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+        "imageUrl":"https://via.placeholder.com/320x400.png",
+        "linkedInUrl": ""
+    }
+]

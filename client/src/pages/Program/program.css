@@ -1,150 +1,104 @@
-.warpper{
-	display:flex;
-	flex-direction: column;
-	align-items: center;
-  }
-  .tab{
-	cursor: pointer;
-	padding:10px 20px;
-	margin:0px 2px;
-	background:#000;
-	display:inline-block;
-	color:#fff;
-	border-radius:3px 3px 0px 0px;
-	box-shadow: 0 0.5rem 0.8rem #00000080;
-  }
-  .panels{
-	background:#fffffff6;
-	box-shadow: 0 2rem 2rem #00000080;
-	min-height:200px;
-	width:100%;
-	max-width:500px;
-	border-radius:3px;
-	overflow:hidden;
-	padding:20px;  
-  }
-  .panel{
-	display:none;
-	animation: fadein .8s;
-  }
-  @keyframes fadein {
-	  from {
-		  opacity:0;
-	  }
-	  to {
-		  opacity:1;
-	  }
-  }
-  .panel-title{
-	font-size:1.5em;
-	font-weight:bold
-  }
-  .radio{
-	display:none;
-  }
-  #one:checked ~ .panels #one-panel,
-  #two:checked ~ .panels #two-panel,
-  #three:checked ~ .panels #three-panel{
-	display:block
-  }
-  #one:checked ~ .tabs #one-tab,
-  #two:checked ~ .tabs #two-tab,
-  #three:checked ~ .tabs #three-tab{
-	background:#fffffff6;
-	color:#000;
-	border-top: 3px solid #000;
-  }
-  
-  
-  #secondHeader{
-	background: black;
-  }
-
-  :root {
-	--gradient-shadow: linear-gradient(
-		45deg,
-		#fb0094,
-		#0000ff,
-		#00ff00,
-		#ffff00,
-		#ff0000,
-		#fb0094,
-		#0000ff,
-		#00ff00,
-		#ffff00,
-		#ff0000
-	);
+.tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0px 2px;
+  background: #000;
+  display: inline-block;
+  color: #fff;
+  border-radius: 3px 3px 0px 0px;
+  box-shadow: 0 0.5rem 0.8rem #00000080;
 }
-  
-  
-  .card1 {
-	display: flex;
-	height: 400px;
-	width: 1000px;
-	background-color: #17141d;
-	border-radius: 10px;
-	/*box-shadow: -1rem 0 3rem rgb(255, 255, 255);*/
-	transition: 0.4s ease-out;
-	position: relative;
-	left: 0px;
+.panels {
+  background: #fffffff6;
+  box-shadow: 0 2rem 2rem #00000080;
+  min-height: 200px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 20px;
+}
+.panel {
+  display: none;
+  animation: fadein 0.8s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+.panel-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.radio {
+  display: none;
+}
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#three:checked ~ .panels #three-panel {
+  display: block;
+}
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab,
+#three:checked ~ .tabs #three-tab {
+  background: #fffffff6;
+  color: #000;
+  border-top: 3px solid #000;
+}
 
-  .card1:before,
+:root {
+  --gradient-shadow: linear-gradient(
+    45deg,
+    #ee7752,
+    #e73c7e,
+    #23a6d5,
+    #23d5ab,
+    #ee7752,
+    #e73c7e,
+    #23a6d5,
+    #23d5ab,
+    #ee7752,
+    #e73c7e
+  );
+}
+
+.card1:before,
 .card1:after {
-	content: "";
-	position: absolute;
-	border-radius: 10px;
-	top: -2px;
-	left: -2px;
-	background: var(--gradient-shadow);
-	background-size: 400%;
-	width: calc(100% + 4px);
-	height: calc(100% + 4px);
-	z-index: -1;
-	animation: animate 20s linear infinite;
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  top: -2px;
+  left: -2px;
+  background: var(--gradient-shadow);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: animate 40s linear infinite;
 }
 
 .card1:after {
-	filter: blur(20px);
+  filter: blur(5px);
 }
 
 @keyframes animate {
-	0% {
-		background-position: 0 0;
-	}
-	50% {
-		background-position: 300% 0;
-	}
-	100% {
-		background-position: 0 0;
-	}
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
-
-
-  
- 
-
-  .header{
-	font-size: 150px;
-	font-weight: 800;
-	outline: none;
-	text-transform: uppercase;
-	background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
-	background-size: 400%;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent; 
-	animation: animate 10s linear infinite;
+@keyframes animate {
+  to {
+    background-position: 400%;
   }
-  @keyframes animate {
-	to{
-	  background-position: 400%;
-	}
-  }
-
-
-
-#image{
-	border-radius: 10px;
-	margin-right: 0%;
 }

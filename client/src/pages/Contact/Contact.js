@@ -3,6 +3,10 @@ import { useForm } from "react-hook-form";
 import { MailIcon, MenuIcon, PhoneIcon, XIcon } from '@heroicons/react/outline'
 
 
+// USING TEACH3 ZOOM ACCT
+// TEKJUMP SUPPORT DISCORD.
+
+
 const Contact = () => {
   const {
     register,
@@ -131,7 +135,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <h3 className="text-lg font-medium text-white">
-                  Contact information
+                  Talk to us!
                 </h3>
                 <p className="mt-6 text-base text-blue-50 max-w-3xl">
                   Nullam risus blandit ac aliquam justo ipsum. Quam mauris

@@ -21,23 +21,20 @@ const Home = () => {
           {/* Headers */}
           <div className="flex-col w-full xl:w-2/5 2xl:w-1/3 space-y-6 xl:space-y-8 ">
             <h1 className="text-white text-4xl xl:text-5xl 2xl:text-6xl flex-col space-y-2 xl:space-y-4 2xl:space-y-6 animate-fadeIn">
-              <span className="flex justify-center xl:justify-start">
-                Learn Real Skills.
-              </span>
-              <span className="flex justify-center xl:justify-start">
-                Engage Real Clients.
-              </span>
-              <span className="flex justify-center xl:justify-start">
-                Build Real Projects.
-              </span>
+              <p className="flex justify-center xl:justify-start">
+                Learn <span className="text-gray-800 mx-2"> Real</span> Skills.
+              </p>
+              <p className="flex justify-center xl:justify-start">
+                Engage <span className="text-gray-800 mx-2"> Real</span> Clients.
+              </p>
+              <p className="flex justify-center xl:justify-start">
+                Build <span className="text-gray-800 mx-2"> Real</span> Projects.
+              </p>
             </h1>
 
             {/* Text Paragraph */}
-            <div className="flex xl:w-11/12 mx-2 md:mx-0 md:leading-relaxed text-2xl 2xl:text-3xl text-gray-300 animate-fadeIn">
-              Join Tekjump today to Lo6em ipsum dolor sit amet consectetur
-              adipisicing elit. Molestias provident veritatis voluptas
-              perspiciatis voluptates excepturi non, a, eius esse incidunt ad
-              consequuntur laudantium quia quo sapiente fugiat quod modi beatae!
+            <div className="flex xl:w-11/12 mx-2 md:mx-0 md:leading-loose text-2xl 2xl:text-3xl text-gray-300 animate-fadeIn">
+              Join Tekjump today to not only receive the training you need, but also the crucial real world experience that will wow employers and jumpstart your new software career!
             </div>
             <div className="flex xl:w-2/3 2xl:w-3/4 animate-fadeIn">
               <Link
@@ -212,12 +209,12 @@ const Home = () => {
                     to="/program"
                     className="block pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7 arrow-hover text-cyan-600 hover:text-cyan-700"
                   >
-                    <p>Want to learn more about our program?</p>
-                    Learn More{" "}
+                   
+                    See how we can help you launch your new career{" "}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
+                      width="20"
+                      height="20"
                       fill="currentColor"
                       className="bi bi-arrow-right-short arrow w-6 h-6"
                       viewBox="0 0 16 16"

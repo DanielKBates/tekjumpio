@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 const FormSite = () => {
   const embedForm = () => {
     window.EmbedManager.embed({
-      key: "https://fs9.formsite.com/res/showFormEmbed?EParam=jFMIig1ZP557Klu2bBVhwtt7h1SghSJ6&1832948506",
+      key: "https://fs26.formsite.com/res/showFormEmbed?EParam=m_OmK8apOTASBU8K-Mte1yJ-zpXHYORbFzpUCZwnDno&1948865317",
       width: "100%",
       mobileResponsive: true,
     });
@@ -14,8 +14,8 @@ const FormSite = () => {
   }, []);
 
   return (
-    <div className="xl:p-20 xl:pt-20 mx-auto w-full">
-      <a name="form1832948506" id="formAnchor1832948506"></a>
+    <div className="xl:p-20 pt-20 mx-auto w-full lg:w-2/3">
+      <a name="form1948865317" id="formAnchor1948865317"></a>{" "}
     </div>
   );
 };
