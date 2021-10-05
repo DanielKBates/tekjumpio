@@ -29,4 +29,16 @@ export const programFeatures = [
         'Veniam necessitatibus reiciendis fugit explicabo dolorem nihil et omnis assumenda odit? Quisquam unde accusantium.',
       icon: DesktopComputerIcon,
     },
+    {
+      name: 'Get Immersed in Best Practices',
+      description:
+        'Veniam necessitatibus reiciendis fugit explicabo dolorem nihil et omnis assumenda odit? Quisquam unde accusantium.',
+      icon: DesktopComputerIcon,
+    },
+    {
+      name: 'Work on Real World Projects',
+      description:
+        'Veniam necessitatibus reiciendis fugit explicabo dolorem nihil et omnis assumenda odit? Quisquam unde accusantium.',
+      icon: DesktopComputerIcon,
+    }
   ]

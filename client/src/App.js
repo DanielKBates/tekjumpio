@@ -7,8 +7,7 @@ import {
   
 } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import About2 from "./pages/About/About2"
+import About from "./pages/About/About"
 import Program from "./pages/Program/Program";
 import FormSite from "./pages/Register/FormSite";
 import Register from "./pages/Register/Register";
@@ -26,7 +25,7 @@ function App() {
         <div>
           <Switch>
             <Route  path="/about">
-              <About2 />
+              <About />
             </Route>
             <Route  path="/program">
               <Program />

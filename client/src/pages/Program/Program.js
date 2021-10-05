@@ -1,5 +1,4 @@
 import React from "react";
-import ProgramTabs from "./ProgramTabs";
 import AnimatedCard from "../../components/AnimatedCard";
 import Reviews from "../../components/Reviews/Reviews";
 import "./program.css";
@@ -12,7 +11,7 @@ const Program = () => {
       {/* Header w/ animatedBorder */}
       <div className="lg:mt-4 mb-4 lg:mb-14 animate-fadeIn">
         <div className="flex-col lg:flex-row">
-          <div className="card1 relative flex bg-gray-800 rounded-xl">
+          <div className="card1 relative flex bg-gray-900 rounded-xl">
             <div className="flex flex-col lg:justify-end lg:flex-row">
               <div className="w-full">
                 <img
@@ -23,7 +22,7 @@ const Program = () => {
               </div>
 
               <div>
-                <h1 className="text-white text-6xl text-right font-black mt-4 mr-3">
+                <h1 className="text-indigo-500 text-6xl text-right font-black mt-4 mr-3">
                   Our Program
                 </h1>
 
@@ -42,68 +41,45 @@ const Program = () => {
       </div>
 
       <div className="animate-fadeIn">
-        <div className="bg-gray-800 overflow-hidden">
-          <div className="relative max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <svg
-              className="absolute top-0 left-full transform -translate-x-1/2 -translate-y-3/4 lg:left-auto lg:right-full lg:translate-x-2/3 lg:translate-y-1/4"
-              width={404}
-              height={784}
-              fill="none"
-              viewBox="0 0 404 784"
-              aria-hidden="true"
-            >
-              <defs>
-                <pattern
-                  id="8b1b5f72-e944-4457-af67-0c6d15a99f38"
-                  x={0}
-                  y={0}
-                  width={20}
-                  height={20}
-                  patternUnits="userSpaceOnUse"
-                >
-                  <rect
-                    x={0}
-                    y={0}
-                    width={4}
-                    height={4}
-                    className="text-gray-300"
-                    fill="currentColor"
-                  />
-                </pattern>
-              </defs>
-              <rect
-                width={404}
-                height={784}
-                fill="url(#8b1b5f72-e944-4457-af67-0c6d15a99f38)"
-              />
-            </svg>
-
-            <div className="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
-              <div className="">
-                <h2 className="text-3xl font-extrabold tracking-tight text-gray-100 sm:text-4xl">
-                  Get Trained.
-                </h2>
-                <h2 className="text-3xl font-extrabold tracking-tight text-gray-100 sm:text-4xl">
-                  Build Real World Experience.
-                </h2>
-              </div>
-              <dl className="mt-10 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 lg:mt-0 lg:col-span-2">
+        <div className="relative bg-gray-900 rounded-lg card1 py-16 sm:py-24 lg:py-32">
+          <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
+            <h2 className="text-base font-semibold tracking-wider text-indigo-500 uppercase">
+              Deploy faster
+            </h2>
+            <p className="mt-2 text-3xl font-extrabold text-blue-200 tracking-tight sm:text-4xl">
+              Everything you need to deploy your app
+            </p>
+            <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
+              Phasellus lorem quam molestie id quisque diam aenean nulla in.
+              Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend
+              condimentum id viverra nulla.
+            </p>
+            <div className="mt-12">
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {programFeatures.map((feature) => (
-                  <div key={feature.name}>
-                    <dt>
-                      <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                        <feature.icon className="h-6 w-6 text-gray-50 " aria-hidden="true" />
+                  <div key={feature.name} className="pt-6">
+                    <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                      <div className="-mt-6">
+                        <div>
+                          <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+                            <feature.icon
+                              className="h-6 w-6 text-white"
+                              aria-hidden="true"
+                            />
+                          </span>
+                        </div>
+                        <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                          {feature.name}
+                        </h3>
+                        <p className="mt-5 text-base text-gray-500">
+                          Ac tincidunt sapien vehicula erat auctor pellentesque
+                          rhoncus. Et magna sit morbi lobortis.
+                        </p>
                       </div>
-                      <p className="mt-5 text-lg leading-6 font-medium text-gray-500">
-                        {feature.name}
-                      </p>
-                    </dt>
-                    <dd className="mt-2 text-base text-gray-200">
-                      {feature.description}
-                    </dd>
+                    </div>
                   </div>
                 ))}
-              </dl>
+              </div>
             </div>
           </div>
         </div>
