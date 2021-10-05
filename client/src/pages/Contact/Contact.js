@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { MailIcon, MenuIcon, PhoneIcon, XIcon } from '@heroicons/react/outline'
+import { MailIcon, PhoneIcon, VideoCameraIcon } from '@heroicons/react/outline'
 
 
 // USING TEACH3 ZOOM ACCT
@@ -138,10 +138,20 @@ const Contact = () => {
                   Talk to us!
                 </h3>
                 <p className="mt-6 text-base text-blue-50 max-w-3xl">
-                  Nullam risus blandit ac aliquam justo ipsum. Quam mauris
-                  volutpat massa dictumst amet. Sapien tortor lacus arcu.
+                  Join us in discussion about your future! Join our support discord below to chat with the team, or hop in 
+                  our daily support Zoom to speak with us live!
                 </p>
                 <dl className="mt-8 space-y-6">
+                  <dt>
+                    <span className="sr-only">Phone number</span>
+                  </dt>
+                  <dd className="flex text-base text-blue-50">
+                    <VideoCameraIcon
+                      className="flex-shrink-0 w-6 h-6 text-blue-200"
+                      aria-hidden="true"
+                    />
+                    <span className="ml-3">Join our support Zoom from 1-3 PM, Monday - Friday</span>
+                  </dd>
                   <dt>
                     <span className="sr-only">Phone number</span>
                   </dt>
@@ -150,7 +160,17 @@ const Contact = () => {
                       className="flex-shrink-0 w-6 h-6 text-blue-200"
                       aria-hidden="true"
                     />
-                    <span className="ml-3">+1 (555) 123-4567</span>
+                    <span className="ml-3"><a href="https://discord.gg/zHhyZjbV">Join our support discord server and talk to the team!</a></span>
+                  </dd>
+                  <dt>
+                    <span className="sr-only">Phone number</span>
+                  </dt>
+                  <dd className="flex text-base text-blue-50">
+                    <PhoneIcon
+                      className="flex-shrink-0 w-6 h-6 text-blue-200"
+                      aria-hidden="true"
+                    />
+                    <span className="ml-3">+1 (919) 656-5154</span>
                   </dd>
                   <dt>
                     <span className="sr-only">Email</span>
@@ -160,7 +180,7 @@ const Contact = () => {
                       className="flex-shrink-0 w-6 h-6 text-blue-200"
                       aria-hidden="true"
                     />
-                    <span className="ml-3">support@workcation.com</span>
+                    <span className="ml-3">tekjump-support@tekjump.io</span>
                   </dd>
                 </dl>
                 <ul role="list" className="mt-8 flex space-x-12">

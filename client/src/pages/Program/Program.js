@@ -7,14 +7,13 @@ import { programFeatures } from "../../utils/programFeatures";
 const Program = () => {
   return (
     <div className="pt-24 w-11/12 lg:w-3/4 mx-auto">
-
       <div className="animate-fadeIn">
         <div className="relative pb-10 bg-gray-800 rounded-lg gradient-border animate-animateGradient">
           <img
             className="rounded-tl-lg w-full h-full lg:h-90 rounded-tr-lg"
-            src="https://miro.medium.com/max/2600/1*FVtCyRdJ6KOr4YswTtwMeA.jpeg"
+            src="/images/Adobe_Cropped2.jpeg"
             alt="MERN STACK"
-          ></img> 
+          ></img>
           <div className="flex flex-col lg:justify-end">
             <div>
               <h1 className="text-indigo-500 text-6xl text-right font-black mt-4 lg:mt-6 pr-4">
@@ -23,22 +22,24 @@ const Program = () => {
 
               <p className="text-left pl-4 text-blue-200 mt-4 lg:text-xl">
                 Our handcrafted curriculum will put you right in the role of a
-                Full Stack Developer, giving you in-depth training in
-                everything from the basics of web development, all the way up
-                to the industry standards used by professionals every day.
-                Learn modern methodologies and best practices and get ready to
-                jump into your new career.
+                Full Stack Developer, giving you in-depth training in everything
+                from the basics of web development, all the way up to the
+                industry standards used by professionals every day. Learn modern
+                methodologies and best practices and get ready to jump into your
+                new career.
               </p>
-            </div>
-          </div>
-          <div className="mx-auto max-w-md px-4 lg:mt-12 text-left sm:max-w-3xl lg:max-w-7xl">
-            <p className="mt-2 text-3xl font-extrabold text-indigo-500 tracking-tight md:text-4xl">
+            </div>{" "}
+            <p className="mt-6 px-4 lg:mt-12 text-4xl font-extrabold text-indigo-500 tracking-tight">
               We want to show you the (Hello) World
             </p>
-            <p className="mt-5 text-right text-xl text-blue-200">
-              Beyond the actual technologies you will be trained on, you will be immersed in developer methodologies, communities, and culture.
-              You will be utilizing with your team the same practices that professional devs use everyday, from Tel Aviv to Sillicon Valley.
+            <p className="mt-5 px-4 text-xl text-blue-200">
+              Beyond the actual technologies you will be trained on, you will be
+              immersed in developer methodologies, communities, and culture. You
+              will be utilizing with your team the same practices that
+              professional devs use everyday, from Tel Aviv to Sillicon Valley.
             </p>
+          </div>
+          <div className="mx-auto max-w-md px-4 lg:mt-12 text-left sm:max-w-3xl lg:max-w-7xl">
             <div className="mt-12">
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {programFeatures.map((feature) => (

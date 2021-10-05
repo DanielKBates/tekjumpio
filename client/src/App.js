@@ -1,13 +1,9 @@
 import React from "react";
 import NavBar from "./components/NavBar";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home/Home";
-import About from "./pages/About/About"
+import About from "./pages/About/About";
 import Program from "./pages/Program/Program";
 import FormSite from "./pages/Register/FormSite";
 import Register from "./pages/Register/Register";
@@ -16,27 +12,26 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-
-    <Router >
-    
+    <Router>
+      <ScrollToTop />
       <div className="min-h-screen relative ">
         <div className="fixed min-h-screen min-w-full bg-gray-800 oxerflow-x-hidden -z-1"></div>
-        <NavBar  />
+        <NavBar />
         <div>
           <Switch>
-            <Route  path="/about">
+            <Route path="/about">
               <About />
             </Route>
-            <Route  path="/program">
+            <Route path="/program">
               <Program />
             </Route>
-            <Route  path="/register">
+            <Route path="/register">
               <FormSite />
             </Route>
-            <Route  path="/contact">
+            <Route path="/contact">
               <Contact />
             </Route>
-            <Route  path="/">
+            <Route path="/">
               <Home />
             </Route>
           </Switch>

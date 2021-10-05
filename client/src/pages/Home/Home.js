@@ -208,7 +208,7 @@ const Home = () => {
                   to="/program"
                   className="group block p-4 rounded-xl bg-gradient-to-r from-purple-500 to-purple-800 via-pink-600 bg-400 animate-animateGradient font-bold text-indigo-100 text-center text-lg lg:text-xl hover:text-pink-100"
                 >
-                  See what you'll learn
+                  See the skills you'll learn
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-12 w-6 mx-auto mt-2 transform duration-300 group-hover:translate-x-4"
