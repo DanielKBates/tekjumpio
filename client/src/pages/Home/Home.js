@@ -8,8 +8,6 @@ import Reviews from "../../components/Reviews/Reviews";
 import Callout from "../../components/Callout";
 import CodeBlock from "./CodeBlock";
 
-import { messages } from "../../utils/codeBlockText";
-
 const Home = () => {
   //Ok so the <AnimatedCard>s use IntersectionObserver API. Google it if you mess with the way they are called here. Use them for any scroll event based animations (although it doesnt really look at scrolling)
 
@@ -20,7 +18,7 @@ const Home = () => {
         <div className="absolute flex flex-col top-24 md:justify-around md:top-32 md:flex-row z-10 ">
           {/* Headers */}
           <div className="flex-col w-full xl:w-2/5 2xl:w-1/3 space-y-6 xl:space-y-8 ">
-            <h1 className="text-white text-4xl xl:text-5xl 2xl:text-6xl flex-col space-y-2 xl:space-y-4 2xl:space-y-6 animate-fadeIn">
+            <h1 className="text-white pl-1 text-4xl xl:text-5xl 2xl:text-6xl flex-col space-y-2 xl:space-y-4 2xl:space-y-6 animate-fadeIn">
               <p className="flex md:justify-center xl:justify-start">
                 Learn <span className="text-gray-800 mx-2"> Real</span> Skills.
               </p>
@@ -35,7 +33,7 @@ const Home = () => {
             </h1>
 
             {/* Text Paragraph */}
-            <div className="flex xl:w-11/12 mx-2 md:mx-0 md:leading-loose text-2xl 2xl:text-3xl text-gray-300 animate-fadeIn">
+            <div className="flex xl:w-11/12 px-1 md:leading-loose text-2xl 2xl:text-3xl text-gray-300 animate-fadeIn">
               Join Tekjump today to not only receive the training you need, but
               also the crucial real world experience that will wow employers and
               jumpstart your new software career!
@@ -43,26 +41,26 @@ const Home = () => {
             <div className="flex xl:w-2/3 2xl:w-3/4 animate-fadeIn">
               <Link
                 to="/register"
-                className="py-3 md:my-8 px-12 md:px-20 multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-11/12 mx-auto md:mx-0 arrow-hover"
+                className="py-3 md:my-8 px-12 group multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full mx-auto md:mx-0"
               >
                 Register Now{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  className="bi bi-arrow-right-short arrow w-10 h-10"
-                  viewBox="0 0 16 16"
+                  className="inline h-8 w-6 transform duration-300 group-hover:translate-x-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
                   <path
-                    className="text-white"
-                    fillRule="evenodd"
-                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
                   />
                 </svg>
               </Link>
             </div>
-            <div className="flex justify-center pt-24 text-indigo-200 animate-bounce md:hidden">
+            <div className="flex justify-center pt-20 text-indigo-200 animate-bounce md:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -107,14 +105,14 @@ const Home = () => {
       </div>
 
       <div className="flex md:mb-10 flex-col justify-center pt-12 pb-4">
-        <div className=" relative py-3 w-11/12 mx-auto mb-10">
+        <div className=" relative py-3 w-11/12 md:w-2/5 mx-auto mb-10">
           <AnimatedCard
             threshold={0.25}
-            activeClassName="transition-all duration-1400 ease-in transform scale-y-105 md:rotate-12 opacity-100  absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg rounded-3xl"
-            inactiveClassName="transition-all duration-1400 ease-in scale-y-100 md:translate-y-0 opacity-0 absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg rounded-3xl"
+            activeClassName="transition-all duration-1400 ease-in transform scale-105 md:rotate-12 opacity-100  absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg rounded-xl"
+            inactiveClassName="transition-all duration-1400 ease-in scale-y-100 md:translate-y-0 opacity-0 absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg rounded-xl"
           />
 
-          <div className="relative px-4 py-10 bg-gray-200 shadow-lg rounded-3xl sm:p-20">
+          <div className="relative px-4 py-10 bg-gray-200 shadow-lg rounded-xl sm:p-20">
             <div className="max-w-md mx-auto">
               <div>
                 <h1 className="text-black text-4xl">Jump Start Your Career</h1>
@@ -208,12 +206,12 @@ const Home = () => {
                 </div>
                 <Link
                   to="/program"
-                  className="block p-4 rounded-xl arrow-hover multiGradient animate-animateGradient font-bold text-center text-lg hover:text-indigo-200"
+                  className="group block p-4 rounded-xl bg-gradient-to-r from-purple-500 to-purple-800 via-pink-600 bg-400 animate-animateGradient font-bold text-indigo-100 text-center text-lg lg:text-xl hover:text-pink-100"
                 >
-                  How we will help you launch a new career
+                  See what you'll learn
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-8 w-6 mx-auto mt-2"
+                    className="h-12 w-6 mx-auto mt-2 transform duration-300 group-hover:translate-x-4"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -221,7 +219,7 @@ const Home = () => {
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={2}
+                      strokeWidth={3}
                       d="M14 5l7 7m0 0l-7 7m7-7H3"
                     />
                   </svg>
@@ -231,7 +229,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="mb-8 md:mb-20 md:pt-10">
+      <div className="mx-auto mb-8 w-11/12 md:mb-20 md:pt-10">
         <AnimatedCard
           threshold={0.25}
           activeClassName={
@@ -239,7 +237,7 @@ const Home = () => {
           }
           inactiveClassName="transition-all duration-1200 ease-in md:transform md:-translate-x-7 md:-translate-y-7 opacity-0"
         >
-          <div className="w-100 mx-auto flex justify-center">
+          <div className="w-11/12 mx-auto lg:w-full flex justify-center">
             <Reviews />
           </div>
         </AnimatedCard>

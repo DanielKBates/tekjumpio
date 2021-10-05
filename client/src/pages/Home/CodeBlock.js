@@ -11,7 +11,7 @@ const CodeBlock = () => {
     <div className=" p-6 bg-gray-800 rounded-3xl 2xl:min-w-full ">
       <Highlight className="jsx rounded-3xl ">
         {textBody}
-        <Typewriter />
+        {/* <Typewriter /> */}
         {/* <Typewriter loop={true} /> */}
       </Highlight>
     </div>

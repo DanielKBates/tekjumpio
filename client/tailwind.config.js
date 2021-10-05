@@ -20,7 +20,9 @@ module.exports = {
     },
 
     extend: {
+
       height: {
+        90:"26rem",
         96:"45rem",
         128: "55rem"
       },
@@ -43,7 +45,10 @@ module.exports = {
       },
 
       zIndex: {
-        "-10": "-10",
+        "negative": "-10",
+      },
+      backgroundSize: {
+        "400": "400%"
       },
 
       keyframes: {
@@ -135,8 +140,9 @@ module.exports = {
     extend: {
       animation: ["motion-safe", "motion-reduce"],
       backgroundColor: ["active"],
-      transform: ["hover", "focus"],
+      transform: ["hover", "focus", "group-hover"],
       scale: ["responsive", "hover", "focus"],
+      translate: ["group-hover"]
     },
   },
   plugins: [require("@tailwindcss/forms")],

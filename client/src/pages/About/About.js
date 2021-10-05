@@ -8,7 +8,7 @@ export default function About() {
     <>
       <div className="bg-indigo-700">
         <div className="max-w-2xl mx-auto text-center  pt-28 pb-16 px-4 sm:pb-20 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-white sm:text-5xl">
             <span className="block">Our Mission </span>
           </h2>
           <p className="mt-4 text-lg leading-6 text-indigo-200">
@@ -18,7 +18,7 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="pb-16 pt-8 bg-gray-800 overflow-hidden lg:pb-24 lg:pt-28">
+      <div className="pb-16 pt-8 bg-gray-800 overflow-hidden lg:pb-24 lg:pt-12">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
           <svg
             className="hidden lg:block absolute left-full transform -translate-x-1/2 z-0 -translate-y-1/4"
@@ -55,7 +55,7 @@ export default function About() {
           </svg>
           <div className="relative  lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div className="relative animate-fadeIn ">
-              <h3 className="text-2xl font-extrabold text-gray-50 tracking-tight sm:text-3xl">
+              <h3 className="text-2xl font-extrabold text-indigo-500 tracking-tight sm:text-4xl">
                 Jump Into a New Career
               </h3>
 
@@ -65,15 +65,15 @@ export default function About() {
                     <dt>
                       <div className="absolute flex items-center justify-center h-12 w-12 rounded-md multiGradient animate-animateGradient text-white">
                         <item.icon
-                          className="h-6 w-6 text-gray-50 fill-current"
+                          className="h-6 w-6 text-blue-100 fill-current"
                           aria-hidden="true"
                         />
                       </div>
-                      <p className="ml-16 text-lg leading-6 font-medium text-gray-50">
+                      <p className="ml-16 text-lg leading-6 font-medium text-indigo-300">
                         {item.name}
                       </p>
                     </dt>
-                    <dd className="mt-2 ml-16 text-base text-gray-400">
+                    <dd className="mt-2 ml-16 text-base text-indigo-100">
                       {item.description}
                     </dd>
                   </div>
@@ -162,10 +162,10 @@ export default function About() {
             >
               <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
                 <div className="lg:col-start-2">
-                  <h3 className="text-2xl font-extrabold text-gray-50 tracking-tight sm:text-3xl">
+                  <h3 className="text-2xl font-extrabold text-indigo-500 tracking-tight sm:text-3xl">
                     Let's Build a Community
                   </h3>
-                  <p className="mt-3 text-lg text-gray-300">
+                  <p className="mt-3 text-lg text-blue-100">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Impedit ex obcaecati natus eligendi delectus, cum deleniti
                     sunt in labore nihil quod quibusdam expedita nemo.
@@ -177,15 +177,15 @@ export default function About() {
                         <dt>
                           <div className="absolute flex items-center justify-center h-12 w-12 rounded-md multiGradient animate-animateGradient text-white">
                             <item.icon
-                              className="h-6 w-6 text-gray-50 fill-current"
+                              className="h-6 w-6 text-blue-100 fill-current"
                               aria-hidden="true"
                             />
                           </div>
-                          <p className="ml-16 text-lg leading-6 font-medium text-gray-50">
+                          <p className="ml-16 text-lg leading-6 font-medium text-indigo-300">
                             {item.name}
                           </p>
                         </dt>
-                        <dd className="mt-2 ml-16 text-base text-gray-300">
+                        <dd className="mt-2 ml-16 text-base text-blue-100">
                           {item.description}
                         </dd>
                       </div>
@@ -241,11 +241,11 @@ export default function About() {
               activeClassName={"opacity-1 transition-all duration-1000 z-10"}
               inactiveClassName={"opacity-0 transition-all duration-1000 z-10"}
             >
-              <div className="bg-gray-50 lg:mt-12 rounded-xl">
+              <div className="bg-gray-100 lg:mt-12 rounded-xl">
                 <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
                   <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
                     <div className="space-y-5 sm:space-y-4">
-                      <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+                      <h2 className="text-3xl text-indigo-500 font-extrabold tracking-tight sm:text-4xl">
                         Meet Our Team
                       </h2>
                       <p className="text-xl text-gray-500">
@@ -318,7 +318,7 @@ export default function About() {
                   <div className=" mx-auto py-12 px-4  sm:px-6 lg:px-8 lg:py-24">
                     <div className="space-y-8 sm:space-y-12">
                       <div className="space-y-5 sm:mx-auto sm:max-w-xl text-center sm:space-y-4 lg:max-w-5xl">
-                        <h2 className="text-3xl font-extrabold  tracking-tight sm:text-4xl">
+                        <h2 className="text-3xl text-indigo-500 font-extrabold  tracking-tight sm:text-4xl">
                           Our Graduates{" "}
                         </h2>
                         <p className="text-xl text-gray-500">

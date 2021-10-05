@@ -36,39 +36,17 @@ code:focus-visible {
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0);
   transition: box-shadow 0.2s;
 }
-.purpleGradient {
-  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0);
-  transition: box-shadow 0.2s;
-}
 
-.blueGradient {
-  background: linear-gradient(45deg, #7B85E3, #9585E4, #B085E5, #CA85E7);
-  background-size: 600% 600%;
-  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0);
-  transition: box-shadow 0.2s;
-}
-.greenGradient {
-  background: linear-gradient(45deg, #68BB59, #ACDF87, #ACDF87, #76BA1B);
-  background-size: 600% 600%;
-  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0);
-  transition: box-shadow 0.2s;
-}
- /* .navlink {
-  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-} */
 .multiGradient:hover {
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
 }
-.gradient-box {
+.footer-border {
   position: relative;
   box-sizing: border-box;
   background-clip: padding-box;
   border-top: solid var(--border-width) transparent;
 }
-.gradient-box:before {
+.footer-border:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -82,6 +60,22 @@ code:focus-visible {
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
+
+.gradient-border:before,
+.gradient-border:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  border-radius: inherit;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: gradient 15s ease infinite;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -140,16 +134,5 @@ code:focus-visible {
   visibility: visible;
   opacity: 1;
 }
-
-.arrow-hover .arrow {
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-  left: 0;
-  padding: 0;
-  margin: 0;
-}
-.arrow-hover:hover .arrow {
-  left: 10px;
-}
+ 
 
