@@ -83,7 +83,7 @@ export default function About() {
             </div>
             <div className="mt-10 -mx-4 relative lg:mt-0 " aria-hidden="true">
               <svg
-                className="absolute left-1/2 transform z-0 -translate-x-1/2 translate-y-16 lg:hidden"
+                className="absolute left-1/2 transform z-0 scale-y-75 -translate-x-1/2 translate-y-8 lg:hidden"
                 width={784}
                 height={404}
                 fill="none"
@@ -115,7 +115,7 @@ export default function About() {
                 />
               </svg>
               <img
-                className="relative mx-auto animate-fadeIn rounded-xl"
+                className="relative mx-auto animate-fadeIn w-4/5 shadow-2xl rounded-xl"
                 width={490}
                 src="/images/Adobe_Cropped1.png"
                 alt=""
@@ -123,7 +123,7 @@ export default function About() {
             </div>
           </div>
           <svg
-            className="hidden lg:block absolute right-full z-0 transform translate-x-1/2 translate-y-12"
+            className="hidden lg:block absolute right-full z-0 transform  translate-x-1/2 translate-y-12"
             width={404}
             height={784}
             fill="none"
@@ -159,7 +159,7 @@ export default function About() {
             <AnimatedCard
               activeClassName={"opacity-1 z-0 transition-all duration-1000"}
               inactiveClassName={"opacity-0 z-0 transition-all duration-1000"}
-              threshold={0.25}
+              threshold={0.10}
             >
               <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
                 <div className="lg:col-start-2">
@@ -167,9 +167,7 @@ export default function About() {
                     Let's Build a Community
                   </h3>
                   <p className="mt-3 text-lg text-blue-100">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Impedit ex obcaecati natus eligendi delectus, cum deleniti
-                    sunt in labore nihil quod quibusdam expedita nemo.
+                    Tekjump isn't just building individually strong developers - we are growing an active community of developers that strives to enrice our society with elegant and responsible software.
                   </p>
 
                   <dl className="mt-10 space-y-10">
@@ -195,7 +193,7 @@ export default function About() {
                 </div>
                 <div className="mt-10 z-0 -mx-4 relative lg:mt-0 lg:col-start-1">
                   <svg
-                    className="absolute left-1/2 z-0 transform  -translate-x-1/2 translate-y-16 lg:hidden"
+                    className="absolute left-1/2 z-0 transform  -translate-x-1/2 scale-y-75 translate-y-16 lg:hidden"
                     width={784}
                     height={404}
                     fill="none"
@@ -228,9 +226,9 @@ export default function About() {
                     />
                   </svg>
                   <img
-                    className="relative mx-auto"
+                    className=" w-4/5 relative mx-auto rounded-xl shadow-2xl"
                     width={490}
-                    src="https://tailwindui.com/img/features/feature-example-2.png"
+                    src="/images/Adobe_Cropped4.png"
                     alt=""
                   />
                 </div>
@@ -242,7 +240,7 @@ export default function About() {
               activeClassName={"opacity-1 transition-all duration-1000 z-10"}
               inactiveClassName={"opacity-0 transition-all duration-1000 z-10"}
             >
-              <div className="bg-gray-100 lg:mt-12 rounded-xl">
+              <div className="bg-gray-100 mt-12 md:mt-28 rounded-xl">
                 <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
                   <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
                     <div className="space-y-5 sm:space-y-4">

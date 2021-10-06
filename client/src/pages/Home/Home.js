@@ -105,7 +105,7 @@ const Home = () => {
       </div>
 
       <div className="flex md:mb-10 flex-col justify-center pt-12 pb-4">
-        <div className=" relative py-3 w-11/12 md:w-2/5 mx-auto mb-10">
+        <div className=" relative py-3 w-11/12 md:w-2/5 xl:w-1/3 mx-auto mb-10">
           <AnimatedCard
             threshold={0.25}
             activeClassName="transition-all duration-1400 ease-in transform scale-105 md:rotate-12 opacity-100  absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg rounded-xl"

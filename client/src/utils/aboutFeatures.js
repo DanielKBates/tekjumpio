@@ -36,7 +36,7 @@ export const communityFeatures = [
         id: 2,
         name: 'Empower Each Other Through Software',
         description:
-            'Join a growing community of web developers ',
+            'Join a growing community of web developers all dedicated to furthering their learning, building amazing web applications, and of course, pursuing an outstanding career in web development.',
         icon: LightningBoltIcon,
     },
 ]
