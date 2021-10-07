@@ -322,7 +322,7 @@ export default function About() {
                         </h2>
                         <p className="text-xl text-gray-500">
                           Meet our previous graduates who have worked with us to
-                          create WEBSITES
+                          create live web applications for real clients.
                         </p>
                       </div>
                       <ul

@@ -38,7 +38,7 @@ const Home = () => {
               also the crucial real world experience that will wow employers and
               jumpstart your new software career!
             </div>
-            <div className="flex xl:w-2/3 2xl:w-3/4 animate-fadeIn">
+            <div className="flex xl:w-2/3 2xl:w-2/3 animate-fadeIn">
               <Link
                 to="/register"
                 className="py-3 md:my-8 px-12 group multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full mx-auto md:mx-0"
@@ -229,7 +229,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="mx-auto mb-8 w-11/12 md:mb-20 md:pt-10">
+      <div className="mx-auto mb-8 md:w-2/3 md:mb-20 md:pt-16">
         <AnimatedCard
           threshold={0.25}
           activeClassName={
