@@ -1,8 +1,11 @@
 import {
-  GlobeAltIcon,
+  OfficeBuildingIcon,
   ScaleIcon,
   LightningBoltIcon,
   DesktopComputerIcon,
+  DatabaseIcon,
+  GlobeIcon,
+  AcademicCapIcon
 } from "@heroicons/react/outline";
 
 export const programFeatures = [
@@ -10,7 +13,7 @@ export const programFeatures = [
     name: "Master the Fundamentals",
     description:
       "Build a strong foundation for your web development career by mastering the integral languages that make up modern websites. We train our students to have a full understanding of semantic HTML, scalable CSS and modern JavaScript, not just to know the latest framework and fads.",
-    icon: GlobeAltIcon,
+    icon: AcademicCapIcon,
   },
   {
     name: "Learn the MERN",
@@ -29,18 +32,18 @@ export const programFeatures = [
     name: "Control Data with MongoDB",
     description:
       "Learn to create databases from scratch and connect your applications to robust storage solutions using MongoDB. On top of being taught how to create and connect your web applications to MongoDB, you will be trained in modern practices that preserve data integrity, allow for safe manipulation, and result in scalable solutions.",
-    icon: DesktopComputerIcon,
+    icon: DatabaseIcon,
   },
   {
     name: "Get with Git",
     description:
       "Get immersed in the world's most popular version control system. Become an expert in collaborative web development as you and your team master Git through large-scale team projects. ",
-    icon: DesktopComputerIcon,
+    icon: GlobeIcon,
   },
   {
-    name: "Build Beautiful Sites, with Real Users",
+    name: "Build Beautiful Sites with Real Users",
     description:
       "On top of developing fully functional applications both individually and in a team throughout the program, upon graduating, you will be invited to work alongside our development team and gain professional work experience building websites for local clients. Unleash your new skills and build a robust portfolio that will wow employers and land you the job of your dreams.",
-    icon: ScaleIcon,
+    icon: OfficeBuildingIcon,
   },
 ];

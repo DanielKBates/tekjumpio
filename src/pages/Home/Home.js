@@ -20,14 +20,14 @@ const Home = () => {
           <div className="flex-col w-full xl:w-2/5 2xl:w-1/3 space-y-6 xl:space-y-8 ">
             <h1 className="text-white pl-1 text-4xl xl:text-5xl 2xl:text-6xl flex-col space-y-2 xl:space-y-4 2xl:space-y-6 animate-fadeIn">
               <p className="flex md:justify-center xl:justify-start">
-                Learn <span className="text-gray-800 mx-2"> Real</span> Skills.
+                Learn <span className="text-indigo-800 mx-2"> Real</span> Skills.
               </p>
               <p className="flex md:justify-center xl:justify-start">
-                Engage <span className="text-gray-800 mx-2"> Real</span>{" "}
+                Engage <span className="text-indigo-800 mx-2"> Real</span>{" "}
                 Clients.
               </p>
               <p className="flex md:justify-center xl:justify-start">
-                Build <span className="text-gray-800 mx-2"> Real</span>{" "}
+                Build <span className="text-indigo-800 mx-2"> Real</span>{" "}
                 Projects.
               </p>
             </h1>
@@ -204,26 +204,28 @@ const Home = () => {
                     into a new career.
                   </p>
                 </div>
+                <div className="w-full flex justify-center">
                 <Link
-                  to="/program"
-                  className="group block p-4 rounded-xl bg-gradient-to-r from-purple-500 to-purple-800 via-pink-600 bg-400 animate-animateGradient font-bold text-indigo-100 text-center text-lg lg:text-xl hover:text-pink-100"
+                to="/program"
+                className="py-3 md:my-8 px-12 group multiGradient animate-animateGradient text-gray-100 rounded-xl text-xl transition duration-300 text-center font-semibold w-full mx-auto md:mx-0"
+              >
+                Check It Out{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="inline h-8 w-6 transform duration-300 group-hover:translate-x-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  See the skills you'll learn
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-12 w-6 mx-auto mt-2 transform duration-300 group-hover:translate-x-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={3}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </Link>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </Link>
+              </div>
               </div>
             </div>
           </div>

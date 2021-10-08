@@ -20,7 +20,7 @@ const Program = () => {
                 Our Program
               </h1>
 
-              <p className="justify-self-start pl-4 text-blue-200 mt-4 lg:text-xl xl:w-2/3 xl:px-12 xl:pt-4 animate-fadeIn">
+              <p className="justify-self-start pl-4 text-blue-200 mt-4 text-xl xl:w-2/3 xl:px-12 xl:pt-4 animate-fadeIn">
                 Our handcrafted curriculum will put you right in the role of a
                 Full Stack Developer, giving you in-depth training in everything
                 from the basics of web development, all the way up to the
