@@ -3,6 +3,7 @@ import "./type.css";
 function Typewriter({ txt, speed = 15 }) {
   const [HTML, setHTML] = useState(txt);
   const [done, setDone] = useState(false);
+  const ref = useRef(null);
   const setUpType = (t) => {
     let cursorPosition = 0,
       tag = "",
@@ -72,12 +73,12 @@ function Typewriter({ txt, speed = 15 }) {
     };
   };
   useEffect(() => {
-    const type = setUpType(document.getElementById("type"));
+    const type = setUpType(ref.current);
     type.type();
   }, []);
   return (
     <div>
-      <div id="type" style={{ "--time": done ? "0.7s" : "0s" }}></div>
+      <div ref={ref} id="type" style={{ "--time": done ? "0.7s" : "0s" }}></div>
     </div>
   );
 }
