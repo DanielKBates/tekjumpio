@@ -5,6 +5,7 @@ function Typewriter({ txt, speed = 15 }) {
   const [done, setDone] = useState(false);
   const ref = useRef(null);
   const setUpType = (t) => {
+    t.innerHTML = "";
     let cursorPosition = 0,
       tag = "",
       writingTag = false,

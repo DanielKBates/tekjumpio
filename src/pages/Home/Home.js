@@ -7,7 +7,7 @@ import AnimatedCard from "../../components/AnimatedCard";
 import Reviews from "../../components/Reviews/Reviews";
 import Callout from "../../components/Callout";
 import CodeBlock from "./CodeBlock";
-
+import { textBody } from "../../utils/codeBlockText";
 const Home = () => {
   //Ok so the <AnimatedCard>s use IntersectionObserver API. Google it if you mess with the way they are called here. Use them for any scroll event based animations (although it doesnt really look at scrolling)
 
@@ -20,7 +20,8 @@ const Home = () => {
           <div className="flex-col w-full xl:w-2/5 2xl:w-1/3 space-y-6 xl:space-y-8 ">
             <h1 className="text-white pl-1 text-4xl xl:text-5xl 2xl:text-6xl flex-col space-y-2 xl:space-y-4 2xl:space-y-6 animate-fadeIn">
               <p className="flex md:justify-center xl:justify-start">
-                Learn <span className="text-indigo-800 mx-2"> Real</span> Skills.
+                Learn <span className="text-indigo-800 mx-2"> Real</span>{" "}
+                Skills.
               </p>
               <p className="flex md:justify-center xl:justify-start">
                 Engage <span className="text-indigo-800 mx-2"> Real</span>{" "}
@@ -81,15 +82,15 @@ const Home = () => {
           <div className="hidden xl:flex z-20 ">
             <AnimatedCard
               threshold={0.5}
-              activeClassName="transform -translate-x-4 opacity-100 transition-all duration-1000 ease-in"
-              inactiveClassName="transform opacity-0 translate-x-0 transition-all duration-1000 ease-in"
+              activeClassName="transform translate-y-0 translate-x-0 opacity-100 transition-all duration-1000 ease-in-out"
+              inactiveClassName="transform opacity-0 translate-x-4 translate-y-4 transition-all duration-1000 ease-in-out"
             >
               {/* <img
                 src={`${process.env.PUBLIC_URL}/images/rec5.gif`}
                 alt="placeholder"
                 className="rounded-lg shadow-2xl h-full"
               /> */}
-              <CodeBlock />
+              <CodeBlock text={textBody} width={682.422} name="Program.jsx" />
             </AnimatedCard>
           </div>
         </div>
@@ -205,27 +206,27 @@ const Home = () => {
                   </p>
                 </div>
                 <div className="w-full flex justify-center">
-                <Link
-                to="/program"
-                className="py-3 md:my-8 px-12 group multiGradient animate-animateGradient text-gray-100 rounded-xl text-xl transition duration-300 text-center font-semibold w-full mx-auto md:mx-0"
-              >
-                Check It Out{" "}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="inline h-8 w-6 transform duration-300 group-hover:translate-x-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
-              </Link>
-              </div>
+                  <Link
+                    to="/program"
+                    className="py-3 md:my-8 px-12 group multiGradient animate-animateGradient text-gray-100 rounded-xl text-xl transition duration-300 text-center font-semibold w-full mx-auto md:mx-0"
+                  >
+                    Check It Out{" "}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="inline h-8 w-6 transform duration-300 group-hover:translate-x-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

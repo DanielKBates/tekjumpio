@@ -1,4 +1,4 @@
-export const textBody = `import React from "react";
+const textBody = `import React from "react";
 import ProgramTabs from "./ProgramTabs";
 import AnimatedCard from "../../components/AnimatedCard";
 const Program = () => {
@@ -19,5 +19,7 @@ const Program = () => {
 };
 
 export default Program;`;
+const count = 20;
+const textArray = textBody.split("");
 
-export const textArray = textBody.split("");
+export { textBody, count };
