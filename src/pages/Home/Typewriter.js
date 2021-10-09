@@ -1,22 +1,85 @@
-import React, { useState, useEffect } from "react";
-import { textBody } from '../../utils/codeBlockText'
-
-function Typewriter({ loop, children }) {
-    const [text, setText] = useState("");
-    const [currentIndex, setCurrentIndex] = useState(0);
-    useEffect(() => {
-        if (currentIndex < textBody.length) {
-            setTimeout(() => {
-                setText(text + textBody[currentIndex]);
-                setCurrentIndex(currentIndex + 1);
-            }, 400);
-        } else if (loop) {
-            // reset the text and the index
-            setText("");
-            setCurrentIndex(0);
+import React, { useState, useEffect, useRef } from "react";
+import "./type.css";
+function Typewriter({ txt, speed = 15 }) {
+  const [HTML, setHTML] = useState(txt);
+  const [done, setDone] = useState(false);
+  const setUpType = (t) => {
+    let cursorPosition = 0,
+      tag = "",
+      writingTag = false,
+      tagOpen = false,
+      typeSpeed = speed,
+      tempTypeSpeed = 0,
+      offset = speed;
+    let type = function () {
+      if (writingTag === true) {
+        tag += HTML[cursorPosition];
+      }
+      if (HTML[cursorPosition] === "<") {
+        tempTypeSpeed = 0;
+        if (tagOpen) {
+          tagOpen = false;
+          writingTag = true;
+        } else {
+          tag = "";
+          tagOpen = true;
+          writingTag = true;
+          tag += HTML[cursorPosition];
         }
-    }, [currentIndex]);
-    return (text);
+      }
+
+      if (!writingTag && tagOpen) {
+        if (tag) {
+          tag.innerHTML += HTML[cursorPosition];
+        } else {
+          t.innerHTML += HTML[cursorPosition];
+        }
+      }
+      if (!writingTag && !tagOpen) {
+        if (HTML[cursorPosition] === " ") {
+          tempTypeSpeed = 0;
+        } else {
+          tempTypeSpeed = Math.floor(Math.random() * typeSpeed) + offset;
+        }
+        if (HTML[cursorPosition] === "«") {
+          t.innerHTML += "<";
+        } else if (HTML[cursorPosition] === "»") {
+          t.innerHTML += ">";
+        } else {
+          t.innerHTML += HTML[cursorPosition];
+        }
+      }
+      if (writingTag === true && HTML[cursorPosition] === ">") {
+        tempTypeSpeed = Math.floor(Math.random() * typeSpeed) + offset;
+        writingTag = false;
+        if (tagOpen) {
+          let newSpan = document.createElement("span");
+          t.appendChild(newSpan);
+          newSpan.innerHTML = tag;
+          tag = newSpan.firstChild;
+        }
+      }
+
+      cursorPosition += 1;
+      if (cursorPosition < HTML.length) {
+        setTimeout(type, tempTypeSpeed);
+      } else {
+        setDone(true);
+      }
+    };
+    return {
+      type: type,
+    };
+  };
+  useEffect(() => {
+    const type = setUpType(document.getElementById("type"));
+    type.type();
+  }, []);
+  return (
+    <div>
+      <div id="type" style={{ "--time": done ? "0.7s" : "0s" }}></div>
+    </div>
+  );
 }
 
-export default Typewriter
+export default Typewriter;

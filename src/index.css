@@ -17,10 +17,6 @@ input:focus-visible,
 textarea:focus-visible {
   @apply ring-4 ring-white ring-opacity-50 outline-none;
 }
-.hljs {
-  color: #adbac7;
-  background: #1f2937 !important;
-}
 code:focus-visible {
   outline: none;
 }

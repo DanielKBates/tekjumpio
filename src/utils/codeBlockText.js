@@ -10,9 +10,7 @@ const Program = () => {
         </div>
         <AnimatedCard
           threshold={0.5}
-          activeClassName={
-            "transform translate-x-0 opacity-100 transition-all "
-          }
+          activeClassName="transform translate-x-0 opacity-100 transition-all"
         >
         </AnimatedCard>
       </Container>
@@ -20,6 +18,6 @@ const Program = () => {
   );
 };
 
-export default Program;`
+export default Program;`;
 
-export const textArray = textBody.split("")
+export const textArray = textBody.split("");
