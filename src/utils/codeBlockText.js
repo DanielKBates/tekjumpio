@@ -19,7 +19,6 @@ const Program = () => {
 };
 
 export default Program;`;
-const count = 20;
 const textArray = textBody.split("");
 
-export { textBody, count };
+export { textBody };
