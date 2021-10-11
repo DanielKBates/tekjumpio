@@ -167,7 +167,7 @@ export default function About() {
                     Let's Build a Community
                   </h3>
                   <p className="mt-3 text-lg text-blue-100">
-                    Tekjump isn't just building individually strong developers - we are growing an active community of developers that strives to enrice our society with elegant and responsible software.
+                    Tekjump isn't just building individually strong developers - we are growing an active community of developers that strives to enrich our society with elegant and responsible software.
                   </p>
 
                   <dl className="mt-10 space-y-10">
