@@ -39,7 +39,7 @@ const CodeBlock = ({ text = "", width = 0, name = "" }) => {
     >
       <div className="relative overflow-hidden md:rounded-xl shadow-2xl flex">
         <div className="absolute inset-0 bg-black bg-opacity-75 backdrop-blur-2xl backdrop-filter"></div>
-        <div className="relative w-full flex flex-col">
+        <div className="relative w-full flex flex-col bg-gray-800 bg-opacity-50">
           <div className="flex-none h-11 flex items-center px-4 bg-black bg-opacity-10">
             <span className=" w-full text-center text-gray-400 text-sm">
               {name}
