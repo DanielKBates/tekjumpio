@@ -39,7 +39,7 @@ const Program = () => {
               <p className="mt-6 px-4 xl:px-12 lg:mt-12 text-right text-4xl lg:text-5xl font-black text-indigo-500 tracking-tight">
                 We want to show you the (Hello) World
               </p>
-              <p className="mt-5 px-4  xl:pr-12 xl:w-2/3 xl:pt-4 xl:text-right text-xl text-blue-200">
+              <p className="mt-5 pl-4  xl:pl-12 xl:w-2/3 xl:pt-4  text-xl text-blue-200">
                 Beyond the actual technologies you will be trained on, you will
                 be immersed in developer methodologies, communities, and
                 culture. You will be utilizing with your team the same practices
