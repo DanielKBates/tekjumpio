@@ -12,7 +12,7 @@ function Reviews() {
     } else {
       setSlide(slide + 1);
     }
-  }, 6000);
+  }, 12000);
 
   return (
     <div className="relative w-full group">
