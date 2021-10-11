@@ -2,10 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // Components
-// import Container from "../../components/Container";
 import AnimatedCard from "../../components/AnimatedCard";
 import Reviews from "../../components/Reviews/Reviews";
-import Callout from "../../components/Callout";
 import CodeBlock from "./CodeBlock";
 
 const Home = () => {

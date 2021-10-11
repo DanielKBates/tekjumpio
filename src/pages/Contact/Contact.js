@@ -181,7 +181,7 @@ const Contact = () => {
                         href="https://discord.gg/cfQJR85KTG"
                         className="underline"
                       >
-                        Join our support discord server{" "}
+                        Join our support Discord server{" "}
                       </a>
                       and talk to the team!
                     </span>
