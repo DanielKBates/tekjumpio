@@ -1,13 +1,12 @@
 import { useState } from "react";
 
 import useInterval from "../../hooks/useInterval";
-const reviewList = require("../../utils/reviews.json");
-
+import { reviews } from "../../utils/students"
 function Reviews() {
   const [slide, setSlide] = useState(0);
 
   useInterval(() => {
-    if (slide === reviewList.length - 1) {
+    if (slide === reviews.length - 1) {
       setSlide(0);
     } else {
       setSlide(slide + 1);
@@ -36,15 +35,15 @@ function Reviews() {
             </div>
             <div className="review-text flex flex-col items-center text-center">
               <h2 className="review-title font-bold text-3xl text-gray-100 m-5 overflow-ellipsis w-4/6">
-                {reviewList[slide].title}
+                {reviews[slide].title}
               </h2>
-              <p className="italic text-gray-300">{reviewList[slide].message}</p>
+              <p className="italic text-gray-300">{reviews[slide].message}</p>
               <div className="review-user mt-5">
-                <h3 className="text-gray-100 text-xl">{reviewList[slide].name}</h3>
-                <h4 className="text-gray-300 text-xs">{reviewList[slide].class}</h4>
+                <h3 className="text-gray-100 text-xl">{reviews[slide].name}</h3>
+                <h4 className="text-gray-300 text-xs">{reviews[slide].class}</h4>
                 <img
                   className="mx-auto h-10 w-10 mt-2 rounded-full"
-                  src={reviewList[slide].image}
+                  src={reviews[slide].image}
                   alt=""
                 />
               </div>

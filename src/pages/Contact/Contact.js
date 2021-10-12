@@ -148,13 +148,13 @@ const Contact = () => {
                     />
                     <span className="ml-3">
                       <a href="" className="underline">
-                        Join our support Zoom
+                       Virtual Meet and Greet 
                       </a>{" "}
-                      from 1-3 PM, Monday - Friday
+                      with the Team over Zoom on Monday - Friday, 1-3 PM.
                     </span>
                   </dd>
                   <dt>
-                    <span className="sr-only">Support Discord Link</span>
+                    <span className="sr-only">Q&A Discord Link</span>
                   </dt>
                   <dd className="flex text-base text-blue-50">
                     <svg
@@ -181,7 +181,7 @@ const Contact = () => {
                         href="https://discord.gg/cfQJR85KTG"
                         className="underline"
                       >
-                        Join our support Discord server{" "}
+                        Join our Q&A Discord server{" "}
                       </a>
                       and talk to the team!
                     </span>

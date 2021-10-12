@@ -1,8 +1,7 @@
 import AnimatedCard from "../../components/AnimatedCard";
-
+import { graduates } from "../../utils/students";
 import { trainingFeatures, communityFeatures } from "../../utils/aboutFeatures";
 const people = require("../../utils/people.json");
-const reviews = require("../../utils/reviews.json")
 
 export default function About() {
   return (
@@ -305,7 +304,7 @@ export default function About() {
                         role="list"
                         className="mx-auto text-center grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-6"
                       >
-                        {reviews.map((person) => (
+                        {graduates.map((person) => (
                           <li key={person.name}>
                             <div className="space-y-4">
                               <img
