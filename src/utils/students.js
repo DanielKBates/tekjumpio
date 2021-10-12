@@ -18,9 +18,9 @@ export const reviews = [
     image: "https://via.placeholder.com/150"
   },
   {
-    name: "Aiden O.",
+    name: "Aidan O.",
     class: "SUMMER '21",
-    message: "LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM",
+    message: "If you are interested in web design + development, I would 100% recommend tekjump. The camp focuses on popular web technologies and encourages creativity, questions, and thinking outside the box. Wether you code as a hobby or want to pursue software as a career, you will be prepared to continue learning and writing software outside of class.",
     image: "https://via.placeholder.com/150"
   },
   

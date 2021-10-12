@@ -6,6 +6,9 @@ import AnimatedCard from "../../components/AnimatedCard";
 import Reviews from "../../components/Reviews/Reviews";
 import CodeBlock from "./CodeBlock";
 
+// utils
+import { codeBlockText } from "../../utils/codeBlockText";
+
 const Home = () => {
   //Ok so the <AnimatedCard>s use IntersectionObserver API. Google it if you mess with the way they are called here. Use them for any scroll event based animations (although it doesnt really look at scrolling)
 
@@ -82,12 +85,7 @@ const Home = () => {
               activeClassName="transform -translate-x-4 opacity-100 transition-all duration-1000 ease-in"
               inactiveClassName="transform opacity-0 translate-x-0 transition-all duration-1000 ease-in"
             >
-              {/* <img
-                src={`${process.env.PUBLIC_URL}/images/rec5.gif`}
-                alt="placeholder"
-                className="rounded-lg shadow-2xl h-full"
-              /> */}
-              <CodeBlock />
+              <CodeBlock text={codeBlockText} width={682.422} name="Program.jsx" />
             </AnimatedCard>
           </div>
         </div>

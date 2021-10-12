@@ -7,7 +7,10 @@ const dayWeeks = [
     week: "Week Two",
     unit: "Animation and CSS Libraries, Developing Interactive Sites - JavaScript, Bootstrap",
   },
-  { week: "Week Three", unit: "Advanced JavaScript and Object Oriented Development - JavaScript" },
+  {
+    week: "Week Three",
+    unit: "Advanced JavaScript and Object Oriented Development - JavaScript",
+  },
   {
     week: "Week Four",
     unit: "Making HTTP requests with JavaScript, Utilizing Externl APIs in Web Development - JavaScript",
@@ -95,7 +98,7 @@ const FormSite = () => {
     <div className="pt-20 mx-auto w-full lg:w-2/3">
       <div className="flex flex-col">
         <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div className="pt-2 text-lg align-middle inline-block sm:px-6 lg:px-10">
+          <div className="pt-2 text-lg align-middle inline-block px-2 lg:px-10">
             <div className="shadow overflow-hidden border-b border-gray-200">
               <p className="px-6 pt-10 bg-gray-50 text-2xl lg:text-xl text-pink-900 ">
                 In addition to receiving in depth and expert full stack web
@@ -103,30 +106,42 @@ const FormSite = () => {
                 Graduate Development Team and build professional work experience
                 by engaging with real clients from our local communities.
               </p>
-              <p className="px-6 pt-14  bg-gray-50 text-2xl lg:text-xl text-pink-900 ">
+              <p className="px-6 pt-10  bg-gray-50 text-2xl lg:text-xl text-pink-900 ">
                 Classes start on Dec 1st, register now to reserve your seat and
-                jumpstart your new development career! Jump in our <a href ="#" className="underline">Virtual Meet and Greet Zoom,</a> anytime before registering for a discount to the program!
+                jumpstart your new development career! Jump in our{" "}
+                <a href="#" className="underline">
+                  Virtual Meet and Greet Zoom,
+                </a>{" "}
+                anytime before registering for a discount to the program!
               </p>
               <div className="px-6 p-14 bg-gray-50 justify-items-end grid grid-cols-2">
                 <ul>
                   <li>
                     {" "}
                     {toggle
-                      ? "9 Week, 225 Hour Program"
-                      : "15 Week 225 Hour Program"}{" "}
+                      ? "9 Week, 240 Hour Program"
+                      : "16 Week 240 Hour Program"}{" "}
                   </li>
                   <li>Internship Opportunities </li>
                   <li>Career Coaching </li>
                   <li> Placement Assistance </li>
                 </ul>
-                <div className="p-4 ml-24 flex justify-self-start items-center">
-                  Total of $4000 <span className="text-sm text-pink-900 ml-2">(Launch Discounts Available)</span>
-                  
+                <div className="p-4 ml-24 flex-col lg:flex-row justify-self-start items-center">
+                  Total of $4000{" "}
+                  <span className="text-sm text-pink-900 ml-2">
+                    (Launch Discounts Available)
+                  </span>
                 </div>
               </div>
-              <div>
-                <h1 className="bg-gray-50  pl-6 text-3xl font-bold text-pink-900">
-                  Class Schedule <p className="text-black font-normal text-lg"> {toggle? "DAY SCHEDULE DETAILS DAY2DAY" : "Night SCHEDULE DETAILS DAY2DAY" } </p>
+              
+                <div className="bg-gray-50 pl-6 text-3xl font-semibold text-pink-900">
+                  Class Schedule <span className="text-lg ml-2">{toggle ? "(Day)" : "(Night)"}</span>
+                  <p className="text-black font-normal text-lg my-4">
+                    {" "}
+                    {toggle
+                      ? "Our Day sessions will be Monday - Friday, from 9AM to 3PM, with an hour lunch in the middle of the session. Our instructors will have office hours every day for an hour after the class ends, and upon request."
+                      : "Our night sessions will be Monday - Friday, from 6PM to 9PM. Our instructors will have office hours every day for an hour before the class starts, and upon request."}{" "}
+                  </p>
                   <span>
                     {" "}
                     <Switch.Group as="div" className="flex items-center">
@@ -155,8 +170,8 @@ const FormSite = () => {
                       </Switch.Label>
                     </Switch.Group>
                   </span>
-                </h1>
-              </div>
+                </div>
+              
 
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">

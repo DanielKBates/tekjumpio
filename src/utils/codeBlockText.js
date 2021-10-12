@@ -1,4 +1,4 @@
-export const textBody = `import React from "react";
+export const codeBlockText = `import React from "react";
 import ProgramTabs from "./ProgramTabs";
 import AnimatedCard from "../../components/AnimatedCard";
 const Program = () => {
@@ -22,4 +22,4 @@ const Program = () => {
 
 export default Program;`
 
-export const textArray = textBody.split("")
+export const textArray = codeBlockText.split("")
