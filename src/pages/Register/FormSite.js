@@ -98,7 +98,7 @@ const FormSite = () => {
     <div className="pt-20 mx-auto w-full lg:w-2/3">
       <div className="flex flex-col">
         <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div className="pt-2 text-lg align-middle inline-block px-2 lg:px-10">
+          <div className="pt-2 text-lg align-middle inline-block px-2 md:px-8 lg:px-10">
             <div className="shadow overflow-hidden border-b border-gray-200">
               <p className="px-6 pt-10 bg-gray-50 text-2xl lg:text-xl text-pink-900 ">
                 In addition to receiving in depth and expert full stack web
@@ -114,64 +114,66 @@ const FormSite = () => {
                 </a>{" "}
                 anytime before registering for a discount to the program!
               </p>
-              <div className="px-6 p-14 bg-gray-50 justify-items-end grid grid-cols-2">
-                <ul>
-                  <li>
-                    {" "}
-                    {toggle
-                      ? "9 Week, 240 Hour Program"
-                      : "16 Week 240 Hour Program"}{" "}
-                  </li>
-                  <li>Internship Opportunities </li>
-                  <li>Career Coaching </li>
-                  <li> Placement Assistance </li>
-                </ul>
-                <div className="p-4 ml-24 flex-col lg:flex-row justify-self-start items-center">
-                  Total of $4000{" "}
-                  <span className="text-sm text-pink-900 ml-2">
-                    (Launch Discounts Available)
-                  </span>
-                </div>
-              </div>
-              
-                <div className="bg-gray-50 pl-6 text-3xl font-semibold text-pink-900">
-                  Class Schedule <span className="text-lg ml-2">{toggle ? "(Day)" : "(Night)"}</span>
-                  <p className="text-black font-normal text-lg my-4">
-                    {" "}
-                    {toggle
-                      ? "Our Day sessions will be Monday - Friday, from 9AM to 3PM, with an hour lunch in the middle of the session. Our instructors will have office hours every day for an hour after the class ends, and upon request."
-                      : "Our night sessions will be Monday - Friday, from 6PM to 9PM. Our instructors will have office hours every day for an hour before the class starts, and upon request."}{" "}
-                  </p>
-                  <span>
-                    {" "}
-                    <Switch.Group as="div" className="flex items-center">
-                      <Switch
-                        checked={toggle}
-                        onChange={setToggle}
+
+              <div className="bg-gray-50 pl-6 text-3xl pt-16 font-semibold text-pink-900">
+                Class Schedule{" "}
+                <span className="text-lg ml-2">
+                  {toggle ? "(Day)" : "(Night)"}
+                </span>
+                <span>
+                  {" "}
+                  <Switch.Group as="div" className="flex items-center">
+                    <Switch
+                      checked={toggle}
+                      onChange={setToggle}
+                      className={classNames(
+                        toggle ? "bg-pink-900" : "bg-gray-200",
+                        "relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      )}
+                    >
+                      <span
+                        aria-hidden="true"
                         className={classNames(
-                          toggle ? "bg-pink-900" : "bg-gray-200",
-                          "relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                          toggle ? "translate-x-5" : "translate-x-0",
+                          "pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"
                         )}
-                      >
-                        <span
-                          aria-hidden="true"
-                          className={classNames(
-                            toggle ? "translate-x-5" : "translate-x-0",
-                            "pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"
-                          )}
-                        />
-                      </Switch>
-                      <Switch.Label as="span" className="ml-3">
-                        <span className="text-sm font-medium text-gray-900">
-                          {toggle
-                            ? "See the Night Class Schedule"
-                            : "See the Day Schedule"}
-                        </span>
-                      </Switch.Label>
-                    </Switch.Group>
-                  </span>
+                      />
+                    </Switch>
+                    <Switch.Label as="span" className="ml-3">
+                      <span className="text-sm font-medium text-gray-900">
+                        {toggle
+                          ? "See the Night Class Schedule"
+                          : "See the Day Schedule"}
+                      </span>
+                    </Switch.Label>
+                  </Switch.Group>
+                </span>
+                <div className="px-6 p-14 bg-gray-50 justify-items-end grid grid-cols-2">
+                  <ul className="text-black font-normal text-lg my-4">
+                    <li>
+                      {" "}
+                      {toggle
+                        ? "9 Week, 240 Hour Program"
+                        : "16 Week 240 Hour Program"}{" "}
+                    </li>
+                    <li>Internship Opportunities </li>
+                    <li>Career Coaching </li>
+                    <li> Placement Assistance </li>
+                  </ul>
+                  <div className="p-4  flex-col lg:flex-row justify-self-start items-center text-black font-normal text-lg">
+                    Total of $4000{" "}
+                    <span className="text-sm text-pink-900 ml-2">
+                      (Launch Discounts Available)
+                    </span>
+                  </div>
                 </div>
-              
+                <p className="text-black font-normal text-lg my-4">
+                  {" "}
+                  {toggle
+                    ? "Our Day sessions will be Monday - Friday, from 9AM to 3PM, with an hour lunch in the middle of the session. Our instructors will have office hours every day for an hour after the class ends, and upon request."
+                    : "Our night sessions will be Monday - Friday, from 6PM to 9PM. Our instructors will have office hours every day for an hour before the class starts, and upon request."}{" "}
+                </p>
+              </div>
 
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">

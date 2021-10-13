@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-const Typewriter = ({ txt, speed = 5 }) => {
+const Typewriter = ({ txt, speed = 0 }) => {
   const [HTML, setHTML] = useState(txt);
   const [done, setDone] = useState(false);
   const ref = useRef(null);

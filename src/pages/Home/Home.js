@@ -19,12 +19,12 @@ const Home = () => {
         <div className="absolute flex flex-col top-24 md:justify-around md:top-32 md:flex-row z-10 ">
           {/* Headers */}
           <div className="flex-col w-full xl:w-2/5 2xl:w-1/3 space-y-6 xl:space-y-8 ">
-            <h1 className="text-white pl-1 text-4xl xl:text-5xl 2xl:text-6xl flex-col space-y-2 xl:space-y-4 2xl:space-y-6 animate-fadeIn">
+            <h1 className="text-white px-2 text-4xl xl:text-5xl 2xl:text-6xl flex-col space-y-2 xl:space-y-4 2xl:space-y-6 animate-fadeIn">
               <p className="flex md:justify-center xl:justify-start">
                 Learn <span className="text-indigo-800 mx-2"> Real</span> Skills.
               </p>
               <p className="flex md:justify-center xl:justify-start">
-                Engage <span className="text-indigo-800 mx-2"> Real</span>{" "}
+                Engage <span className="text-indigo-800 mx-1"> Real</span>{" "}
                 Clients.
               </p>
               <p className="flex md:justify-center xl:justify-start">
@@ -34,15 +34,15 @@ const Home = () => {
             </h1>
 
             {/* Text Paragraph */}
-            <div className="flex xl:w-11/12 px-1 md:leading-loose text-2xl 2xl:text-3xl text-gray-300 animate-fadeIn">
-              Join Tekjump today to not only receive the training you need, but
-              also the crucial real world experience that will wow employers and
+            <div className="flex xl:w-11/12 px-2 md:leading-loose text-2xl 2xl:text-3xl text-gray-300 animate-fadeIn">
+              Join Tekjump today to not only receive expert and comprehensive web development training , but
+              also  crucial real world experience that will wow employers and
               jumpstart your new software career!
             </div>
             <div className="flex xl:w-2/3 2xl:w-2/3 animate-fadeIn">
               <Link
                 to="/register"
-                className="py-3 md:my-8 px-12 group multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-full mx-auto md:mx-0"
+                className="py-3 md:my-4 px-12 group multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-11/12 lg:w-full mx-auto md:mx-0"
               >
                 Register Now{" "}
                 <svg
@@ -85,7 +85,8 @@ const Home = () => {
               activeClassName="transform -translate-x-4 opacity-100 transition-all duration-1000 ease-in"
               inactiveClassName="transform opacity-0 translate-x-0 transition-all duration-1000 ease-in"
             >
-              <CodeBlock text={codeBlockText} width={682.422} name="Program.jsx" />
+            
+              <CodeBlock text={codeBlockText} width={700} name="Program.jsx" />
             </AnimatedCard>
           </div>
         </div>
@@ -101,7 +102,7 @@ const Home = () => {
       </div>
 
       <div className="flex md:mb-10 flex-col justify-center pt-12 pb-4">
-        <div className=" relative py-3 w-11/12 md:w-2/5 xl:w-1/3 mx-auto mb-10">
+        <div className=" relative py-3 w-11/12 sm:w-1/2 2xl:w-1/3 mx-auto mb-10">
           <AnimatedCard
             threshold={0.25}
             activeClassName="transition-all duration-1400 ease-in transform scale-105 md:rotate-12 opacity-100  absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg rounded-xl"

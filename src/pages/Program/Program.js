@@ -16,11 +16,11 @@ const Program = () => {
           ></img>
           <div className="flex flex-col lg:justify-end">
             <div className="grid grid-cols-1">
-              <h1 className="text-indigo-500 text-6xl xl:text-7xl text-right font-black mt-4 lg:mt-6 xl:px-12 xl:pt-12 pr-4 animate-fadeIn">
+              <h1 className="text-indigo-500 text-6xl xl:text-7xl text-center font-black mt-4 lg:mt-6 xl:px-12 xl:pt-12 pr-4 animate-fadeIn">
                 Our Program
               </h1>
 
-              <p className="justify-self-start pl-4 text-blue-200 mt-4 text-xl xl:w-2/3 xl:px-12 xl:pt-4 animate-fadeIn">
+              <p className="justify-self-start pl-4 text-blue-200 mt-4 text-center text-xl xl:w-2/3 xl:px-12 xl:pt-4 animate-fadeIn">
                 Our handcrafted curriculum will put you right in the role of a
                 Full Stack Developer, giving you in-depth training in everything
                 from the basics of web development, all the way up to the
@@ -36,10 +36,10 @@ const Program = () => {
                 "transform grid grid-cols-1 w-full opacity-100 transition-all duration-1200 ease-in-out"
               }
             >
-              <p className="mt-6 px-4 xl:px-12 lg:mt-12 text-right text-4xl lg:text-5xl font-black text-indigo-500 tracking-tight">
+              <p className="mt-6 px-4 xl:px-12 lg:mt-12 text-center text-4xl lg:text-5xl font-black text-indigo-500 tracking-tight">
                 We want to show you the (Hello) World
               </p>
-              <p className="mt-5 pl-4  xl:pl-12 xl:w-2/3 xl:pt-4  text-xl text-blue-200">
+              <p className="mt-5 pl-4  xl:pl-12 xl:w-2/3 xl:pt-4 text-center text-xl text-blue-200">
                 Beyond the actual technologies you will be trained on, you will
                 be immersed in developer methodologies, communities, and
                 culture. You will be utilizing with your team the same practices

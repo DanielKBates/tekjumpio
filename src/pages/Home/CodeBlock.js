@@ -4,7 +4,7 @@ import hljs from "highlight.js";
 import "highlight.js/styles/github-dark-dimmed.css"; // THIS STYLE
 import "./codeblock.css"
 
-const CodeBlock = ({ text = "", width = 0, name = "" }) => {
+const CodeBlock = ({ text = "", width =0, name = "" }) => {
   const [calc, setCalc] = useState(0);
   function unesc(s) {
     return s
@@ -35,7 +35,7 @@ const CodeBlock = ({ text = "", width = 0, name = "" }) => {
   }, []);
   return (
     <div
-      className="relative lg:w-auto self-center pb-8 lg:pb-0 max-w-6xl mx-auto "
+      className="relative lg:w-auto self-center pb-8 lg:pb-0 w-full mx-auto "
       style={{ width: width }}
     >
       <div className="relative overflow-hidden md:rounded-xl shadow-2xl flex">
@@ -74,7 +74,7 @@ const CodeBlock = ({ text = "", width = 0, name = "" }) => {
                         txt={unesc(
                           hljs.highlight(text, { language: "jsx" }).value
                         )}
-                        speed={0}
+                        speed={18}
                       />
                     </div>
                   </pre>
