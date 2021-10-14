@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { MailIcon, PhoneIcon, VideoCameraIcon } from "@heroicons/react/solid";
 
@@ -17,6 +17,11 @@ const Contact = () => {
     console.log(data);
     setData(data);
   };
+
+useEffect(() => {
+  console.log("Look at you, 1337 hax0r")
+ 
+}, [])
 
   const [data, setData] = useState({});
 
