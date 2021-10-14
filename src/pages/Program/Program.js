@@ -6,7 +6,7 @@ import { programFeatures } from "../../utils/programFeatures";
 
 const Program = () => {
   return (
-    <div className="pt-24 w-11/12 lg:w-3/4 mx-auto">
+    <div className="pt-24 w-11/12 lg:w-5/6 mx-auto">
       <div className="animate-fadeIn">
         <div className="relative pb-10 bg-gray-800 rounded-lg gradient-border animate-animateGradient">
           <img
@@ -20,7 +20,7 @@ const Program = () => {
                 Our Program
               </h1>
 
-              <p className="justify-self-start pl-4 text-blue-200 mt-4 text-center text-xl xl:w-2/3 xl:px-12 xl:pt-4 animate-fadeIn">
+              <p className="justify-self-start pl-4 text-blue-200 mt-4 text-center text-xl  xl:px-16 xl:pt-4 animate-fadeIn">
                 Our handcrafted curriculum will put you right in the role of a
                 Full Stack Developer, giving you in-depth training in everything
                 from the basics of web development, all the way up to the
@@ -39,7 +39,7 @@ const Program = () => {
               <p className="mt-6 px-4 xl:px-12 lg:mt-12 text-center text-4xl lg:text-5xl font-black text-indigo-500 tracking-tight">
                 We want to show you the (Hello) World
               </p>
-              <p className="mt-5 pl-4  xl:pl-12 xl:w-2/3 xl:pt-4 text-center text-xl text-blue-200">
+              <p className="mt-5 pl-4  xl:px-16  xl:pt-4 text-center text-xl text-blue-200">
                 Beyond the actual technologies you will be trained on, you will
                 be immersed in developer methodologies, communities, and
                 culture. You will be utilizing with your team the same practices
