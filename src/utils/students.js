@@ -9,7 +9,7 @@ export const reviews = [
     name: "Savith T.",
     class: "SUMMER '21",
     message: "I am a graduate who recently took this camp, and I have to say that it is one of the best decisions that I have ever made. I learned so much in the span of three months and the instructor of the camp, Mr.Dan, taught very well, and explained everything in a simple and easy way. When I first started camp, I looked through the material that we were going to learn and was feeling overwhelmed. But throughout the course, there were many exercises and tools that helped me fully understand everything I was doing. This is and always will be one of the best courses I have ever taken.",
-    "image": "https://via.placeholder.com/150"
+    image: "https://via.placeholder.com/150"
   },
   {
     name: "Aryan G.",
@@ -40,10 +40,10 @@ export const graduates = [
   {
     name: "Savith T.",
     class: "SUMMER '21",
-    "image": "https://via.placeholder.com/150"
+    image: "https://via.placeholder.com/150"
   },
   {
-    name: "Aryan G.",
+    name: "Aryan g.",
     class: "SUMMER '21",
     image: "https://via.placeholder.com/150"
   },
