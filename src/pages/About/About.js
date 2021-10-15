@@ -116,7 +116,7 @@ export default function About() {
               <img
                 className="relative mx-auto animate-fadeIn w-4/5 shadow-2xl rounded-xl"
                 width={490}
-                src="/images/Adobe_Cropped1.png"
+                src="https://tekjumpbucket.s3.amazonaws.com/Adobe_Cropped1.jpg"
                 alt=""
               />
             </div>
@@ -227,7 +227,7 @@ export default function About() {
                   <img
                     className=" w-4/5 relative mx-auto rounded-xl shadow-2xl"
                     width={490}
-                    src="/images/Adobe_Cropped4.png"
+                    src="/images/Adobe_Cropped4.jpg"
                     alt=""
                   />
                 </div>

@@ -75,6 +75,9 @@ const Typewriter = ({ txt, speed = 0 }) => {
   useEffect(() => {
     const type = setUpType(ref.current);
     type.type();
+    return (
+      clearTimeout(type)
+    )
   }, []);
   return (
     <div>

@@ -43,7 +43,7 @@ export const graduates = [
     image: "https://via.placeholder.com/150"
   },
   {
-    name: "Aryan g.",
+    name: "Aryan G.",
     class: "SUMMER '21",
     image: "https://via.placeholder.com/150"
   },
