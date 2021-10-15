@@ -3,21 +3,21 @@
         "name": "Tuhin Dutt",
         "role":"Founder & CEO",
         "bio":"Tuhin is a late blooming Tennis enthusiast, who often finds himself with a twisted ankle every time he tries to pull off a Nadal on clay. On relatively safer days he is actively working on dode algorithms, math and physics problems, and teaching creative problems solving to an eager bunch of students. Tuhin believes that anyone with a passion for learning can build coding and tech skills.  At Tekjump, his vision is to provide skill development opportunities for anyone seeking a software development career launchpad.",
-        "imageUrl":"/images/tuhin-tjPhoto.jpg",
+        "imageUrl":"https://tekjumpbucket.s3.amazonaws.com/tuhin-tjPhoto.jpg",
         "linkedInUrl": ""
     },
     {
         "name": "Dan Bates",
         "role":"Director of Technology & Lead Developer",
         "bio":"Dan is an avid reader, huge hockey fan, and enjoyer of ma",
-        "imageUrl":"/images/dan-tjPhoto2.png",
+        "imageUrl":"https://tekjumpbucket.s3.amazonaws.com/dan-tjPhoto2.jpg",
         "linkedInUrl": ""
     },
     {
         "name": "Jordan Burke",
         "role":"Vice President of Operations",
         "bio":"Jordan is an animal, pizza and rollerskating enthusiast. She loves learning and working with students of all ages to help them achieve their 'lightbulb moment'. Jordan believes that students, of every age, have the ability to succeed in technology and programming. Jordan's favorite part about coding is that it's like learning a new language. With time and effort you get to the point where you can write in a programming language like you'd speak in your native spoken language.",
-        "imageUrl":"/images/jordan-tjPhoto.jpg",
+        "imageUrl":"https://tekjumpbucket.s3.amazonaws.com/jordan-tjPhoto.jpg",
         "linkedInUrl": ""
     }
 ]

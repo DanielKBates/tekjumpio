@@ -227,7 +227,7 @@ export default function About() {
                   <img
                     className=" w-4/5 relative mx-auto rounded-xl shadow-2xl"
                     width={490}
-                    src="/images/Adobe_Cropped4.jpg"
+                    src="https://tekjumpbucket.s3.amazonaws.com/Adobe_Cropped4.jpg"
                     alt=""
                   />
                 </div>

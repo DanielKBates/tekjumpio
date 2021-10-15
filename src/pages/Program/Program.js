@@ -11,7 +11,7 @@ const Program = () => {
         <div className="relative pb-10 bg-gray-800 rounded-lg gradient-border animate-animateGradient">
           <img
             className="rounded-tl-lg w-full h-full lg:h-90 rounded-tr-lg"
-            src="/images/Adobe_Cropped2.jpeg"
+            src="https://tekjumpbucket.s3.amazonaws.com/Adobe_Cropped2.jpeg"
             alt="MERN STACK"
           ></img>
           <div className="flex flex-col lg:justify-end">
