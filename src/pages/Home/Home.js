@@ -16,9 +16,9 @@ const Home = () => {
     <div>
       <div className="relative">
         {/* CONTENT ON TOP OF ANIMATED GRADIENT */}
-        <div className="absolute flex flex-col top-24 md:justify-around md:top-32 md:flex-row z-10 ">
+        <div className="absolute flex flex-col top-24 justify-center md:top-32 md:flex-row z-10 ">
           {/* Headers */}
-          <div className="flex-col w-full xl:w-2/5 2xl:w-1/3 space-y-6 xl:space-y-8 ">
+          <div className="flex-col w-full xl:w-1/2 space-y-6 xl:space-y-8 ">
             <h1 className="text-white px-2 text-4xl xl:text-5xl 2xl:text-6xl flex-col space-y-2 xl:space-y-4 2xl:space-y-6 animate-fadeIn">
               <p className="flex md:justify-center xl:justify-start">
                 Learn <span className="text-indigo-800 mx-2"> Real</span> Skills.
