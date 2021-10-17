@@ -14,7 +14,7 @@ export const reviews = [
   {
     name: "Aryan G.",
     class: "SUMMER '21",
-    message: "LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM LOREM",
+    message: "This is one of the best classes I have ever taken. I learned so much about coding, websites, working with peers, and so much more. I got to make new friends, learn real skills, and build real websites. I had a lot of fun in this class and I would recommend everyone to take it.",
     image: "https://via.placeholder.com/150"
   },
   {

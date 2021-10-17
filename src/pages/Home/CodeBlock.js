@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Typewriter from "./Typewriter";
 import hljs from "highlight.js";
-import "highlight.js/styles/github-dark-dimmed.css"; // THIS STYLE
+import "highlight.js/styles/github-dark.css"; // THIS STYLE
 import "./codeblock.css"
 
 const CodeBlock = ({ text = "", width =0, name = "" }) => {
@@ -20,7 +20,7 @@ const CodeBlock = ({ text = "", width =0, name = "" }) => {
     for (
       let i = 2;
       i <=
-      unesc(hljs.highlight(text, { language: "jsx" }).value).match(/\n/g)
+      unesc(hljs.highlight(text, { language: "javascript" }).value).match(/\n/g)
         .length +
         2;
       i++

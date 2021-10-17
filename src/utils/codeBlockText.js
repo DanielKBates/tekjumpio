@@ -1,25 +1,20 @@
-export const codeBlockText = `import React from "react";
-import ProgramTabs from "./ProgramTabs";
-import AnimatedCard from "../../components/AnimatedCard";
-const Program = () => {
-  return (
-    <div className="pt-28">
-      <Container>
-        <div className="animate-fadeIn">
-          <ProgramTabs />
-        </div>
-        <AnimatedCard
-          threshold={0.5}
-          activeClassName={
-            "transform translate-x-0 opacity-100 transition-all "
-          }
-        >
-        </AnimatedCard>
-      </Container>
-    </div>
-  );
+export const codeBlockText = `const student = {
+  you: "Interested in Web Development",
+  readyToLearn: true,
+  wantToMakeASwitch: true,
+  training: 0,
+  webDevExperience: "minimal",
+
+  joinTekjump: function () {
+    if (this.readyToLearn && this.wantToMakeASwitch) {
+        this.you = "Full Stack Developer";
+        this.training += 9000;
+        this.webDevExperience = 
+          "Building live sites for real clients on 
+           the Graduate Development Team";
+    };
+  }
 };
 
-export default Program;`
+student.joinTekjump();`
 
-export const textArray = codeBlockText.split("")

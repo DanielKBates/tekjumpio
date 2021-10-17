@@ -1,4 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+
+let timer = (func, speed) => {
+  setTimeout(func, speed)
+}
 const Typewriter = ({ txt, speed = 0 }) => {
   const [HTML, setHTML] = useState(txt);
   const [done, setDone] = useState(false);
@@ -63,7 +67,7 @@ const Typewriter = ({ txt, speed = 0 }) => {
 
       cursorPosition += 1;
       if (cursorPosition < HTML.length) {
-        setTimeout(type, tempTypeSpeed);
+        timer(type, tempTypeSpeed);
       } else {
         setDone(true);
       }
@@ -75,9 +79,7 @@ const Typewriter = ({ txt, speed = 0 }) => {
   useEffect(() => {
     const type = setUpType(ref.current);
     type.type();
-    return (
-      clearTimeout(type)
-    )
+    return (clearTimeout(timer))
   }, []);
   return (
     <div>

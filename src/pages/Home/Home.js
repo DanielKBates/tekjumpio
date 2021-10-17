@@ -86,7 +86,7 @@ const Home = () => {
               inactiveClassName="transform opacity-0 translate-x-0 transition-all duration-1000 ease-in"
             >
             
-              <CodeBlock text={codeBlockText} width={700} name="Program.jsx" />
+              <CodeBlock text={codeBlockText} width={700} name="Student.js" />
             </AnimatedCard>
           </div>
         </div>
@@ -188,9 +188,9 @@ const Home = () => {
                         </svg>
                       </span>
                       <p className="ml-2">
-                        Upon completion, join our development team for critical
-                        work experience, working on real projects for real
-                        clients
+                        Upon completion, join our Graduate Development Team for critical
+                        work experience, building and deploying live sites for real local
+                        clients.
                       </p>
                     </li>
                   </ul>
