@@ -34,7 +34,7 @@ const Home = () => {
             </h1>
 
             {/* Text Paragraph */}
-            <div className="flex md:text-center lg:text-left xl:w-11/12 px-2 md:leading-loose text-2xl 2xl:text-3xl text-gray-300 animate-fadeIn">
+            <div className="flex md:text-center lg:text-left xl:w-11/12 2xl:w-2/3 px-2 md:leading-loose text-2xl 2xl:text-3xl text-gray-300 animate-fadeIn">
               Join Tekjump today to not only receive expert and comprehensive web development training , but
               also  crucial real world experience that will wow employers and
               jumpstart your new software career!
@@ -79,7 +79,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="hidden xl:flex z-20 ">
+          <div className="hidden xl:flex 2xl:-ml-14 z-20 ">
             <AnimatedCard
               threshold={0.5}
               activeClassName="transform -translate-x-4 opacity-100 transition-all duration-1000 ease-in"

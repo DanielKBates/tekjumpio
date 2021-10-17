@@ -148,7 +148,7 @@ const Contact = () => {
                       aria-hidden="true"
                     />
                     <span className="ml-3">
-                      <a href="" className="underline">
+                      <a href="https://us02web.zoom.us/j/89810725704" className="underline">
                         Virtual Meet and Greet
                       </a>{" "}
                       with the Team over Zoom on Monday - Friday, 1-3 PM.

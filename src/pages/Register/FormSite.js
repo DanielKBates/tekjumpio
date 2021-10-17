@@ -36,7 +36,7 @@ const FormSite = () => {
               <p className="px-6 pt-10  bg-gray-50 text-xl text-pink-900 ">
                 Classes start on Dec 1st, register now to reserve your seat and
                 jumpstart your new development career! Jump in our{" "}
-                <a href="#" className="underline">
+                <a href="https://us02web.zoom.us/j/89810725704" className="underline">
                   Virtual Meet and Greet Zoom,
                 </a>{" "}
                 Mon-Fri from 1-3pm, before registering for a discount to the program!
