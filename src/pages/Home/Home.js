@@ -19,7 +19,7 @@ const Home = () => {
         <div className="absolute flex flex-col top-24 justify-center md:top-32 md:flex-row z-10 ">
           {/* Headers */}
           <div className="flex-col w-full xl:w-1/2 space-y-6 xl:space-y-8 ">
-            <h1 className="text-white px-2 text-4xl xl:text-5xl 2xl:text-6xl flex-col space-y-2 xl:space-y-4 2xl:space-y-6 animate-fadeIn">
+            <h1 className="text-white px-2 text-4xl md:text-5xl 2xl:text-6xl flex-col space-y-2 xl:space-y-4 2xl:space-y-6 animate-fadeIn">
               <p className="flex md:justify-center xl:justify-start">
                 Learn <span className="text-indigo-800 mx-2"> Real</span> Skills.
               </p>
@@ -34,15 +34,15 @@ const Home = () => {
             </h1>
 
             {/* Text Paragraph */}
-            <div className="flex xl:w-11/12 px-2 md:leading-loose text-2xl 2xl:text-3xl text-gray-300 animate-fadeIn">
+            <div className="flex md:text-center lg:text-left xl:w-11/12 px-2 md:leading-loose text-2xl 2xl:text-3xl text-gray-300 animate-fadeIn">
               Join Tekjump today to not only receive expert and comprehensive web development training , but
               also  crucial real world experience that will wow employers and
               jumpstart your new software career!
             </div>
-            <div className="flex xl:w-2/3 2xl:w-2/3 animate-fadeIn">
+            <div className="flex md:justify-center lg:justify-start xl:w-2/3 2xl:w-1/2 animate-fadeIn">
               <Link
                 to="/register"
-                className="py-3 md:my-4 px-12 group multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-11/12 lg:w-full mx-auto md:mx-0"
+                className="py-3 md:my-4 px-12 group multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-11/12 md:w-1/2 xl:w-full  md:mx-0"
               >
                 Register Now{" "}
                 <svg
@@ -61,7 +61,7 @@ const Home = () => {
                 </svg>
               </Link>
             </div>
-            <div className="flex justify-center pt-20 text-indigo-200 animate-bounce md:hidden">
+            <div className="flex justify-center pt-20 md:pt-24 text-indigo-200 animate-bounce lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -102,7 +102,7 @@ const Home = () => {
       </div>
 
       <div className="flex md:mb-10 flex-col justify-center pt-12 pb-4">
-        <div className=" relative py-3 w-11/12 sm:w-1/2 2xl:w-1/3 mx-auto mb-10">
+        <div className=" relative py-3 w-11/12 md:w-2/3 xl:1/2 2xl:w-1/3 mx-auto mb-10">
           <AnimatedCard
             threshold={0.25}
             activeClassName="transition-all duration-1400 ease-in transform scale-105 md:rotate-12 opacity-100  absolute inset-0 bg-gradient-to-l from-purple-400 to-blue-400 shadow-lg rounded-xl"
