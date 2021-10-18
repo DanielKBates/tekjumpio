@@ -307,7 +307,7 @@ export default function About() {
                         {graduates.map((person) => (
                           <li key={person.name}>
                             <div className="space-y-4">
-                              <div className="mx-auto flex justify-center items-center h-20 w-20 rounded-full lg:w-24 lg:h-24" style = {{backgroundColor: `#${Math.floor(Math.random()*16777215).toString(16)}`}}>
+                              <div className="mx-auto flex justify-center items-center h-20 w-20 rounded-full lg:w-24 lg:h-24" style = {{backgroundColor: `#${(Math.random()*0xFFFFFF<<0).toString(16)}`}}>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                 </svg>

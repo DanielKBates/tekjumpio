@@ -6,13 +6,6 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const registerDetails = [
-  { id: 1, text: "lorem lorem lorem yyy" },
-  { id: 2, text: "lorem lorem lorem" },
-  { id: 3, text: "lorem lorem lorem" },
-  { id: 4, text: "lorem lorem lorem" },
-];
-
 const FormSite = () => {
   const [toggle, setToggle] = useState(true);
   const embedForm = () => {
