@@ -1,6 +1,9 @@
 module.exports = {
   enabled: process.env.NODE_ENV === "production",
-  purge: [ "./src/pages/**/*.{js,ts,jsx,tsx}", "./src/components/**/*.{js,ts,jsx,tsx}", ],
+  purge: [
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     scale: {
@@ -19,13 +22,17 @@ module.exports = {
       150: "1.5",
       200: "2",
     },
+    listStyleType: {
+      none: "none",
+      disc: "disc",
+      decimal: "decimal",
+    },
 
     extend: {
-
       height: {
-        90:"26rem",
-        96:"45rem",
-        128: "55rem"
+        90: "26rem",
+        96: "45rem",
+        128: "55rem",
       },
       boxShadow: {
         sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
@@ -46,10 +53,10 @@ module.exports = {
       },
 
       zIndex: {
-        "negative": "-10",
+        negative: "-10",
       },
       backgroundSize: {
-        "400": "400%"
+        400: "400%",
       },
 
       keyframes: {
@@ -143,7 +150,7 @@ module.exports = {
       backgroundColor: ["active"],
       transform: ["hover", "focus", "group-hover"],
       scale: ["responsive", "hover", "focus"],
-      translate: ["group-hover"]
+      translate: ["group-hover"],
     },
   },
   plugins: [require("@tailwindcss/forms")],

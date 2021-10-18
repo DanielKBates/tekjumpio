@@ -10,6 +10,9 @@ body {
   overflow-x: hidden;
   @apply bg-gray-800 overlay md:overflow-x-hidden;
 }
+
+
+
 a:focus-visible,
 button:focus-visible,
 link:focus-visible,
