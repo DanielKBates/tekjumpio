@@ -17,6 +17,11 @@ function App() {
       <Helmet>
         {/* HTML Meta Tags  */}
         <title>Tekjump</title>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>Tekjump</title>
         <meta
           name="description"
           content="Tekjump offers expert web development training and professional experience through our graduate development team."
