@@ -53,7 +53,7 @@ const NavBar = () => {
                 to="/"
                 className="flex items-center py-5 text-gray-100 transition ease-linear duration-300"
               >
-                <span className="font-bold text-2xl">TJ</span>
+                <span className="font-bold bg-gradient-to-br from-indigo-400 to-red-500 bg-clip-text text-transparent text-2xl">TJ</span>
               </Link>
             </div>
 

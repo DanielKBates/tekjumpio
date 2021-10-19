@@ -44,6 +44,9 @@ const FormSite = () => {
                   skills.
                 </li>
                 <li>
+                  Learn some of the industry's most popular skills from the comfort of your own home, as all of our classes are 100% remote.
+                </li>
+                <li>
                   If you are not completely satisfied within the first week of classes, get 100% of your money back.
                 </li>
                 <li>
@@ -60,12 +63,12 @@ const FormSite = () => {
                   Jump in our{" "}
                   <a
                     href="https://us02web.zoom.us/j/89810725704"
-                    className="underline"
+                    className="text-indigo-500"
                   >
                     Virtual Meet and Greet Zoom
                   </a>{" "}
                   , Mon-Fri 1-3pm, or our{" "}
-                  <a href="https://discord.gg/cfQJR85KTG" className="underline">
+                  <a href="https://discord.gg/cfQJR85KTG" className="text-indigo-500">
                     Q&A Discord Server
                   </a>{" "}
                   to talk to our team.
@@ -130,8 +133,8 @@ const FormSite = () => {
                 <p className="text-black font-normal text-lg pb-8 w-11/12 lg:w-2/3">
                   {" "}
                   {toggle
-                    ? "Our day sessions will be Monday - Friday, from 9AM to 3PM, with an hour lunch in the middle of the session. Our instructors will have office hours every day for an hour after the class ends, and upon request."
-                    : "Our night sessions will be Monday - Friday, from 6PM to 9PM. Our instructors will have office hours every day for an hour before the class starts, and upon request."}{" "}
+                    ? "Our day sessions will be Monday - Friday, from 9am to 3pm EST, with an hour lunch in the middle of the session. Our instructors will have office hours every day for an hour after the class ends, and upon request."
+                    : "Our night sessions will be Monday - Friday, from 6pm to 9pm EST. Our instructors will have office hours every day for an hour before the class starts, and upon request."}{" "}
                 </p>
               </div>
 
