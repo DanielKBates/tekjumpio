@@ -41,11 +41,7 @@ function Reviews() {
               <div className="review-user mt-5">
                 <h3 className="text-gray-100 text-xl">{reviews[slide].name}</h3>
                 <h4 className="text-gray-300 text-xs">{reviews[slide].class}</h4>
-                <img
-                  className="mx-auto h-10 w-10 mt-2 rounded-full"
-                  src={reviews[slide].image}
-                  alt=""
-                />
+            
               </div>
             </div>
             <div className="quote-end flex flex-row-reverse">

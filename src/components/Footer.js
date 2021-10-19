@@ -23,7 +23,7 @@ const Footer = () => {
           </nav>
           <div className="flex justify-center mt-8 space-x-6">
             <a
-              to="https://facebook.com/tekjumpio"
+              href="https://facebook.com/tekjumpio"
               className="text-gray-400 hover:text-gray-100 transition ease-linear"
             >
               <span className="sr-only">Facebook</span>
