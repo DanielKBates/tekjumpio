@@ -13,12 +13,12 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <main>
+    <div>
       <Helmet>
         {/* HTML Meta Tags  */}
         <title>Tekjump</title>
         <meta charset="utf-8" />
-        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <title>Tekjump</title>
@@ -90,7 +90,7 @@ function App() {
           <Footer />
         </div>
       </Router>
-    </main>
+    </div>
   );
 }
 
