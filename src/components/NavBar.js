@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink,  } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 const pages = require("../utils/pages.json");
 
 const NavBar = () => {
-
   const [mobileMenu, setMobileMenu] = useState(false);
   const [dir, setDir] = useState(1);
   const handleMobileMenu = () => {
     setMobileMenu(!mobileMenu);
   };
+  const location = useLocation()
 
   const handleNavScroll = () => {
     var lastScrollTop = 0;
@@ -31,7 +31,8 @@ const NavBar = () => {
 
   useEffect(() => {
     handleNavScroll()
-  }, []);
+    handleMobileMenu()
+  }, [location]);
 
   return (
     <nav
@@ -111,13 +112,13 @@ const NavBar = () => {
           if (page.forNav) {
             return (
               <NavLink
-              to={page.to}
-              className="p-2 my-1 text-gray-300 rounded hover:bg-gray-600 hover:underline transition ease-linear duration-100 after-arrow"
-              activeClassName="underline"
-              key={page.to}
-            >
-              {page.name}
-            </NavLink>
+                to={page.to}
+                className="p-2 my-1 text-gray-300 rounded hover:bg-gray-600 hover:underline transition ease-linear duration-100 after-arrow"
+                activeClassName="underline"
+                key={page.to}
+              >
+                {page.name}
+              </NavLink>
             );
           } else {
             return null;
