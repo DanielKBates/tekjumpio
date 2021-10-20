@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Switch } from "@headlessui/react";
 import { dayWeeks, nightWeeks } from "../../utils/schedules";
+import { registerInfo } from "../../utils/registerInfo";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -26,7 +27,7 @@ const FormSite = () => {
         <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="pt-2 text-lg align-middle inline-block px-2 md:px-8 lg:px-10">
             <div className="shadow overflow-hidden border-b border-gray-200">
-              <div className="flex-col space-y-4 lg:flex-row  bg-pink-900 px-6 pt-12 pb-2 rounded-tl-lg rounded-tr-lg ">
+              <div className="flex-col space-y-4 lg:flex-row  bg-indigo-900 px-6 pt-12 pb-2 rounded-tl-lg rounded-tr-lg ">
                 <span className="text-4xl xl:text-5xl font-semibold text-gray-50">
                   Class Details and Registration
                 </span>
@@ -34,48 +35,47 @@ const FormSite = () => {
                   Launch Discount Available Until Nov 17th!
                 </span>
               </div>
-              <p className="px-6 pt-10  font-semibold bg-gray-50 text-2xl text-pink-900 ">
-                Classes start on Dec 1st, register now to reserve your seat and
-                jumpstart your new career!
-              </p>
-              <ul className="text-xl space-y-6 lg:space-y-2 font-semibold text-pink-900 pt-8 px-6 list-inside list-disc bg-gray-50">
-                <li>
-                  Receive expert training in the latest and most in demand
-                  skills.
-                </li>
-                <li>
-                  Learn some of the industry's most popular skills from the comfort of your own home, as all of our classes are 100% remote.
-                </li>
-                <li>
-                  If you are not completely satisfied within the first week of classes, get 100% of your money back.
-                </li>
-                <li>
-                  After graduating, join our Graduate Dev Team to gain
-                  professional work experience building sites for real
-                  clients.
-                </li>
-                <li>
-                  Join our community for career coaching, interview preparation,
-                  and placement assistance.
-                </li>
-                <li>
-                  {" "}
-                  Jump in our{" "}
-                  <a
-                    href="https://us02web.zoom.us/j/89810725704"
-                    className="text-indigo-500"
+              <div className=" bg-gray-50 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px">
+                {registerInfo.map((element) => (
+                  <div
+                    key={element.title}
+                    className={classNames("relative group bg-white p-6 ")}
                   >
-                    Virtual Meet and Greet Zoom
-                  </a>{" "}
-                  , Mon-Fri 1-3pm, or our{" "}
-                  <a href="https://discord.gg/cfQJR85KTG" className="text-indigo-500">
-                    Q&A Discord Server
-                  </a>{" "}
-                  to talk to our team.
-                </li>
-              </ul>
+                    <div className="mt-4">
+                      <h3 className="text-2xl text-indigo-500 font-medium">
+                        <div>{element.title}</div>
+                      </h3>
+                      <ul className="list-outside list-disc space-y-2 text-gray-600">
+                        {element.points.map((point, textIndx) => (
+                          <li key={point.id}>{point.text}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+                <div className="relative group bg-white p-6 ">
+                  <div className="mt-4">
+                    <h3 className="text-2xl text-indigo-500 font-medium">
+                      <div>Talk To Us</div>
+                    </h3>
+                    <ul className="list-outside list-disc space-y-2 text-gray-600">
+                      <li>
+                        Jump in our{" "}
+                        <a className="text-indigo-400" href="https://us02web.zoom.us/j/89810725704">
+                          Meet and Greet Zoom
+                        </a>
+                        , M-F 1-3pm EST, or our{" "}
+                        <a className="text-indigo-400" href="https://discord.gg/cfQJR85KTG">
+                          Q&A Discord Server
+                        </a>{" "}
+                        to talk to our team.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
 
-              <div className="bg-gray-50 px-4 text-3xl  pt-8 font-semibold text-pink-900">
+              <div className="bg-gray-50 px-4 text-3xl  pt-8 font-semibold text-indigo-600">
                 Class Schedule{" "}
                 <span className="text-lg ml-2">
                   {toggle ? "(Day)" : "(Night)"}
@@ -87,8 +87,8 @@ const FormSite = () => {
                       checked={toggle}
                       onChange={setToggle}
                       className={classNames(
-                        toggle ? "bg-pink-900" : "bg-gray-200",
-                        "relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-900"
+                        toggle ? "bg-indigo-700" : "bg-gray-200",
+                        "relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-900"
                       )}
                     >
                       <span
@@ -100,7 +100,7 @@ const FormSite = () => {
                       />
                     </Switch>
                     <Switch.Label as="span" className="ml-3">
-                      <span className="text-sm font-medium text-gray-900">
+                      <span className="text-sm font-medium text-gray-600">
                         {toggle
                           ? "See the Night Class Schedule"
                           : "See the Day Class Schedule"}
@@ -109,7 +109,7 @@ const FormSite = () => {
                   </Switch.Group>
                 </span>
                 <div className="grid grid-cols-6  py-14 bg-gray-50 ">
-                  <ul className="col-span-2 text-black list-inside list-disc space-y-2 font-normal text-lg">
+                  <ul className="col-span-2 text-gray-600 list-inside list-disc space-y-2 font-normal text-lg">
                     <li>
                       {" "}
                       {toggle
@@ -120,17 +120,19 @@ const FormSite = () => {
                     <li>Career Coaching </li>
                     <li> Placement Assistance </li>
                   </ul>
-                  <span className="text-3xl xl:text-4xl self-center justify-self-center text-pink-900 "> =</span>{" "}
-                  <div className="col-span-3 self-center flex-col lg:flex-row text-black font-normal text-lg">
-                    
+                  <span className="text-3xl xl:text-4xl self-center justify-self-center text-indigo-900 ">
+                    {" "}
+                    =
+                  </span>{" "}
+                  <div className="col-span-3 self-center flex-col lg:flex-row text-gray-600 font-normal text-lg">
                     Total of
                     <span className="line-through"> $4000 </span>
-                    <span className="text-pink-900 ml-2">
+                    <span className="text-indigo-900 ml-2">
                       ($3000 til November 17th!)
                     </span>
                   </div>
                 </div>
-                <p className="text-black font-normal text-lg pb-8 w-11/12 lg:w-2/3">
+                <p className="text-gray-600 font-normal text-lg pb-8 w-11/12 lg:w-2/3">
                   {" "}
                   {toggle
                     ? "Our day sessions will be Monday - Friday, from 9am to 3pm EST, with an hour lunch in the middle of the session. Our instructors will have office hours every day for an hour after the class ends, and upon request."

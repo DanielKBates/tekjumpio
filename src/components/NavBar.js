@@ -31,7 +31,7 @@ const NavBar = () => {
 
   useEffect(() => {
     handleNavScroll()
-    handleMobileMenu()
+    setMobileMenu(false)
   }, [location]);
 
   return (

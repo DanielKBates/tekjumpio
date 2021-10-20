@@ -16,12 +16,12 @@ function App() {
     <div>
       <Helmet>
         {/* HTML Meta Tags  */}
-        <title>Tekjump</title>
+        <title>Tekjump - Learn, Build, Succeed</title>
         <meta charset="utf-8" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>Tekjump</title>
+        <title>Tekjump - Learn, Build, Succeed</title>
         <meta
           name="description"
           content="Tekjump offers expert web development training and professional experience through our graduate development team."
@@ -41,7 +41,7 @@ function App() {
         {/* Facebook Meta Tags  */}
         <meta property="og:url" content="https://www.tekjump.io" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Tekjump" />
+        <meta property="og:title" content="Tekjump - Learn, Build, Succeed" />
         <meta
           property="og:description"
           content="Tekjump offers expert web development training and professional experience through our graduate development team."
@@ -53,7 +53,7 @@ function App() {
 
         {/* Twitter Meta Tags  */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Tekjump" />
+        <meta name="twitter:title" content="Tekjump - Learn, Build, Succeed" />
         <meta
           name="twitter:description"
           content="Tekjump offers expert web development training and professional experience through our graduate development team."
