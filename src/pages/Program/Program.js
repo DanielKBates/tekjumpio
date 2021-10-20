@@ -43,7 +43,7 @@ const Program = () => {
                 Beyond the actual technologies you will be trained on, you will
                 be immersed in developer methodologies, communities, and
                 culture. You will be utilizing with your team the same practices
-                that professional devs use everyday, from Tel Aviv to Sillicon
+                that professional devs use everyday, from Tel Aviv to Silicon
                 Valley.
               </p>
             </AnimatedCard>
