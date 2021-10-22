@@ -42,7 +42,7 @@ const Home = () => {
             <div className="flex md:justify-center  lg:justify-start xl:w-2/3 2xl:w-1/2 animate-fadeIn">
               <Link
                 to="/register"
-                className="py-3 md:my-4 px-12 group multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-11/12 md:w-1/2 xl:w-full mx-auto md:mx-0"
+                className="py-3 md:my-4 px-12 group multiGradient animate-animateGradient text-gray-100 rounded-xl text-2xl transition duration-300 text-center font-bold w-11/12 md:w-1/2 xl:w-full 2xl:w-4/5 mx-auto md:mx-0"
               >
                 Register Now{" "}
                 <svg
