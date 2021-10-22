@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Switch } from "@headlessui/react";
 import { dayWeeks, nightWeeks } from "../../utils/schedules";
 import { registerInfo } from "../../utils/registerInfo";
@@ -64,12 +65,17 @@ const FormSite = () => {
                         <a className="text-indigo-400" href="https://us02web.zoom.us/j/89810725704">
                           Meet and Greet Zoom
                         </a>
-                        , M-F 1-3pm EST, or our{" "}
+                        , M-F 1-3pm EST
+                      </li>
+                      <li>
+                        Chat with us anytime on our{" "}
+                      
                         <a className="text-indigo-400" href="https://discord.gg/cfQJR85KTG">
                           Q&A Discord Server
                         </a>{" "}
-                        to talk to our team.
+                       
                       </li>
+                      <li> Check out our<Link className ="text-indigo-400" to="/contact"> Contact page </Link>to talk to us!</li>
                     </ul>
                   </div>
                 </div>

@@ -16,6 +16,10 @@ export const registerInfo = [
     title: "Money Back Guarantee",
     points: [
       {
+        id: 10,
+        text: "No payment required during registration. Sign up now to reserve your seat and we will send you an email with payment and registration confirmation.",
+      },
+      {
         id: 3,
         text: "If you are not completely satisfied within the first week of classes, get 100% of your money back.",
       },
@@ -34,5 +38,4 @@ export const registerInfo = [
       },
     ],
   },
-  
 ];
