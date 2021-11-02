@@ -83,7 +83,7 @@ export default function Example() {
         </div>
 
         <div className="relative pt-16 pb-32 bg-gray-800 overflow-hidden">
-          <div className="relative">
+          <div className="relative flex flex-col justify-center w-full">
             <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24 border-b-2 border-l-2 border-contest-red rounded-xl">
               <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
                 <div>
@@ -99,7 +99,7 @@ export default function Example() {
                     <h2 className="text-3xl font-extrabold tracking-tight text-contest-red">
                       Aesthetic and Design
                     </h2>
-                    <p className="mt-4 text-xl text-gray-200">
+                    <p className="mt-4 text-2xl text-gray-200">
                       We are looking for a creative, bright and modern logo to
                       brand our new program with! We want to see your
                       creativity... and reward it! We are looking for a logo
@@ -110,10 +110,10 @@ export default function Example() {
                 </div>
               </div>
               <div className="mt-12 sm:mt-16 lg:mt-0">
-                <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                <div className="pl-4  sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                   <img
-                    className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://tekjumpbucket.s3.amazonaws.com/graphic2.jpg"
+                    className=" rounded-xl h-full w-full shadow-xl lg:h-full lg:w-auto lg:max-w-3xl"
+                    src="https://tekjumpbucket.s3.amazonaws.com/graphic1.jpg"
                     alt="Graphic 2"
                   />
                 </div>
@@ -136,7 +136,7 @@ export default function Example() {
                     <h2 className="text-3xl font-extrabold tracking-tight text-contest-red">
                       Prizes
                     </h2>
-                    <p className="mt-4 text-xl text-gray-200">
+                    <p className="mt-4 text-2xl text-gray-200">
                       The winner will be selected and announced on ***DATE**!
                       The designer who makes the best design will be able to
                       choose from three top-of-the-line Smart Watches as their prize, see below
@@ -146,10 +146,10 @@ export default function Example() {
                 </div>
               </div>
               <div className="mt-12 sm:mt-16 lg:mt-0 ">
-                <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                <div className="pr-4 lg:relative lg:h-full">
                   <img
-                    className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="https://tekjumpbucket.s3.amazonaws.com/graphic1.jpg"
+                    className="w-full h-full rounded-xl shadow-xl  lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-3xl"
+                    src="https://tekjumpbucket.s3.amazonaws.com/graphic2.jpg"
                     alt="graphic 1"
                   />
                 </div>
