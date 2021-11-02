@@ -7,7 +7,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Program from "./pages/Program/Program";
 import FormSite from "./pages/Register/FormSite";
-import Register from "./pages/Register/Register";
+import Contest from "./pages/Contest/Contest"
 import Contact from "./pages/Contact/Contact";
 import Footer from "./components/Footer";
 
@@ -70,6 +70,9 @@ function App() {
           <NavBar />
           <div>
             <Switch>
+            <Route path="/contest">
+                <Contest />
+              </Route>
               <Route path="/about">
                 <About />
               </Route>

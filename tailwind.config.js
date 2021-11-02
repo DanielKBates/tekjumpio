@@ -20,7 +20,9 @@ module.exports = {
       110: "1.1",
       125: "1.25",
       150: "1.5",
+      175: "1.75",
       200: "2",
+      250: "2.5"
     },
     listStyleType: {
       none: "none",
@@ -128,6 +130,7 @@ module.exports = {
         "gradient-pink": "#e73c7e",
         "gradient-blue": "#23a6d5",
         "gradient-green": "#23d5ab",
+        "contest-red": "#d03138"
       },
       transitionDuration: {
         0: "0ms",
