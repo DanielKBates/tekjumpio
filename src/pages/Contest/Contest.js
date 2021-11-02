@@ -51,14 +51,14 @@ export default function Example() {
         <div className="relative">
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-800" />
           <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
+            <div className="relative shadow-3xl sm:rounded-2xl sm:overflow-hidden">
               <div className="absolute inset-0">
                 <img
                   className="h-full w-full object-cover"
-                  src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
-                  alt="People working on laptops"
+                  src="https://tekjumpbucket.s3.amazonaws.com/contestDesigners.jpeg"
+                  alt="Graphic Designers"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-800 to-contest-red  mix-blend-multiply" />
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-contest-red  mix-blend-multiply" />
               </div>
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                 <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -84,7 +84,7 @@ export default function Example() {
 
         <div className="relative pt-16 pb-32 bg-gray-800 overflow-hidden">
           <div className="relative flex flex-col justify-center w-full">
-            <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24 border-b-2 border-l-2 border-contest-red rounded-xl">
+            <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24 border-b-2 border-l-2 border-indigo-400 border-opacity-50 rounded-xl shadow-3xl">
               <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
                 <div>
                   <div>
@@ -112,7 +112,7 @@ export default function Example() {
               <div className="mt-12 sm:mt-16 lg:mt-0">
                 <div className="pl-4  sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                   <img
-                    className=" rounded-xl h-full w-full shadow-xl lg:h-full lg:w-auto lg:max-w-3xl"
+                    className=" rounded-xl h-full w-full shadow-3xl lg:h-full lg:w-auto lg:max-w-3xl"
                     src="https://tekjumpbucket.s3.amazonaws.com/graphic1.jpg"
                     alt="Graphic 2"
                   />
@@ -121,7 +121,7 @@ export default function Example() {
             </div>
           </div>
           <div className="mt-24">
-            <div className="lg:mx-auto lg:max-w-7xl border-b-2 border-r-2 border-contest-red rounded-xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+            <div className="lg:mx-auto lg:max-w-7xl border-b-2 border-r-2 border-indigo-400 border-opacity-50 rounded-xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense shadow-3xl lg:gap-24">
               <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
                 <div>
                   <div>
@@ -148,7 +148,7 @@ export default function Example() {
               <div className="mt-12 sm:mt-16 lg:mt-0 ">
                 <div className="pr-4 lg:relative lg:h-full">
                   <img
-                    className="w-full h-full rounded-xl shadow-xl  lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-3xl"
+                    className="w-full h-full rounded-xl shadow-3xl  lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-3xl"
                     src="https://tekjumpbucket.s3.amazonaws.com/graphic2.jpg"
                     alt="graphic 1"
                   />
@@ -158,15 +158,15 @@ export default function Example() {
           </div>
         </div>
         <div className="bg-white">
-          <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+          <div className="w-3/4 mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-extrabold tracking-tight text-contest-red">
               The Winner will select one of the following:
             </h2>
 
-            <div className="mt-6 flex flex-col space-y-6 md:flex-row justify-around">
+            <div className="mt-6 flex flex-col space-y-6 md:flex-row items-end justify-between">
               {prizes.map((prize) => (
                 <div key={prize.id} className="group relative">
-                  <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                  <div className="w-full  min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
                     <img
                       src={prize.imageSrc}
                       alt={prize.imageAlt}
