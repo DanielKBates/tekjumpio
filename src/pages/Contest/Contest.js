@@ -65,7 +65,7 @@ export default function Example() {
                 </div>
               </div>
               <div className="mt-12 sm:mt-16 lg:mt-0">
-                <div className="sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                <div className="lg:px-0 lg:m-0 lg:relative lg:h-full">
                   <img
                     className=" rounded-xl h-full w-full shadow-3xl lg:h-full lg:w-auto lg:max-w-3xl"
                     src="https://tekjumpbucket.s3.amazonaws.com/graphic1.jpg"
