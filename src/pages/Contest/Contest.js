@@ -1,48 +1,9 @@
 import React from "react";
+import ContestForm from "./ContestForm";
 
-import { InboxIcon, SparklesIcon, CheckIcon } from "@heroicons/react/outline";
+import {  CheckIcon } from "@heroicons/react/outline";
 
-const features = [
-  {
-    name: "Design",
-    description:
-      "We are looking for a logo that compliments the aesthetic of the site: bright, vibrant pinks, purples and blues. That being said, we want to see your creativity!",
-  },
-  {
-    name: "Format",
-    description:
-      "Design the logo in such a way that the resolution is solid in sizes from 16x16 to 300x300. Please only submit .jpg or .png image files.",
-  },
-  {
-    name: "Submit",
-    description:
-      "Review the terms and conditions below and submit your design! We will be announcing the winner on ***DATE***!",
-  },
-];
-
-const prizes = [
-  {
-    id: 1,
-    name: "Galaxy Watch 4 - 44mm",
-    href: "https://www.amazon.com/Samsung-Electronics-Galaxy-Watch-Smartwatch/dp/B096BHLJ7V/ref=sr_1_4?dchild=1&gclid=CjwKCAjwoP6LBhBlEiwAvCcthIYovLwX3Asf4Eb9WNrh2KFBAm2FiLbog72mfX9gMI9dTscFA0stEhoCSmUQAvD_BwE&hvadid=539979812379&hvdev=c&hvlocphy=9009576&hvnetw=g&hvqmt=e&hvrand=13993254876307791058&hvtargid=kwd-1409527913986&hydadcr=15191_9872177&keywords=galaxy+watch+4+classic+amazon&qid=1635814608&sr=8-4",
-    imageSrc: "https://tekjumpbucket.s3.amazonaws.com/galaxyWatch.jpg",
-    imageAlt: "Galaxy Watch 4",
-  },
-  {
-    id: 1,
-    name: "Apple Watch Series 7",
-    href: "https://www.amazon.com/Apple-Watch-Midnight-Aluminum-Sport/dp/B09HF6XBPF/ref=sr_1_1_sspa?dchild=1&keywords=apple+watch+series+7&qid=1635814657&sprefix=apple%2Caps%2C104&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyNUcyT1I5RlE5S1VKJmVuY3J5cHRlZElkPUEwNDExMzI0UEJJMDBIMDZHRTRMJmVuY3J5cHRlZEFkSWQ9QTA3ODUxMTgzRzhTRTE0U1ZWSlpWJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==",
-    imageSrc: "https://tekjumpbucket.s3.amazonaws.com/appleWatch.jpg",
-    imageAlt: "Apple Watch Series 7",
-  },
-  {
-    id: 1,
-    name: "Fitbit Versa 3",
-    href: "https://www.amazon.com/Fitbit-Fitness-Smartwatch-Exclusive-Included/dp/B08W2GKGR4/ref=sr_1_1?dchild=1&keywords=fitbit+versa+3&qid=1635814697&rdc=1&sprefix=fitbit+versa%2Caps%2C98&sr=8-1",
-    imageSrc: "https://tekjumpbucket.s3.amazonaws.com/fitbit.jpg",
-    imageAlt: "Fitbit Versa 3",
-  },
-];
+import { rules, prizes } from "../../utils/contestFeatures";
 
 export default function Example() {
   return (
@@ -82,35 +43,29 @@ export default function Example() {
           </div>
         </div>
 
-        <div className="relative pt-16 pb-32 bg-gray-800 overflow-hidden">
+        <div className="relative pt-16 pb-16 bg-gray-800 overflow-hidden">
           <div className="relative flex flex-col justify-center w-full">
-            <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24 border-b-2 border-l-2 border-indigo-400 border-opacity-50 rounded-xl shadow-3xl">
+            <div className="w-11/12 mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24 border-b-2 border-l-2 border-indigo-400 border-opacity-50 rounded-xl shadow-3xl">
               <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
                 <div>
-                  <div>
-                    <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-400 to-blue-600">
-                      <InboxIcon
-                        className="h-6 w-6 text-white"
-                        aria-hidden="true"
-                      />
-                    </span>
-                  </div>
+                  <div></div>
                   <div className="mt-6">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-contest-red">
+                    <h2 className="text-4xl font-extrabold tracking-tight text-contest-red">
                       Aesthetic and Design
                     </h2>
-                    <p className="mt-4 text-2xl text-gray-200">
+                    <p className="mt-4 text-2xl font-thin text-gray-200">
                       We are looking for a creative, bright and modern logo to
                       brand our new program with! We want to see your
                       creativity... and reward it! We are looking for a logo
-                      that fits with the website's current vibrant aesthetic, and
-                      we can't wait to see the design you come up with! Check below to see the rules, guidelines and conditions.
+                      that fits with the website's current vibrant aesthetic,
+                      and we can't wait to see the design you come up with!
+                      Check below to see the rules, guidelines and conditions.
                     </p>
                   </div>
                 </div>
               </div>
               <div className="mt-12 sm:mt-16 lg:mt-0">
-                <div className="pl-4  sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                <div className="sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                   <img
                     className=" rounded-xl h-full w-full shadow-3xl lg:h-full lg:w-auto lg:max-w-3xl"
                     src="https://tekjumpbucket.s3.amazonaws.com/graphic1.jpg"
@@ -121,32 +76,25 @@ export default function Example() {
             </div>
           </div>
           <div className="mt-24">
-            <div className="lg:mx-auto lg:max-w-7xl border-b-2 border-r-2 border-indigo-400 border-opacity-50 rounded-xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense shadow-3xl lg:gap-24">
+            <div className="w-11/12 mx-auto lg:max-w-7xl border-b-2 border-r-2 border-indigo-400 border-opacity-50 rounded-xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense shadow-3xl lg:gap-24">
               <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
                 <div>
-                  <div>
-                    <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-indigo-600 to-blue-400">
-                      <SparklesIcon
-                        className="h-6 w-6 text-white"
-                        aria-hidden="true"
-                      />
-                    </span>
-                  </div>
+                  <div></div>
                   <div className="mt-6">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-contest-red">
+                    <h2 className="text-4xl font-extrabold tracking-tight text-contest-red">
                       Prizes
                     </h2>
-                    <p className="mt-4 text-2xl text-gray-200">
-                      The winner will be selected and announced on ***DATE**!
-                      The designer who makes the best design will be able to
-                      choose from three top-of-the-line Smart Watches as their prize, see below
-                      for more detail!
+                    <p className="mt-4 font-thin text-2xl text-gray-200">
+                      The winner will be selected and announced on January 10th,
+                      2022! The designer of our new logo will be able
+                      to choose from three top-of-the-line Smart Watches as
+                      their prize, see below for more detail!
                     </p>
                   </div>
                 </div>
               </div>
               <div className="mt-12 sm:mt-16 lg:mt-0 ">
-                <div className="pr-4 lg:relative lg:h-full">
+                <div className="lg:relative lg:h-full">
                   <img
                     className="w-full h-full rounded-xl shadow-3xl  lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-3xl"
                     src="https://tekjumpbucket.s3.amazonaws.com/graphic2.jpg"
@@ -156,7 +104,16 @@ export default function Example() {
               </div>
             </div>
           </div>
+          <div className="w-full flex justify-center">
+              <a
+                className="bg-green-400 p-4 mt-20 rounded-xl text-center w-2/3 lg:w-1/3"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdG3MEU4YhyC-0HLymgLWCPt_KcxvF2gnALsXxVJVvIPV1rgA/viewform?usp=sf_link"
+              >
+                Submit your design
+              </a>
+            </div>
         </div>
+        
         <div className="bg-white">
           <div className="w-3/4 mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-extrabold tracking-tight text-contest-red">
@@ -205,7 +162,7 @@ export default function Example() {
                 <div>
                   <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
                     <CheckIcon
-                      className="h-6 w-6 text-green-500"
+                      className="h-6 w-6 text-green-400"
                       aria-hidden="true"
                     />
                   </span>
@@ -225,7 +182,7 @@ export default function Example() {
                   </p>
                 </div>
               </div>
-              {features.map((feature) => (
+              {rules.map((feature) => (
                 <div key={feature.name}>
                   <div>
                     <span className="flex items-center justify-center h-12 w-12 rounded-md bg-white bg-opacity-10">
@@ -245,6 +202,14 @@ export default function Example() {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="w-full flex justify-center">
+              <a
+                className="bg-green-400 p-4 mt-8 rounded-xl text-center w-2/3 lg:w-1/3"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdG3MEU4YhyC-0HLymgLWCPt_KcxvF2gnALsXxVJVvIPV1rgA/viewform?usp=sf_link"
+              >
+                Submit your design
+              </a>
             </div>
           </div>
         </div>

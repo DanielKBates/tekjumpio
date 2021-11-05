@@ -10,18 +10,23 @@
   {
     "name": "About",
     "to": "/about",
-    "forNav": true
+    "navbar": true
 
   },
   {
     "name": "Program",
     "to": "/program",
-    "forNav": true
+    "navbar": true
   },
   {
     "name": "Contact",
     "to": "/contact",
-    "forNav":true
+    "navbar":true
+  },
+  {
+    "name": "Contest",
+    "to": "/contest",
+    "navbar":true
   }
 ]
 

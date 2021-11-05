@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-const pages = require("../utils/pages.json");
+const routes = require("../utils/routes.json");
 
 const NavBar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -59,8 +59,8 @@ const NavBar = () => {
             </div>
 
             <div className="hidden md:flex items-center space-x-1">
-              {pages.map((page) => {
-                if (page.forNav) {
+              {routes.map((page) => {
+                if (page.navbar) {
                   return (
                     <NavLink
                       to={page.to}
@@ -108,8 +108,8 @@ const NavBar = () => {
         }
       >
 
-        {pages.map((page) => {
-          if (page.forNav) {
+        {routes.map((page) => {
+          if (page.navbar) {
             return (
               <NavLink
                 to={page.to}
