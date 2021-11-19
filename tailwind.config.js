@@ -116,7 +116,7 @@ module.exports = {
         },
       },
       animation: {
-        shake: "shake 750ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both",
+        shake: "shake 750ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite",
         fadeIn: "fadeIn 1s ease-in",
         fadeDown: "fadeDown 1s ease-in",
         fadeInDelay: "fadeInDelay 2s ease-in",

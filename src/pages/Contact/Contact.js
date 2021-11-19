@@ -220,7 +220,7 @@ const Contact = () => {
                       className="flex-shrink-0 w-6 h-6 text-blue-200"
                       aria-hidden="true"
                     />
-                    <span className="ml-3">(919) 656-5154</span>
+                    <span className="ml-3">(919) 659-5154</span>
                   </dd>
                   <dt>
                     <span className="sr-only">Email</span>
