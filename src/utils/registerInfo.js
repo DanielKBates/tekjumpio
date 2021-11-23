@@ -26,7 +26,7 @@ export const registerInfo = [
     ],
   },
   {
-    title: "Build Professional Experience",
+    title: "Jumpstart Your Career",
     points: [
       {
         id: 5,
@@ -34,7 +34,7 @@ export const registerInfo = [
       },
       {
         id: 6,
-        text: "Join our community for career coaching, interview preparation, and placement assistance.",
+        text: "Join our community for interview preparation, resume building, continued education, placement assistance and personalized coaching.",
       },
     ],
   },

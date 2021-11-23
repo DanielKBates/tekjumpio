@@ -32,9 +32,6 @@ const FormSite = () => {
                 <span className="text-4xl xl:text-5xl font-semibold text-gray-50">
                   Class Details and Registration
                 </span>
-                <span className="inline-block bg-yellow-300 h-full rounded-lg text-xl py-2 px-4 lg:ml-12 ">
-                  Launch Discount Available Until Nov 17th!
-                </span>
               </div>
               <div className=" bg-gray-50 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px">
                 {registerInfo.map((element) => (
@@ -62,25 +59,37 @@ const FormSite = () => {
                     <ul className="list-outside list-disc space-y-2 text-gray-600">
                       <li>
                         Jump in our{" "}
-                        <a className="text-indigo-400" href="https://us02web.zoom.us/j/89810725704">
+                        <a
+                          className="text-indigo-400"
+                          href="https://us02web.zoom.us/j/89810725704"
+                        >
                           Meet and Greet Zoom
                         </a>
-                        , M-F 1-3pm EST
+                        , M-F, 1-3pm EST
                       </li>
                       <li>
                         Chat with us anytime on our{" "}
-                      
-                        <a className="text-indigo-400" href="https://discord.gg/cfQJR85KTG">
+                        <a
+                          className="text-indigo-400"
+                          href="https://discord.gg/cfQJR85KTG"
+                        >
                           Q&A Discord Server
                         </a>{" "}
-                       
                       </li>
-                      <li> Check out our<Link className ="text-indigo-400" to="/contact"> Contact page </Link>to talk to us!</li>
+                      <li>
+                        {" "}
+                        Check out our
+                        <Link className="text-indigo-400" to="/contact">
+                          {" "}
+                          Contact page{" "}
+                        </Link>
+                        to talk to us!
+                      </li>
                     </ul>
                   </div>
                 </div>
               </div>
-
+                          
               <div className="bg-gray-50 px-4 text-3xl  pt-8 font-semibold text-indigo-600">
                 Class Schedule{" "}
                 <span className="text-lg ml-2">
@@ -114,30 +123,7 @@ const FormSite = () => {
                     </Switch.Label>
                   </Switch.Group>
                 </span>
-                <div className="grid grid-cols-6  py-14 bg-gray-50 ">
-                  <ul className="col-span-2 text-gray-600 list-inside list-disc space-y-2 font-normal text-lg">
-                    <li>
-                      {" "}
-                      {toggle
-                        ? "9 Week, 240 Hour Program"
-                        : "16 Week 240 Hour Program"}{" "}
-                    </li>
-                    <li>Invitation to join Graduate Dev Team </li>
-                    <li>Career Coaching </li>
-                    <li> Placement Assistance </li>
-                  </ul>
-                  <span className="text-3xl xl:text-4xl self-center justify-self-center text-indigo-900 ">
-                    {" "}
-                    =
-                  </span>{" "}
-                  <div className="col-span-3 self-center flex-col lg:flex-row text-gray-600 font-normal text-lg">
-                    Total of
-                    <span className="line-through"> $4000 </span>
-                    <span className="text-indigo-900 ml-2">
-                      ($3000 til November 17th!)
-                    </span>
-                  </div>
-                </div>
+              <p className="text-gray-600 font-normal text-lg pb-8 w-11/12 lg:w-2/3">Our 225 hour training program is $1,000 dollars, due 48 hours within registering for the program.</p>
                 <p className="text-gray-600 font-normal text-lg pb-8 w-11/12 lg:w-2/3">
                   {" "}
                   {toggle
