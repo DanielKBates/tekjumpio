@@ -90,7 +90,7 @@ const FormSite = () => {
                 </div>
               </div>
               <p className="text-gray-600 bg-gray-50 font-normal text-lg p-4 ">
-                Our 225 hour training program is $1,000 dollars, due 48 hours
+                Our 225 hour training program is $1,000, due 48 hours
                 within registering for the program. Upon completing our training
                 program, you will be invited to join our Graduate Career Path,
                 in which you will receive continued education, interview
