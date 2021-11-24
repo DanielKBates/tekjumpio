@@ -23,7 +23,7 @@ const FormSite = () => {
   }, []);
 
   return (
-    <div className="pt-20 mx-auto w-full lg:w-2/3">
+    <div className="pt-24 mx-auto w-full lg:w-2/3">
       <div className="flex flex-col">
         <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="pt-2 text-lg align-middle inline-block px-2 md:px-8 lg:px-10">
@@ -90,20 +90,20 @@ const FormSite = () => {
                 </div>
               </div>
               <p className="text-gray-600 bg-gray-50 font-normal text-lg p-4 ">
-                Our 225 hour training program is $1,000, due 48 hours
+                Our <span className="text-indigo-500 font-bold">225 hour training program </span>is $1,000, due 48 hours
                 within registering for the program. Upon completing our training
-                program, you will be invited to join our Graduate Career Path,
-                in which you will receive continued education, interview
-                preparation, resume building, career coaching, and the
-                opportunity to work alongside our dev team to build live,
-                professional sites.
+                program, you will be invited to join our <span className="font-bold text-indigo-500">Graduate Career Path,</span>
+                in which you will <span className="font-bold text-indigo-500"> receive continued education, interview
+                preparation, resume building, career coaching,</span> and the
+                opportunity to <span className="font-bold text-indigo-500"> work alongside our dev team to build live,
+                professional sites. </span>
               </p>
               <p className="text-gray-600 bg-gray-50 font-normal text-lg p-4 ">
-                We know life gets busy and that the job hunt can be daunting. We
-                want to work with you - if you join our Graduate Career Path, we
-                will work with your schedule so that you are able to contribute
-                to ongoing development projects and build experience at your own
-                pace. Our Graduate Career Path is $2,500, due either once you gain employment, or after a 12 month period.
+                We know <span className="font-bold text-indigo-500">life gets busy </span> and that the job hunt can be daunting. We
+                want to work with you - if you join our <span className="font-bold text-indigo-500"> Graduate Career Path, </span> we
+                will <span className="font-bold text-indigo-500">work with your schedule </span> so that you are able to enage in interview preparation sessions, receive  contribute
+                to ongoing development projects and <span className="font-bold text-indigo-500"> build experience at your own
+                pace.</span> Our Graduate Career Path is $2,500, but you <span className="font-bold text-indigo-500">pay nothing until you start your first job in your new career!</span><span className="text-sm align-top">*</span>
               </p>
 
               <div className="bg-gray-50 px-4 text-3xl  pt-8 font-semibold text-indigo-600">
