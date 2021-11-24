@@ -37,7 +37,7 @@ const FormSite = () => {
                 {registerInfo.map((element) => (
                   <div
                     key={element.title}
-                    className={classNames("relative group bg-white p-6 ")}
+                    className={classNames("relative group bg-gray-50 p-6 ")}
                   >
                     <div className="mt-4">
                       <h3 className="text-2xl text-indigo-500 font-medium">
@@ -51,7 +51,7 @@ const FormSite = () => {
                     </div>
                   </div>
                 ))}
-                <div className="relative group bg-white p-6 ">
+                <div className="relative group bg-gray-50 p-6 ">
                   <div className="mt-4">
                     <h3 className="text-2xl text-indigo-500 font-medium">
                       <div>Talk To Us</div>
@@ -89,7 +89,23 @@ const FormSite = () => {
                   </div>
                 </div>
               </div>
-                          
+              <p className="text-gray-600 bg-gray-50 font-normal text-lg p-4 ">
+                Our 225 hour training program is $1,000 dollars, due 48 hours
+                within registering for the program. Upon completing our training
+                program, you will be invited to join our Graduate Career Path,
+                in which you will receive continued education, interview
+                preparation, resume building, career coaching, and the
+                opportunity to work alongside our dev team to build live,
+                professional sites.
+              </p>
+              <p className="text-gray-600 bg-gray-50 font-normal text-lg p-4 ">
+                We know life gets busy and that the job hunt can be daunting. We
+                want to work with you - if you join our Graduate Career Path, we
+                will work with your schedule so that you are able to contribute
+                to ongoing development projects and build experience at your own
+                pace. Our Graduate Career Path is $2,500, due either once you gain employment, or after a 12 month period.
+              </p>
+
               <div className="bg-gray-50 px-4 text-3xl  pt-8 font-semibold text-indigo-600">
                 Class Schedule{" "}
                 <span className="text-lg ml-2">
@@ -123,7 +139,6 @@ const FormSite = () => {
                     </Switch.Label>
                   </Switch.Group>
                 </span>
-              <p className="text-gray-600 font-normal text-lg pb-8 w-11/12 lg:w-2/3">Our 225 hour training program is $1,000 dollars, due 48 hours within registering for the program.</p>
                 <p className="text-gray-600 font-normal text-lg pb-8 w-11/12 lg:w-2/3">
                   {" "}
                   {toggle

@@ -4,11 +4,11 @@ export const registerInfo = [
     points: [
       {
         id: 1,
-        text: "Receive expert training in the latest and most in demand skills.",
+        text: "Receive expert training in the latest and most in demand skills, technologies, and tools.",
       },
       {
         id: 2,
-        text: "Learn some of the industry's most popular skills from the comfort of your own home, as all of our classes are 100% remote.",
+        text: "Learn some of the industry's most popular skills from the comfort of your own home, as our entire program is 100% remote.",
       },
     ],
   },
