@@ -35,8 +35,8 @@ const Home = () => {
 
             {/* Text Paragraph */}
             <div className="flex md:text-center lg:text-left xl:w-11/12 2xl:w-2/3 px-2 md:leading-loose text-2xl 2xl:text-3xl text-gray-300 animate-fadeIn">
-              Join Tekjump today to not only receive expert and comprehensive web development training , but
-              also  crucial real world experience that will wow employers and
+              Join Tekjump today to not only receive expert and comprehensive web development training, but
+              also crucial real world experience and career preparation that will make you stand out from your peers and
               jumpstart your new software career!
             </div>
             <div className="flex md:justify-center  lg:justify-start xl:w-2/3 2xl:w-1/2 animate-fadeIn">

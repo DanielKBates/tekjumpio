@@ -68,14 +68,14 @@ const FormSite = () => {
                         Get trained, Stand out
                       </h2>
                       <p className="mt-2 text-3xl font-extrabold text-gray-900">
-                        Your path to a new career
+                        Your path to a new career.
                       </p>
                       <p className="mt-4 text-lg text-gray-500">
                         Complete our 225 hour training program and join our
-                        <span className="text-indigo-600 font-bold"> Graduate Dev Path.</span> Receive continued training, interview
+                        <span className="text-pink-500 font-bold"> Graduate Dev Path.</span> Receive continued training, interview
                         preparation, placement assistance and career coaching.
                         Work alongside our Dev team -at your own pace- to build
-                        <span className="text-indigo-600 font-bold"> crucial real world experience on live projects for real
+                        <span className="text-pink-500 font-bold"> crucial real world experience on live projects for real
                         clients.</span> You don't pay anything until you've landed your first role as a software developer!
                       </p>
                     </div>
