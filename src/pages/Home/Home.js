@@ -61,7 +61,7 @@ const Home = () => {
                 </svg>
               </Link>
             </div>
-            <div className="flex justify-center pt-20 md:pt-24 text-indigo-200 animate-bounce lg:hidden">
+            <div className="flex justify-center pt-14 md:pt-24 text-indigo-200 animate-bounce lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
