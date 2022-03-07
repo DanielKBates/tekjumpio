@@ -135,25 +135,10 @@ const Contact = () => {
                 <h3 className="text-lg font-medium text-white">Talk to us!</h3>
                 <p className="mt-6 text-base text-blue-50 max-w-3xl">
                   Join us in discussion about your future! Join our support
-                  discord below to chat with the team, or hop in our daily
-                  support Zoom to speak with us live!
+                  discord below to chat with the team.
                 </p>
                 <dl className="mt-8 space-y-6">
-                  <dt>
-                    <span className="sr-only">Support Zoom Link</span>
-                  </dt>
-                  <dd className="flex text-base text-blue-50">
-                    <VideoCameraIcon
-                      className="flex-shrink-0 w-6 h-6 text-blue-200"
-                      aria-hidden="true"
-                    />
-                    <span className="ml-3">
-                      <a href="https://us02web.zoom.us/j/89810725704" className="underline">
-                        Virtual Meet and Greet
-                      </a>{" "}
-                      with the Team over Zoom on Monday - Friday, 1-3 PM.
-                    </span>
-                  </dd>
+                
                   <dt>
                     <span className="sr-only">Q&A Discord Link</span>
                   </dt>

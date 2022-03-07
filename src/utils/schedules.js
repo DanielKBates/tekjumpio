@@ -6,7 +6,7 @@ export const dayWeeks = [
     },
     {
       week: "Week Three",
-      unit: "Advanced JavaScript and Object Oriented Development - JavaScript",
+      unit: "Advanced JavaScript and DOM manipulation - JavaScript",
     },
     {
       week: "Week Four",
