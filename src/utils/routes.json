@@ -22,11 +22,6 @@
     "name": "Contact",
     "to": "/contact",
     "navbar":true
-  },
-  {
-    "name": "Contest",
-    "to": "/contest",
-    "navbar":true
   }
 ]
 

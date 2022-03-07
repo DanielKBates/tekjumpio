@@ -98,7 +98,7 @@ const Home = () => {
           </clipPath>
         </svg>
 
-        <div className="md:h-128 h-96 transform scale-y-125 md:scale-y-100 origin-top animate-animateGradient animate-fadeIn z-0 clipped"></div>
+        <div className="md:h-128 h-96 transform scale-y-125 md:scale-y-100 origin-top animate-animateGradient z-0 clipped"></div>
       </div>
 
       <div className="flex md:mb-10 flex-col justify-center pt-12 pb-4">
