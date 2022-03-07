@@ -289,43 +289,7 @@ export default function About() {
                       </ul>
                     </div>
                   </div>
-                  <div className=" mx-auto py-12 px-4  sm:px-6 lg:px-8 lg:py-24">
-                    <div className="space-y-8 sm:space-y-12">
-                      <div className="space-y-5 sm:mx-auto sm:max-w-xl text-center sm:space-y-4 lg:max-w-5xl">
-                        <h2 className="text-3xl text-indigo-500 font-extrabold  tracking-tight sm:text-4xl">
-                          Our Graduates{" "}
-                        </h2>
-                        <p className="text-xl text-gray-500">
-                          Meet our previous graduates who have worked with us to
-                          create live web applications for real clients.
-                        </p>
-                      </div>
-                      <ul
-                        role="list"
-                        className="mx-auto text-center grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-6"
-                      >
-                        {graduates.map((person) => (
-                          <li key={person.name}>
-                            <div className="space-y-4">
-                              <div className="mx-auto flex justify-center items-center h-20 w-20 rounded-full lg:w-24 lg:h-24" style = {{backgroundColor: `#${(Math.random()*0xFFFFFF<<0).toString(16)}`}}>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                </svg>
-                              </div>
-                              <div className="space-y-2">
-                                <div className="text-xs font-medium lg:text-sm">
-                                  <h3>{person.name}</h3>
-                                  <p className="text-indigo-600">
-                                    {person.class}
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+               
                 </div>
               </div>
             </AnimatedCard>

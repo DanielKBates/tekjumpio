@@ -43,7 +43,7 @@ const Footer = () => {
           
           </div>
           <p className="mt-8 text-base  leading-6 text-center text-gray-400">
-            © 2021 Thinking Feet LLC
+            © 2022 Thinking Feet LLC
           </p>
         </div>
       </section>
